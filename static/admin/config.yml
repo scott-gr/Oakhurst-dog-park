@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: scott-gr/oakhurst-dog-park
 
 media_folder: static/assets
 public_folder: /assets
