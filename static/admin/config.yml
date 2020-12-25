@@ -1,15 +1,18 @@
 backend:
   name: github
   repo: scott-gr/oakhurst-dog-park
+  branch: main
 
 media_folder: static/assets
 public_folder: /assets
+site_url: https://oakhurstdogpark.com
 
 collections:
   - name: blog
     label: Blog
     folder: blog
     create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: datetime }
