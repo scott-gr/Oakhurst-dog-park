@@ -5,13 +5,24 @@
  */
 
 module.exports = {
-  plugins: [`gatsby-plugin-netlify-cms`,
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      path: `${__dirname}/blog`,
-      name: `blog`,
+  plugins: [
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/blog`,
+        name: `blog`,
+      },
     },
-  },
-  `gatsby-transformer-remark`,],
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        name: `pages`,
+      },
+    },
+
+    "gatsby-plugin-netlify",
+  ],
 }
