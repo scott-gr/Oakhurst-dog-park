@@ -4,6 +4,7 @@
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -12,5 +13,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    "gatsby-plugin-netlify",
   ],
 }
