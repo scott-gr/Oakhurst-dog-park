@@ -1,12 +1,9 @@
 import React from "react"
-import Nav from "../components/Nav"
+import Layout from '../components/Layout/Layout';
+import SEO from "../components/seo";
 
 export default function Home() {
-  return <div>
-    <header>
-      < Nav />
-      <h1>Oakhurst Dog Park</h1>
-    </header>
-      Hello world
-    </div>
+  return <Layout>
+    <SEO title="About" />
+    </Layout>
 }
