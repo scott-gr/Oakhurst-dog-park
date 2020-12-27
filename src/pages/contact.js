@@ -1,15 +1,13 @@
-import React from 'react';
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/seo'
+import React from "react"
+import Layout from "../components/Layout/Layout"
+import SEO from "../components/seo"
 
 const contact = () => {
   return (
-    <Layout >
+    <Layout>
       <SEO title="Contact" />
-
     </Layout>
-      
-  );
-};
+  )
+}
 
-export default contact;
+export default contact

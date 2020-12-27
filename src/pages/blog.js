@@ -1,15 +1,13 @@
-import React from 'react';
-import Layout from '../components/Layout/Layout';
-import SEO from '../components/seo'
+import React from "react"
+import Layout from "../components/Layout/Layout"
+import SEO from "../components/seo"
 
 const blog = () => {
   return (
-    <Layout >
+    <Layout>
       <SEO title="Blog" />
-
     </Layout>
-      
-  );
-};
+  )
+}
 
-export default blog;
+export default blog
