@@ -1,11 +1,15 @@
 import React from 'react';
+import Layout from '../components/Layout/Layout';
+import SEO from '../components/seo'
 
-const report = () => {
+const contact = () => {
   return (
-    <div>
+    <Layout >
+      <SEO title="Contact" />
+
+    </Layout>
       
-    </div>
   );
 };
 
-export default report;
+export default contact;
