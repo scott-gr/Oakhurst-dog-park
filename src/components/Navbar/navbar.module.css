@@ -5,6 +5,9 @@
     flex: 0 1 25px;
   }
 }
+.navwrapper {
+  background-color: blue;
+}
 
 .navItem {
   text-decoration: none;
