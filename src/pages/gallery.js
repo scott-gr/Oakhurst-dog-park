@@ -1,13 +1,26 @@
 import React from "react"
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout/Layout.js"
+import SEO from "../components/seo.js"
 
-const gallery = () => {
+const GalleryPage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+
   return (
-    <Layout>
+    <Layout location={location} title={siteTitle}>
       <SEO title="Gallery" />
+      <div></div>
     </Layout>
   )
 }
 
-export default gallery
+export default GalleryPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

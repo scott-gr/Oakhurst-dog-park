@@ -64,8 +64,8 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: ``,
-        // ADD ICON
+        icon: `content/assets/gatsby-icon.png`,
+// PLACEHOLDER
       },
     },
 
