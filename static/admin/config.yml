@@ -11,11 +11,11 @@ public_folder: /assets
 collections:
   - name: blog
     label: Blog
-    folder: blog
+    folder: 'content/blog'
     create: true
-    slug: '{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: '{{date}}-{{title}}/index'
     fields:
       - { name: date, label: Date, widget: datetime }
       - { name: title, label: Title, widget: string }
       - { name: body, label: Body, widget: markdown }
-      - { name: slug, label: Slug, widget: string, default: '/{{year}}-{{month}}-{{day}}-{{title}}'}
