@@ -1,21 +1,21 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 
-const HomePage = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
+const NotFoundPage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Home Page" />
-      <div>
-        <h1>OAKHURST DOG PARK</h1>
-      </div>
+      <SEO title="404: Not Found" />
+      <h1>404: Not Found</h1>
+      <p>You just hit a route that doesn&#39;t exist. Sorry!</p>
     </Layout>
   )
 }
 
-export default HomePage
+export default NotFoundPage
 
 export const pageQuery = graphql`
   query {
