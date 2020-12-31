@@ -1,11 +1,10 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import styles from "./blogTemplate.module.css"
-import Layout from '../../components/Layout/Layout.js'
+import Layout from "../../components/Layout/Layout.js"
 import SEO from "../../components/seo.js"
 
-
-const BlogPostTemplate = ({ data, location }) => {
+const BlogTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
@@ -30,9 +29,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-
-        </footer>
+        <footer></footer>
       </article>
       <nav className={styles.blognav}>
         <ul>
@@ -56,7 +53,7 @@ const BlogPostTemplate = ({ data, location }) => {
   )
 }
 
-export default BlogPostTemplate
+export default BlogTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
