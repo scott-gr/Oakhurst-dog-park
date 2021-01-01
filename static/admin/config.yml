@@ -6,7 +6,7 @@ backend:
 site_url: https://oakhurstdogpark.com
 
 media_folder: static/assets
-public_folder: /public
+public_folder: /assets
 
 collections:
   - name: blog
@@ -14,7 +14,7 @@ collections:
     folder: /content/blog
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    path: '{{date}}-{{title}}/index'
+    path: '{{slug}}'
     fields:
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date, widget: datetime }
