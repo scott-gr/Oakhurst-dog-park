@@ -11,7 +11,7 @@ const HomePage = ({ data, location }) => {
       <SEO title="Home Page" />
       <div className={styles.hero}>
         <h1>OAKHURST DOG PARK</h1>
-      </div>c
+      </div>
     </Layout>
   )
 }
