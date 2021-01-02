@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
+import styles from "./styles/index.module.css"
 
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -8,9 +9,9 @@ const HomePage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
-      <div>
+      <div className={styles.hero}>
         <h1>OAKHURST DOG PARK</h1>
-      </div>
+      </div>c
     </Layout>
   )
 }

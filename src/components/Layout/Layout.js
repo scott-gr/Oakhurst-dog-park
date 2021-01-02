@@ -14,7 +14,7 @@ const Layout = ({ location, children }) => {
 
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
+        © Scott Griffin 2020, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
