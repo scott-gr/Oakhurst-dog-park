@@ -49,6 +49,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets/logo`,
+        name: `logo`
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD google TRACKING ID HERE`,
