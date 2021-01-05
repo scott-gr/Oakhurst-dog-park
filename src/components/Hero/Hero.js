@@ -22,9 +22,7 @@ const Hero = () => {
   }
 
   return (
-    <div>
       <Img className={styles.logo} fluid={data.heroImage.childImageSharp.fluid} />
-    </div>
   )
 }
 

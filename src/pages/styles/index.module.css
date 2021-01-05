@@ -1,6 +1,13 @@
 .hero {
   background-color: white;
-  display: flex;
-  flex-direction:column ;
+  display: inline-grid;
+  grid-auto-flow: row;
+  gap: 1rem;
   justify-content: center;
 }
+
+.heroimage {
+  justify-self: center;
+}
+
+
