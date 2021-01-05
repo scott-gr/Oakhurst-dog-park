@@ -12,7 +12,7 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
       <main className={styles.hero}>
-        <Hero className={styles.heroimage} />
+        <Hero className={styles.heroImage} />
         <h4 className={styles.about}>
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
@@ -20,7 +20,7 @@ const HomePage = ({ data, location }) => {
           egestas semper. Aenean ultricies mi vitae est. Mauris placerat
           eleifend leo.
         </h4>
-        <div className={styles.bottomnav}>
+        <div className={styles.bottomNav}>
           <p>choice 1</p>
           <p>choice 2</p>
           <p>choice 4</p>
