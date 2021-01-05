@@ -1,18 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
+import NavLinks from "./NavLinks.js"
 import styles from "./navbar.module.css"
 
 const Navbar = () => {
-
   return (
     <nav className={styles.navwrapper}>
-      <Link className={styles.navItem} to="/">
-        Oakhurst Dog Park
-      </Link>
-      <Link className={styles.navItem} to="/blog">
-        Blog
-      </Link>
+      {/* Style or add sections to the navbar here, but links are kept in ./NavLinks.js */}
 
+      <NavLinks />
     </nav>
   )
 }

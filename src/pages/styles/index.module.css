@@ -1,7 +1,13 @@
 .hero {
-  background-color: darkgreen;
+  background-color: white;
+  display: inline-grid;
+  grid-auto-flow: row;
+  gap: 1rem;
+  justify-content: center;
 }
 
-.hero h1 {
-  color: whitesmoke;
+.heroimage {
+  justify-self: center;
 }
+
+
