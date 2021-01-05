@@ -2,12 +2,18 @@
   background-color: white;
   display: inline-grid;
   grid-auto-flow: row;
+  grid-template-rows: subgrid;
   gap: 1rem;
   justify-content: center;
 }
 
 .heroimage {
   justify-self: center;
+}
+
+.bottomnav {
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 
 
