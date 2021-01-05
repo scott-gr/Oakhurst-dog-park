@@ -1,7 +1,6 @@
 .hero {
-  background-color: darkgreen;
-}
-
-.hero h1 {
-  color: whitesmoke;
+  background-color: white;
+  display: flex;
+  flex-direction:column ;
+  justify-content: center;
 }

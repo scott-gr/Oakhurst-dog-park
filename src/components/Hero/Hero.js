@@ -1,25 +1,31 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styles from "./hero.module.css"
 
-export default function Hero({ data }) {
-  return (
-  <div>
-    <Img fluid={data.file.childImageSharp.fluid} alt="oakhurst dog park logo"/>
-  </div>
-  )}
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "content/assets/logo/tricolor.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 500, quality: 100) {
-          ...GatsbyImageSharpFluid
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
-          ...GatsbyImageSharpFluidLimitPresentationSize
+const Hero = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      heroImage: file(relativePath: { eq: "tricolor.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 500) {
+            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluidLimitPresentationSize
+          }
         }
       }
     }
-  }`
+  `)
 
-  
+  if (!data?.heroImage?.childImageSharp?.fluid) {
+    return <div>Picture not found</div>
+  }
+
+  return (
+    <div>
+      <Img className={styles.logo} fluid={data.heroImage.childImageSharp.fluid} />
+    </div>
+  )
+}
+
+export default Hero
