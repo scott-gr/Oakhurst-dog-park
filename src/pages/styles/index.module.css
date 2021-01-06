@@ -3,11 +3,17 @@
   display: inline-grid;
   grid-auto-flow: row;
   gap: 1rem;
+}
+
+.heroImage {
   justify-content: center;
+  grid-template-columns: auto;
 }
 
-.heroimage {
-  justify-self: center;
+.bottomNav {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  column-gap: 4rem;
 }
-
 
