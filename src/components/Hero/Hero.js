@@ -22,7 +22,10 @@ const Hero = () => {
   }
 
   return (
-      <Img className={styles.logo} fluid={data.heroImage.childImageSharp.fluid} />
+      <Img
+        className={styles.logo}
+        fluid={data.heroImage.childImageSharp.fluid}
+      />
   )
 }
 

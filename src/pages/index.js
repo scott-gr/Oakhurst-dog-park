@@ -20,12 +20,12 @@ const HomePage = ({ data, location }) => {
           egestas semper. Aenean ultricies mi vitae est. Mauris placerat
           eleifend leo.
         </h4>
-        <div className={styles.bottomNav}>
-          <p>choice 1</p>
-          <p>choice 2</p>
-          <p>choice 4</p>
-        </div>
       </main>
+      <nav className={styles.bottomNav}>
+        <button>choice 1</button>
+        <button>choice 2</button>
+        <button>choice 3</button>
+      </nav>
     </Layout>
   )
 }

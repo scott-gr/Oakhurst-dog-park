@@ -17,6 +17,7 @@
   margin: 0 1vw;
   transition: all 200ms ease-in;
   position: relative;
+  font-family: var(--lato);
 }
 .navItem:after {
   position: absolute;
@@ -29,6 +30,7 @@
   background: goldenrod;
   height: 1px;
   transition: all 0.4s ease-in;
+  cursor: pointer;
 }
 .navItem:hover {
   color: goldenrod;

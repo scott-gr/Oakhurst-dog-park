@@ -14,7 +14,7 @@ const Layout = ({ location, children }) => {
 
       <main>{children}</main>
       <footer>
-        © Scott Griffin 2020, Built with
+        © Oakhurst Dog Park 2021, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </footer>
