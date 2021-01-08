@@ -3,7 +3,7 @@ module.exports = {
     title: `Oakhurst Dog Park`,
     author: {
       name: `Scott Griffin`,
-      summary: `Web developer based in Atlanta - https://yoscott.com `,
+      summary: `Web developer based in Atlanta. Looking for opportunities! - https://yoscott.com `,
     },
     description: `A community page with guidelines and news about the Oakhurst Dog Park`,
     siteUrl: `https://oakhurstdogpark.com`,
@@ -20,8 +20,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/content/assets/images`,
+        name: `logos`,
+        path: `${__dirname}/content/assets/logos`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `slides`,
+        path: `${__dirname}/content/assets/slides`,
       },
     },
     `gatsby-transformer-sharp`,
