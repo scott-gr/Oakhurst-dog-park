@@ -1,0 +1,26 @@
+.blogCard {
+
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-inline-start: 1rem;
+  min-width: fit-content;
+  max-width: 40rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+
+  .blogTitle , .blogDate {
+    font-family: var(--zilla);
+  }
+
+  .blogDesc {
+    font-family: var(--lato);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin: 0;
+  }
+
+  .blogTitle {
+    margin: 0;
+  }
