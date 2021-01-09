@@ -28,8 +28,9 @@ const HomePage = ({ data, location }) => {
         <button>choice 2</button>
         <button>choice 3</button>
       </nav>
+
     </Layout>
-    </Carousel>
+          </Carousel >
   )
 }
 

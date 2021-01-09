@@ -6,12 +6,12 @@
   }
 }
 .navwrapper {
-  background-color: slategrey;
+  background-color: var(--black);
 }
 
 .navItem {
   text-decoration: none;
-  color: #111;
+  color: var(--offwhite);
   display: inline-block;
   white-space: nowrap;
   margin: 0 1vw;
