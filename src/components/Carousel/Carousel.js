@@ -9,7 +9,7 @@ const Carousel = ({ children }) => (
       query={useStaticQuery(graphql`
         query {
           backgrounds: allFile(
-            filter: { sourceInstanceName: { eq: "logos" } }
+            filter: { sourceInstanceName: { eq: "slides" } }
           ) {
             nodes {
               relativePath
@@ -22,11 +22,11 @@ const Carousel = ({ children }) => (
           }
         }
       `)}
-      initDelay={2} // delay before the first transition (if left at 0, the first image will be skipped initially)
-      transition={3} // transition duration between images
-      duration={6} // how long an image is shown
+      initDelay={4} // delay before the first transition (if left at 0, the first image will be skipped initially)
+      transition={2.5} // transition duration between images
+      duration={5} // how long an image is shown
       // specify images to include (and their order) according to `relativePath`
-      images={["transblack.png", "transwhite.png", "tricolor.png", "white.png"]}
+      images={["doglooking.png", "widepark.png", "twosheps.png", "pool.png", "falltrees.png"]}
       // pass down standard element props
       style={{
         transform: "scale(.9)",
