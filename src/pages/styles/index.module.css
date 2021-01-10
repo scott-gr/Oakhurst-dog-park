@@ -1,8 +1,11 @@
 .hero {
-  background-color: white;
+  background-color:var(--black);
   display: inline-grid;
   grid-auto-flow: row;
   gap: 1rem;
+  color: white;
+  font-family: var(--lato);
+  padding: 0;
 }
 
 .heroImage {

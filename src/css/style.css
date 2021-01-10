@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Zilla+Slab:wght@600&display=swap');
 
-html {
-  font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+:root {
+  --lato :'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --zilla :'Zilla Slab', serif;
+  --blue : #0491D7;
+  --yellow : #FEAE25;
+  --red : #E91929;
+  --black : #27282B;
+  --offwhite : #ECF0F1;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  background-color: #ECF0F1;
+}
+
+img {
+  margin: 0;
+  padding: 0;
 }

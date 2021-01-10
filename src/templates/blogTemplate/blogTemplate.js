@@ -16,20 +16,20 @@ const BlogTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className={styles.blogPostContent}
+        className={styles.blogCard}
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          <h1 className={styles.blogTitle} itemProp="headline">{post.frontmatter.title}</h1>
+          <p className={styles.blogDate}>{post.frontmatter.date}</p>
         </header>
-        <section
+        <section className={styles.blogBody}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
-        <footer></footer>
+        <footer>(Share buttons here)</footer>
       </article>
       <nav className={styles.blognav}>
         <ul>

@@ -8,8 +8,10 @@ const Navbar = () => {
       {/* Style or add sections to the navbar here, but links are kept in ./NavLinks.js */}
 
       <NavLinks />
+      
     </nav>
   )
+
 }
 
 export default Navbar

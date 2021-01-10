@@ -5,3 +5,26 @@
   list-style: none;
   padding: 0,
 }
+
+.blogTitle , .blogDate {
+  font-family: var(--zilla);
+}
+
+.blogBody {
+  font-family: var(--lato);
+}
+
+.blogCard {
+
+border-radius: 10px;
+padding-top: 1rem;
+padding-inline-start: 1rem;
+min-width: fit-content;
+max-width: 40rem;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+}
+
+
+
+/* https://codepen.io/ambiva/pen/bGNWwyg */
