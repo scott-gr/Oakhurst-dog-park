@@ -5,6 +5,8 @@
   color: white;
   font-family: var(--lato);
   padding-top: 1rem;
+  justify-self: center;
+  width: 100vw;
 }
 
 .heroImage {

@@ -8,7 +8,8 @@ const Hero = () => {
     query {
       heroImage: file(relativePath: { eq: "tricolor.png" }) {
         childImageSharp {
-          fluid(srcSetBreakpoints: [ 200, 340, 520, 890 ]) {
+          fluid(maxWidth:250) {
+            ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
             ...GatsbyImageSharpFluid_tracedSVG
           }
