@@ -12,19 +12,18 @@ const HomePage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
-      < Carousel>
-      <main className={styles.hero}>
-        <Hero className={styles.heroImage} />
-        <h4 className={styles.about}>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
-          eleifend leo.
-        </h4>
-    
-      </main>
-      </ Carousel>
+      <Carousel />
+        <main className={styles.hero}>
+          <Hero className={styles.heroImage} />
+          <h4 className={styles.about}>
+            Pellentesque habitant morbi tristique senectus et netus et malesuada
+            fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
+            ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
+            egestas semper. Aenean ultricies mi vitae est. Mauris placerat
+            eleifend leo.
+          </h4>
+        </main>
+
       <nav className={styles.bottomNav}>
         <button>choice 1</button>
         <button>choice 2</button>
