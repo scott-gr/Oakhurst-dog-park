@@ -3,7 +3,6 @@ import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 import styles from "./styles/index.module.css"
 import Hero from "../components/Hero/Hero.js"
-import Carousel from "../components/Carousel/Carousel.js"
 import { graphql } from "gatsby"
 
 const HomePage = ({ data, location }) => {
@@ -12,7 +11,6 @@ const HomePage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
-      <Carousel />
         <main className={styles.hero}>
           <Hero className={styles.heroImage} />
           <h4 className={styles.about}>
