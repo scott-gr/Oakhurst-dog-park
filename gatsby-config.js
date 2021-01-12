@@ -69,9 +69,9 @@ module.exports = {
         short_name: `Dog Park`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#FEAE25`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/favicon.png`,
 // PLACEHOLDER
       },
     },
