@@ -1,0 +1,22 @@
+.carouselWrapper {
+  height: 200px;
+}
+
+.slide {
+  width: 200px;
+}
+
+.first {
+  composes: slide;
+  background-color: red;
+}
+
+.second {
+  background-color: blue;
+}
+
+.third {
+  background-color: green;
+}
+
+
