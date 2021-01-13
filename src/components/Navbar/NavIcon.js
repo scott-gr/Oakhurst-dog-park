@@ -1,12 +1,14 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./hero.module.css"
+import styles from "./navbar.module.css"
 
-const Hero = () => {
+const NavIcon = () => {
   const data = useStaticQuery(graphql`
     query {
-      heroImage: file(relativePath: { eq: "tricolor.png" }) {
+      iconImage: file(
+        relativePath: { eq: "navicon.png" }
+      ) {
         childImageSharp {
           fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid
@@ -18,13 +20,16 @@ const Hero = () => {
     }
   `)
 
-  if (!data?.heroImage?.childImageSharp?.fluid) {
+  if (!data?.iconImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
 
   return (
-    <Img className={styles.logo} fluid={data.heroImage.childImageSharp.fluid} />
+    <Img
+      className={styles.navIcon}
+      fluid={data.iconImage.childImageSharp.fluid}
+    />
   )
 }
 
-export default Hero
+export default NavIcon

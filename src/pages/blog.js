@@ -30,7 +30,8 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={post.fields.slug}>
-              <article className={styles.blogCard}
+              <article
+                className={styles.blogCard}
                 // className="post-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
@@ -41,10 +42,13 @@ const BlogIndex = ({ data, location }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small className={styles.blogDate}>{post.frontmatter.date}</small>
+                  <small className={styles.blogDate}>
+                    {post.frontmatter.date}
+                  </small>
                 </header>
                 <section>
-                  <p className={styles.blogDesc}
+                  <p
+                    className={styles.blogDesc}
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}

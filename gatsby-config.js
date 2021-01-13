@@ -72,7 +72,7 @@ module.exports = {
         theme_color: `#FEAE25`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
-// PLACEHOLDER
+        // PLACEHOLDER
       },
     },
     `gatsby-plugin-netlify-cache`,
