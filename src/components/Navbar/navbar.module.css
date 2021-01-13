@@ -7,6 +7,11 @@
 }
 .navwrapper {
   background-color: var(--black);
+  height: fit-content;
+  text-align: right;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  /* border-bottom: 2px solid white; */
 }
 
 .navItem {
@@ -37,4 +42,10 @@
 }
 .navItem:hover ::after {
   width: 100%;
+}
+
+.navIcon {
+  width: 5rem;
+  display: inline-block;
+  margin-bottom: -1rem;
 }

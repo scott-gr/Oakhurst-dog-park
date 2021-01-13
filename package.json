@@ -14,11 +14,10 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "dedupe": "^3.0.2",
-    "embla-carousel": "^4.1.3",
     "gatsby": "^2.30",
     "gatsby-image": "^2.8.0",
-    "gatsby-image-background-slider": "^0.0.4",
     "gatsby-plugin-feed": "^2.10.0",
     "gatsby-plugin-google-analytics": "^2.8.0",
     "gatsby-plugin-manifest": "^2.9.1",
@@ -40,6 +39,7 @@
     "netlify-plugin-gatsby-cache": "^0.3.2",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.23.0",
+    "pure-react-carousel": "^1.27.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
@@ -49,7 +49,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/scott-gr/oakhurst-dog-park"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
