@@ -49,3 +49,9 @@
   display: inline-block;
   margin-bottom: -1rem;
 }
+
+/* @media screen and (min-width: 480px) {
+  .navIcon {
+display: none;
+  }
+} */

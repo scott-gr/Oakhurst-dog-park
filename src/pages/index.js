@@ -23,14 +23,12 @@ const HomePage = ({ data, location }) => {
           eleifend leo.
         </h4>
         <PhotoSlider />
+        <section className={styles.btnRow}>
+          <Button type="submit" text="ONE" />
+          <Button type="submit" text="TWO" />
+          <Button type="submit" text="THREE" />
+        </section>
       </main>
-
-      <section className={styles.btnRow}>
-        <Button type="submit" text="ONE"/>
-        <Button type="submit" text="TWO"/>
-        <Button type="submit" text="THREE"/>
-
-      </section>
     </Layout>
   )
 }

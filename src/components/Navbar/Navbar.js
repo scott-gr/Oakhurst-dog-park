@@ -7,10 +7,9 @@ const Navbar = () => {
   return (
     <nav className={styles.navwrapper}>
       {/* Style or add sections to the navbar here, but links are kept in ./NavLinks.js */}
-      <div><NavLinks />      <NavIcon /></div>
-
+      <NavLinks />
+      <NavIcon />
     </nav>
   )
 }
-
 export default Navbar
