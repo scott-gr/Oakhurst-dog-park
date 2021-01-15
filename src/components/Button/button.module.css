@@ -1,0 +1,12 @@
+.btn { 
+    border: none;
+    height:inherit;
+    width: 33vw;
+    border-radius: 5px;
+    font-family: var(--lato);
+    font-size: large;
+    background-color: var(--black);
+    color: var(--offwhite);
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }

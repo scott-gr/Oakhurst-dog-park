@@ -1,5 +1,9 @@
 footer {
   font-family: var(--zilla);
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .globalWrapper {

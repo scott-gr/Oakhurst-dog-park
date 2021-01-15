@@ -11,7 +11,7 @@ class PhotoSlider extends Component {
         naturalSlideWidth={100}
         naturalSlideHeight={125}
         totalSlides={6}
-        visibleSlides={2.1}
+        visibleSlides={1.1}
         infinite={true}
         // isIntrinsicHeight={true}
         // hasMasterSpinner={true}
