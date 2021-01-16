@@ -2,23 +2,20 @@ import React from "react"
 import NavLinks from "./NavLinks.js"
 import NavIcon from "./NavIcon.js"
 import styles from "./navbar.module.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import Burger from "./Burger.js"
+
 
 const Navbar = () => {
-
-  const Burger = <FontAwesomeIcon icon={faBars} />
   return (
     <nav className={styles.navwrapper}>
       <NavIcon />
-      <input type="checkbox" className={styles.menuToggle}></input>
 
       <button className={styles.menuOpen}>
         < Burger />
       </button>
 
       <div className={`${styles.menu} ${styles.menuEffects}`}>
-        <label for="menuToggle"></label>
+        {/* <label for="menuToggle"></label> */}
         <div className={styles.menuContent}>
           <NavLinks />
         </div>

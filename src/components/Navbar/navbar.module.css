@@ -45,6 +45,7 @@ input {
   padding: 15px;
   cursor: pointer;
   float: right;
+  color: var(--offwhite);
   background-color: var(--black);
 }
 
