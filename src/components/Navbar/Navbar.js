@@ -4,29 +4,45 @@ import NavIcon from "./NavIcon.js"
 import styles from "./navbar.module.css"
 import Burger from "./Burger.js"
 
+class Navbar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      contentVisible: true,
+    }
+    // bind event handler methods here (defined below) for callback to work
+    this.toggleContentVisible = this.toggleContentVisible.bind(this)
+  }
 
-const Navbar = () => {
-  return (
-    <nav className={styles.navwrapper}>
-      <NavIcon />
+  toggleContentVisible() {
+    // called at onClick of burger button
+    // toggles contentVisible between true and false
+    this.setState(prevState => {
+      return { contentVisible: !prevState.contentVisible }
+    })
+  }
 
-      <button className={styles.menuOpen}>
-        < Burger />
-      </button>
+  render() {
+    return (
+      <nav className={styles.navwrapper}>
+        <NavIcon />
 
-      <div className={`${styles.menu} ${styles.menuEffects}`}>
-        {/* <label for="menuToggle"></label> */}
-        <div className={styles.menuContent}>
-          <NavLinks />
+        <button className={styles.menuOpen} onClick={this.toggleContentVisible}>
+          <Burger />
+        </button>
+
+        <div className={`${styles.menu} ${styles.menuEffects}`}>
+          {/* <label for="menuToggle"></label> */}
+          <div
+            className={`menu_content ${
+              this.state.contentVisible ? "show_content" : ""
+            }`}
+          >
+            <NavLinks />
+          </div>
         </div>
-      </div>
-    </nav>
-    // <nav className={styles.navwrapper}>
-    //   {/* Style or add sections to the navbar here, but links are kept in ./NavLinks.js */}
-    //   <NavLinks />
-    //   <NavIcon />
-
-    // </nav>
-  )
+      </nav>
+    )
+  }
 }
 export default Navbar

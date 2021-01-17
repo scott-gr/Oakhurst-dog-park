@@ -13,40 +13,15 @@ input {
 
 }
 
-.open:before {
-  content: "";
-  background-color:var(--offwhite);
-  width: 24px;
-  height: 4px;
-  display: block;
-  border-radius: 2px;
-  position: relative;
-
-  transform: rotate(0deg);
-  transition: all 0.3s ease;
+.menu_content {
+  height: 0px;
+  transition: height 0.3s ease-in;
 }
 
-.open:after {
-  content: "";
-  background-color: var(--offwhite);
-  width: 24px;
-  height: 4px;
-  display: block;
-  border-radius: 2px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: all 0.3s ease;
-}
-
-.menuOpen {
-  width: fit-content;
-  height: fit-content;
-  display: block;
-  padding: 15px;
-  cursor: pointer;
-  float: right;
-  color: var(--offwhite);
-  background-color: var(--black);
+.show_content {
+  opacity: 1;
+  visibility: visible;
+  transition: height 0.3s ease-out;
 }
 
 .menuOpen:hover .open:before {
