@@ -9,9 +9,9 @@ class PhotoSlider extends Component {
     return (
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={125}
+        naturalSlideHeight={100}
         totalSlides={6}
-        visibleSlides={2.1}
+        visibleSlides={1.5}
         infinite={true}
         // isIntrinsicHeight={true}
         // hasMasterSpinner={true}
