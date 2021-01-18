@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./layout.module.css"
-import Navbar from "../Navbar/Navbar.js"
+import NavFull from "../Navbar/NavFull.js"
 
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -8,7 +8,7 @@ const Layout = ({ location, children }) => {
 
   return (
     <div className={styles.globalWrapper} data-is-root-path={isRootPath}>
-      <Navbar />
+      <NavFull />
 
       <main>{children}</main>
       <footer>

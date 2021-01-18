@@ -2,7 +2,7 @@ import React from "react"
 import NavLinks from "./NavLinks.js"
 import NavIcon from "./NavIcon.js"
 import styles from "./navbar.module.css"
-import Burger from "./Burger.js"
+import BurgerIcon from "./BurgerIcon.js"
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ class Navbar extends React.Component {
         <NavIcon />
 
         <button className={styles.menuOpen} onClick={this.toggleContentVisible}>
-          <Burger />
+          <BurgerIcon />
         </button>
 
         <div className={`${styles.menu} ${styles.menuEffects}`}>
