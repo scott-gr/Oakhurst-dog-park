@@ -36,39 +36,51 @@
   margin-bottom: -1rem;
 }
 
+@media screen and (min-width: 480px) {
+  .navIcon {
+display: none;
+  }
+}
+
 .toggle {
   display: none;
   height: 100%;
   cursor: pointer;
   padding: 0 10vw;
-
-  @media (max-width: 768px) {
-    display: flex;
-  }
 }
 
-/* @media screen and (min-width: 480px) {
-  .navIcon {
-display: none;
-  }
-} */
+
+
+
+.navBox {
+  width: 100%;
+}
 
 
 
 
 
-  /* @media .navbox(max-width: 768px) {
+  @media only screen and (max-width: 768px) {
+    .navBox {
     flex-direction: column;
     position: fixed;
     width: 100%;
     justify-content: flex-start;
     padding-top: 10vh;
-    background-color: #fff;
+    background-color: var(--black);
     transition: all 0.3s ease-in;
     top: 8vh;
-    left: ${props => (props.open ? "-100%" : "0")}; */
+    left: 0;
+  }
+  }
 
+  @media only screen and (max-width: 768px) {
+    .navBoxOpen {
+      composes: navBox;
+      left: -100%;
+    }
 
+    }
 /* .hamburger {
   transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
 

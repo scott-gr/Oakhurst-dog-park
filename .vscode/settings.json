@@ -1,0 +1,12 @@
+{
+  "editor.semanticTokenColorCustomizations": null,
+
+  "css.lint.validProperties": [
+      "composes"
+  ],
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.validProperties": [
+      "composes"
+  ],
+  "scss.lint.unknownAtRules": "ignore"
+}
