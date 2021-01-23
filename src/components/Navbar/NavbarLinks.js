@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from "./navbar.module.css"
 
-const NavLinks = () => {
+const NavbarLinks = () => {
   return (
     <>
       <Link className={styles.navItem} to="/">
@@ -24,4 +24,4 @@ const NavLinks = () => {
   )
 }
 
-export default NavLinks
+export default NavbarLinks

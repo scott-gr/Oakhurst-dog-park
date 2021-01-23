@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import BurgerIcon from "./BurgerIcon.js"
+import Burger from "./Burger.js"
 import styles from "./navbar.module.css"
-import NavLinks from "./NavLinks.js"
+import NavbarLinks from "./NavbarLinks.js"
 import NavIcon from "./NavIcon.js"
 
 const NavBar = () => {
@@ -12,18 +12,18 @@ const NavBar = () => {
       <NavIcon />
       <div
         className={styles.toggle}
-        navbarOpen={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
+        open={navbarOpen}
+        onClick={() => setNavbarOpen(!navbarOpen) }
       >
-        {navbarOpen ? <BurgerIcon open className={styles.burgerOpen}/> : <BurgerIcon />}
+        {navbarOpen ? <Burger open className={styles.burgerOpen}/> : <Burger className={styles.burger} />}
       </div>
       {navbarOpen ? (
         <div className={styles.navBox}>
-          <NavLinks />
+          <NavbarLinks />
         </div>
       ) : (
         <div className={styles.navBoxOpen} open>
-          <NavLinks />
+          <NavbarLinks />
         </div>
       )}
     </nav>

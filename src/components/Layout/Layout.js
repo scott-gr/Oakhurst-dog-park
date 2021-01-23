@@ -1,16 +1,13 @@
 import React from "react"
 import styles from "./layout.module.css"
-import NavBar from "../Navbar/NavBar.js"
+import NavBar from "../Navbar/Navbar.js"
 
-const Layout = ({ location, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const isRootPath = location.pathname === rootPath
+const Layout = ({ children }) => {
 
   return (
-    <div className={styles.globalWrapper} data-is-root-path={isRootPath}>
+    <div className={styles.globalWrapper}>
       <NavBar />
-
-      <main>{children}</main>
+      {children}
       <footer>
         © Oakhurst Dog Park 2021, Built with
         {` `}

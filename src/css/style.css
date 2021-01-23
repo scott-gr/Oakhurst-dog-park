@@ -15,8 +15,10 @@ button {
 }
 
 body {
-  background-color: #ECF0F1;
-  height: 100vh;
+  background-color: var(--offwhite);
+  height: 100%;
+  width: 100%;
+
 }
 
 img {
