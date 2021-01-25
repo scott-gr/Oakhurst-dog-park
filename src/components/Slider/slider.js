@@ -8,14 +8,15 @@ class PhotoSlider extends Component {
   render() {
     return (
       <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={100}
+        naturalSlideWidth={50}
+        naturalSlideHeight={30}
         totalSlides={6}
-        visibleSlides={1.5}
+        visibleSlides={2.1}
         infinite={true}
-        // isIntrinsicHeight={true}
+        isIntrinsicHeight={true}
         // hasMasterSpinner={true}
         orientation={"horizontal"}
+        className={styles.slideGrid}
       >
         <Slider className={styles.carouselWrapper}>
           <Slide className={styles.first} index={0}>
