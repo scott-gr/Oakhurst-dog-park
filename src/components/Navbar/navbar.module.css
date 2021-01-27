@@ -1,9 +1,9 @@
 .navwrapper {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-template-rows: subgrid;
   grid-row: 1;
-  grid-column: 2/9; 
+  grid-column: 2/9;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
   background-color: var(--black);
   padding: 0;
   margin: 0;
@@ -20,10 +20,11 @@
   left: 0;
 }} */
 
+
+
 .navItem {
   text-decoration: none;
   color: var(--offwhite);
-  white-space: nowrap;
   margin: 0;
   transition: all 250ms ease-in;
   font-family: var(--lato);
@@ -37,10 +38,6 @@
   color: var(--yellow);
 }
 
-/* .navIcon {
-
-
-} */
 
 @media screen and (min-width: 480px) {
   .navIcon {
@@ -67,11 +64,10 @@
 }
 @media only screen and (min-width: 480px) {
 .navBox {
+  grid-column-start: 5;
   display: grid;
   grid-template-columns: subgrid;
   grid-template-rows: subgrid;
-  grid-row: 1;
-  grid-column: 5/8;
 }}
 
 @media only screen and (max-width: 480px) {
@@ -81,11 +77,7 @@
     transition: all 0.2s ease-in;
     left: 0;
     z-index: 20;
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-    grid-row: 1;
-    grid-column: 5/8;
+
   }
 }
 
@@ -94,11 +86,7 @@
     composes: navBox;
     left: -100%;
     z-index: 20;
-    display: grid;
-    grid-template-columns: subgrid;
-    grid-template-rows: subgrid;
-    grid-row: 1;
-    grid-column: 5/8;
+
   }
 }
 /* .hamburger {

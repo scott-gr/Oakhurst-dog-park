@@ -9,7 +9,7 @@ const NavBar = () => {
 
   return (
     <nav className={styles.navwrapper}>
-      <NavIcon />
+      {/* <NavIcon /> */}
       <div
         className={styles.toggle}
         open={navbarOpen}
