@@ -11,37 +11,31 @@ grid-column: 2/9;
 }
 
 .first {
-  background-color: red;
   border-color: black;
   border-style: solid;
 }
 
 .second {
-  background-color: blue;
   border-color: black;
   border-style: solid;
 }
 
 .third {
-  background-color: green;
   border-color: black;
   border-style: solid;
 }
 
 .fourth {
-  background-color: yellow;
   border-color: black;
   border-style: solid;
 }
 
 .fifth {
-  background-color: purple;
   border-color: black;
   border-style: solid;
 }
 
 .sixth {
-  background-color: orange;
   border-color: black;
   border-style: solid;
 }
