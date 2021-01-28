@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel"
 import styles from "./slider.module.css"
 import "pure-react-carousel/dist/react-carousel.es.css"
