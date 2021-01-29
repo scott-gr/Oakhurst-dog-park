@@ -12,48 +12,47 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(
+            maxWidth: 900
+            pngCompressionSpeed: 10
+            fit: COVER
+            cropFocus: EAST
+          ) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 900, pngCompressionSpeed: 10, cropFocus: EAST) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFour: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFive: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900) {
-            ...GatsbyImageSharpFluid
+          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

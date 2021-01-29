@@ -15,7 +15,7 @@ const NavbarLinks = () => {
       </Link>
 
       <Link className={styles.navItem} to="/gallery">
-        Gallery
+        Rules
       </Link>
 
       <Link className={styles.navItem} to="/contact">
