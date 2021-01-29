@@ -1,12 +1,8 @@
 .btn { 
-    border: none;
-    height:inherit;
-    width: 33vw;
-    border-radius: 5px;
     font-family: var(--lato);
-    font-size: large;
+    font-size: 2rem;
     background-color: var(--black);
     color: var(--offwhite);
     cursor: pointer;
-    margin-bottom: 1rem;
+    padding: 0;
   }

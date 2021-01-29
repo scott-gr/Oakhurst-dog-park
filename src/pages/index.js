@@ -13,9 +13,6 @@ const HomePage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
-      <div className={styles.heroImage} >
-        <Hero/>
-      </div>
       <h4 className={styles.about}>
         Pellentesque habitant morbi tristique senectus et netus et malesuada
         fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
@@ -23,11 +20,11 @@ const HomePage = ({ data, location }) => {
         egestas semper. Aenean ultricies mi vitae est. Mauris placerat
         eleifend leo.
       </h4>
-      <PhotoSlider styles={styles.slider} />
+      <PhotoSlider styles={styles.slider}/>
       <section className={styles.btnRow}>
-        <Button type="submit" text="ONE" />
-        <Button type="submit" text="TWO" />
-        <Button type="submit" text="THREE" />
+        <Button type="submit" text="Guidelines" />
+        <Button type="submit" text="Blog" />
+        <Button type="submit" text="Contact" />
       </section>
     </Layout>
   )

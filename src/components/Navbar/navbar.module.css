@@ -1,9 +1,9 @@
 .navwrapper {
+  display: inline-grid;
   grid-row: 1;
-  grid-column: 2/9;
-  display: grid;
   grid-template-rows: subgrid;
   grid-template-columns: subgrid;
+  grid-column: 1/9;
   background-color: var(--black);
   padding: 0;
   margin: 0;
@@ -20,12 +20,17 @@
   left: 0;
 }} */
 
-
+.heroLogo {
+  grid-column: 2/3;
+  height: 8rem;
+  width: 8rem;
+  justify-self: center;
+}
 
 .navItem {
   text-decoration: none;
   color: var(--offwhite);
-  margin: 0;
+  margin-top: 2rem;
   transition: all 250ms ease-in;
   font-family: var(--lato);
   font-size: 2rem;
@@ -38,12 +43,6 @@
   color: var(--yellow);
 }
 
-
-@media screen and (min-width: 480px) {
-  .navIcon {
-    display: none;
-  }
-}
 
 .toggle {
   display: none;
@@ -64,10 +63,12 @@
 }
 @media only screen and (min-width: 480px) {
 .navBox {
-  grid-column-start: 5;
   display: grid;
-  grid-template-columns: subgrid;
+  grid-row: inherit;
+  grid-auto-flow: column;
+  grid-column: 5/8;
   grid-template-rows: subgrid;
+  grid-template-columns: subgrid;
 }}
 
 @media only screen and (max-width: 480px) {
@@ -77,6 +78,7 @@
     transition: all 0.2s ease-in;
     left: 0;
     z-index: 20;
+    
 
   }
 }
@@ -86,6 +88,8 @@
     composes: navBox;
     left: -100%;
     z-index: 20;
+    
+    
 
   }
 }

@@ -1,10 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./navbar.module.css"
+import NavIcon from "./NavIcon.js"
 
 const NavbarLinks = () => {
   return (
-    <div className={styles.navLinks}>
+    <>
       <Link className={styles.navItem} to="/">
         About
       </Link>
@@ -20,7 +21,7 @@ const NavbarLinks = () => {
       <Link className={styles.navItem} to="/contact">
         Contact
       </Link>
-    </div>
+    </>
   )
 }
 

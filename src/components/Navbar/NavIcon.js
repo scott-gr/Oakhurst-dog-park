@@ -28,6 +28,8 @@ const NavIcon = () => {
     <Img
       className={styles.navIcon}
       fluid={data.iconImage.childImageSharp.fluid}
+      height={100}
+      width={100}
     />
   )
 }

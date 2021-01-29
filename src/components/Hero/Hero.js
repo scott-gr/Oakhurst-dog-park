@@ -11,7 +11,7 @@ const Hero = () => {
           fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid
             ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -23,7 +23,11 @@ const Hero = () => {
   }
 
   return (
-    <Img className={styles.logo} fluid={data.heroImage.childImageSharp.fluid} />
+    <Img
+      className={styles.hero}
+      fluid={data.heroImage.childImageSharp.fluid}
+      durationFadeIn={50}
+    />
   )
 }
 
