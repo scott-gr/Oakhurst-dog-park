@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./navbar.module.css"
+import NavIcon from "./NavIcon.js"
 
 const NavbarLinks = () => {
   return (

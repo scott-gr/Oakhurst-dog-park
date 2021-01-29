@@ -2,14 +2,16 @@ import React, { useState } from "react"
 import Burger from "./Burger.js"
 import styles from "./navbar.module.css"
 import NavbarLinks from "./NavbarLinks.js"
-import NavIcon from "./NavIcon.js"
+import Hero from "../Hero/Hero.js"
 
 const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
     <nav className={styles.navwrapper}>
-      {/* <NavIcon /> */}
+      <div className={styles.heroLogo} >
+        <Hero/>
+      </div>
       <div
         className={styles.toggle}
         open={navbarOpen}

@@ -9,9 +9,7 @@ const Layout = ({ children }) => {
       <NavBar />
       {children}
       <footer>
-        © Oakhurst Dog Park 2021, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        © Oakhurst Dog Park 2021
       </footer>
     </div>
   )

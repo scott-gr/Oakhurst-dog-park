@@ -4,4 +4,5 @@
     background-color: var(--black);
     color: var(--offwhite);
     cursor: pointer;
+    padding: 0;
   }

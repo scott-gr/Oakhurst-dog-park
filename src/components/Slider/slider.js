@@ -12,55 +12,49 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFour: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFive: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250) {
+          fluid(maxWidth: 900) {
             ...GatsbyImageSharpFluid
-            ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -109,8 +103,11 @@ const PhotoSlider = () => {
       naturalSlideWidth={100}
       naturalSlideHeight={100}
       totalSlides={6}
-      visibleSlides={2.1}
+      visibleSlides={2}
       infinite={true}
+      touchEnabled={true}
+      dragEnabled={true}
+      isPlaying={true}
       isIntrinsicHeight={true}
       // hasMasterSpinner={true}
       orientation={"horizontal"}
@@ -121,12 +118,14 @@ const PhotoSlider = () => {
           <Img
             className={styles.first}
             fluid={data.sliderImgOne.childImageSharp.fluid}
+            durationFadeIn={50}
           />
         </Slide>
         <Slide index={1}>
           <Img
             className={styles.second}
             fluid={data.sliderImgTwo.childImageSharp.fluid}
+            durationFadeIn={50}
           />
         </Slide>
         <Slide index={2}>

@@ -1,11 +1,11 @@
-.logo {
+.hero {
   border-radius: 16%;
   border-style: solid;
   border-color: black;
   border-width: 3px;
   object-fit: cover;
   justify-self: center;
-  align-self: center;
+  align-self:center;
   height: 100%;
   width: 100%;
 }
