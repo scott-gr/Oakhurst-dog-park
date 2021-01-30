@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 import styles from "./styles/index.module.css"
-import Hero from "../components/Hero/Hero.js"
 import PhotoSlider from "../components/Slider/slider.js"
 import { graphql } from "gatsby"
 import Button from "../components/Button/Button.js"
@@ -22,7 +21,7 @@ const HomePage = ({ data, location }) => {
       </h4>
       <PhotoSlider styles={styles.slider}/>
       <section className={styles.btnRow}>
-        <Button type="submit" text="Guidelines" />
+        <Button type="submit" text="Rules" />
         <Button type="submit" text="Blog" />
         <Button type="submit" text="Contact" />
       </section>
