@@ -1,10 +1,24 @@
 footer {
   font-family: var(--zilla);
-  grid-row: 4;
-  grid-column: 2/8;
-  place-self: center;
-  margin-bottom: 0;
+  grid-row: 6;
+  grid-column: 3/7;
+  align-self: flex-end;
+  position: relative;
+  padding-bottom: .5rem;
+  text-align: center;
   height: min-content;
+}
+
+p {
+  grid-row: 2;
+}
+
+.btnRow {
+
+  grid-row: 1;
+  padding: 0;
+  gap: 2rem;
+  height: max-content;
 }
 
 .globalWrapper {
@@ -15,7 +29,7 @@ footer {
   display: grid;
   gap:.5rem;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: max-content max-content auto auto;
+  grid-template-rows: max-content 6rem max-content max-content auto auto;
   background-color: var(--black);
   color: white;
   font-family: var(--lato);

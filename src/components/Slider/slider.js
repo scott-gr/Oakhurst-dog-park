@@ -59,44 +59,6 @@ const PhotoSlider = () => {
       }
     }
   `)
-
-  // if (!data?.heroImage?.childImageSharp?.fluid) {
-  //   return (
-  //     <CarouselProvider
-  //       naturalSlideWidth={50}
-  //       naturalSlideHeight={30}
-  //       totalSlides={6}
-  //       visibleSlides={2.1}
-  //       infinite={true}
-  //       isIntrinsicHeight={true}
-  //       // hasMasterSpinner={true}
-  //       orientation={"horizontal"}
-  //       className={styles.slideGrid}
-  //     >
-  //       <Slider className={styles.carouselWrapper}>
-  //         <Slide className={styles.first} index={0}>
-  //           Picture not found
-  //         </Slide>
-  //         <Slide className={styles.second} index={1}>
-  //           Picture not found
-  //         </Slide>
-  //         <Slide className={styles.third} index={2}>
-  //           Picture not found
-  //         </Slide>
-  //         <Slide className={styles.fourth} index={3}>
-  //           Picture not found
-  //         </Slide>
-  //         <Slide className={styles.fifth} index={4}>
-  //           Picture not found
-  //         </Slide>
-  //         <Slide className={styles.sixth} index={5}>
-  //           Picture not found
-  //         </Slide>
-  //       </Slider>
-  //     </CarouselProvider>
-  //   )
-  // }
-
   return (
     <CarouselProvider
       naturalSlideWidth={100}
