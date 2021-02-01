@@ -3,9 +3,11 @@
   border-style: solid;
   border-color: black;
   border-width: 3px;
-  object-fit: cover;
-  justify-self: center;
-  align-self:center;
+  object-fit:cover;
+  margin: 0;
+  padding: 0;
   height: 100%;
   width: 100%;
+  justify-self: center;
+  align-self: center;
 }

@@ -9,15 +9,18 @@ const NavBar = () => {
 
   return (
     <nav className={styles.navwrapper}>
-      <div className={styles.heroLogo} >
-        <Hero/>
-      </div>
+      <Hero />
+
       <div
         className={styles.toggle}
         open={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen) }
+        onClick={() => setNavbarOpen(!navbarOpen)}
       >
-        {navbarOpen ? <Burger open className={styles.burgerOpen}/> : <Burger className={styles.burger} />}
+        {navbarOpen ? (
+          <Burger open className={styles.burgerOpen} />
+        ) : (
+          <Burger className={styles.burger} />
+        )}
       </div>
       {navbarOpen ? (
         <div className={styles.navBox}>
