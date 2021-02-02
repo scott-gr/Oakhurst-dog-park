@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+// import { Link } from "gatsby"
 import Burger from "./Burger.js"
 import styles from "./navbar.module.css"
 import NavbarLinks from "./NavbarLinks.js"
@@ -10,7 +11,6 @@ const NavBar = () => {
   return (
     <nav className={styles.navwrapper}>
       <Hero />
-
       <div
         className={styles.toggle}
         open={navbarOpen}

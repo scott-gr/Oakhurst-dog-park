@@ -14,9 +14,27 @@ collections:
     folder: /content/blog
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    path: '{{slug}}'
+    path: "{{slug}}"
     fields:
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description, widget: string }
+      - { name: image, label: Cover Image, widget: image, required: false, tagname: ""}
+      - { name: body, label: Body, widget: markdown }
+
+  - name: announcements
+    label: Announcements
+    label_singular: Announcement
+    description: Announcements will appear like a 'pinned' blog post in the bottom section of the front page.
+    folder: /content/announcements
+    editor: 
+      preview: true
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: description, label: Description, widget: string }
+      - { name: image, label: Cover Image, widget: image, required: false, tagname: ""}
       - { name: body, label: Body, widget: markdown }

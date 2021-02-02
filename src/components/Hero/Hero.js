@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import styles from "./hero.module.css"
 
 const Hero = () => {
@@ -21,11 +22,13 @@ const Hero = () => {
   }
 
   return (
-    <Img
+    <Link className={styles.heroLink} to="/">
+      <Img
       className={styles.hero}
       fixed={data.heroImage.childImageSharp.fixed}
       durationFadeIn={50}
     />
+    </Link>
   )
 }
 
