@@ -4,7 +4,7 @@ import SEO from "../components/seo.js"
 import styles from "./styles/index.module.css"
 import PhotoSlider from "../components/Slider/slider.js"
 import { graphql } from "gatsby"
-import Button from "../components/Button/Button.js"
+// import Button from "../components/Button/Button.js"
 
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -18,7 +18,7 @@ const HomePage = ({ data, location }) => {
 
       <div className={styles.overlay} />
       <PhotoSlider />
-
+      
     </Layout>
   )
 }
@@ -30,6 +30,19 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
       }
     }
   }

@@ -5,20 +5,18 @@ import Button from "../Button/Button.js"
 // import { useViewport, ViewportProvider } from "../../Hooks/useViewport.js"
 
 const Layout = ({ children }) => {
-
   return (
     // <ViewportProvider>
     <div className={styles.globalWrapper}>
       <NavBar />
       {children}
       <footer>
-
         <section className={styles.btnRow}>
-        <Button type="submit" text="Rules" />
-        <Button type="submit" text="Blog" />
-        <Button type="submit" text="Contact" />
+          <Button type="submit" text="Rules" />
+          <Button type="submit" text="Blog" />
+          <Button type="submit" text="Contact" />
+        </section>
         <p>© Oakhurst Dog Park 2021</p>
-      </section>
       </footer>
     </div>
     // </ViewportProvider>

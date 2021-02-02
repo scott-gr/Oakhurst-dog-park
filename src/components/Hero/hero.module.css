@@ -11,3 +11,7 @@
   justify-self: center;
   align-self: center;
 }
+
+.heroLink {
+  place-self: center;
+}

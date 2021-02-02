@@ -1,7 +1,7 @@
 footer {
   font-family: var(--zilla);
   grid-row: 6;
-  grid-column: 2/6;
+  grid-column: 3/6;
   align-self: flex-end;
   position: relative;
   padding-bottom: .5rem;
@@ -14,7 +14,6 @@ p {
 }
 
 .btnRow {
-
   grid-row: 1;
   padding: 0;
   gap: 2rem;
