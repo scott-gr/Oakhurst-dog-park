@@ -28,15 +28,16 @@
   transition: all 250ms ease-in;
   font-family: var(--lato);
   font-size: 2rem;
-  opacity: 100%;
   margin: 0;
   padding: 0;
   place-self: center;
+  z-index: 20;
 }
 
 .navItem:hover {
   transform: scale(1.2);
   color: var(--yellow);
+  z-index: 20;
 }
 
 
