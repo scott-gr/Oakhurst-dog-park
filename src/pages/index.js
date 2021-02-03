@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 import styles from "./styles/index.module.css"
 import PhotoSlider from "../components/Slider/slider.js"
+import Announcement from "../components/Announcement/Announcement.js"
 import { graphql } from "gatsby"
 // import Button from "../components/Button/Button.js"
 
@@ -18,7 +19,7 @@ const HomePage = ({ data, location }) => {
 
       <div className={styles.overlay} />
       <PhotoSlider />
-      
+      < Announcement />
     </Layout>
   )
 }
