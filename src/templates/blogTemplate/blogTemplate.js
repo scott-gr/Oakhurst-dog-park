@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import styles from "./blogTemplate.module.css"
+import  "./blogTemplate.module.css"
 import Layout from "../../components/Layout/Layout.js"
 import SEO from "../../components/seo.js"
 
@@ -16,25 +16,25 @@ const BlogTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className={styles.blogCard}
+        styleName="blogCard"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 className={styles.blogTitle} itemProp="headline">
+          <h1 styleName="blogTitle" itemProp="headline">
             {post.frontmatter.title}
           </h1>
-          <p className={styles.blogDate}>{post.frontmatter.date}</p>
+          <p styleName="blogDate">{post.frontmatter.date}</p>
         </header>
         <section
-          className={styles.blogBody}
+          styleName="blogBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
         <footer>(Share buttons here)</footer>
       </article>
-      <nav className={styles.blognav}>
+      <nav styleName="blognav">
         <ul>
           <li>
             {previous && (

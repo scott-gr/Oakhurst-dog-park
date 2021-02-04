@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
-import styles from "./styles/index.module.css"
+import "./styles/index.module.css"
 import PhotoSlider from "../components/Slider/slider.js"
 import Announcement from "../components/Announcement/Announcement.js"
 import { graphql } from "gatsby"
@@ -14,10 +14,10 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
 
-        <h1 className={styles.bigText}>Oakhurst Dog Park</h1>
-        <h4 className={styles.smallText}>Some really great, eye-catching words about the dog park. This text is fun, not necessarily informative.</h4>
+        <h1 styleName="bigText">Oakhurst Dog Park</h1>
+        <h4 styleName="smallText">Some really great, eye-catching words about the dog park. This text is fun, not necessarily informative.</h4>
 
-      <div className={styles.overlay} />
+      <div styleName="overlay" />
       <PhotoSlider />
       < Announcement />
     </Layout>

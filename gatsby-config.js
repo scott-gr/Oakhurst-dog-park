@@ -20,6 +20,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `announcements`,
+        path: `${__dirname}/content/announcements`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `logos`,
         path: `${__dirname}/content/assets/logos`,
       },
@@ -59,6 +66,23 @@ module.exports = {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD google TRACKING ID HERE`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-css-modules`,
+      options: {
+        // *.css files are included by default.
+        // To support another syntax (e.g. SCSS),
+        // add `postcss-scss` to your project's devDependencies
+        // and add the following option here:
+        // filetypes: {
+        //   ".scss": { syntax: `postcss-scss` },
+        // },
+        // Exclude global styles from the plugin using a RegExp:
+        exclude: `\/global\/`,
+        exclude: `node_modules`,
+        handleMissingStyleName: `warn`,
+        // For all the options check babel-plugin-react-css-modules README link provided above
       },
     },
     `gatsby-plugin-feed`,

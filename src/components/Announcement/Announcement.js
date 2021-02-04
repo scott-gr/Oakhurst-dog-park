@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import SEO from "../seo.js"
-import styles from "./announcement.module.css"
+import "./announcement.module.css"
 
 const Announcement = () => {
   const data = useStaticQuery(graphql`
@@ -41,24 +41,24 @@ const Announcement = () => {
 
         return (
           <article
-            className={styles.announcementCard}
+            styleName="announcementCard"
             // className="post-list-item"
             itemScope
             itemType="http://schema.org/Article"
           >
             <header>
-              <h2 className={styles.announcementTitle}>
+              <h2 styleName="announcementTitle">
                 <Link to={post.fields.slug} itemProp="url">
                   <span itemProp="headline">{title}</span>
                 </Link>
               </h2>
-              <small className={styles.announcementDate}>
+              <small styleName="announcementDate">
                 {post.frontmatter.date}
               </small>
             </header>
             <section>
               <p
-                className={styles.announcementDesc}
+                styleName="announcementDesc"
                 dangerouslySetInnerHTML={{
                   __html: post.frontmatter.description || post.excerpt,
                 }}

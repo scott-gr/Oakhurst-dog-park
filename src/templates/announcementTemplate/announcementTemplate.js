@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styles from "./announcementTemplate.module.css"
+import "./announcementTemplate.module.css"
 import Layout from "../../components/Layout/Layout.js"
 import SEO from "../../components/seo.js"
 
@@ -15,25 +15,24 @@ const AnnouncementTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       <article
-        className={styles.Card}
+        styleName="Card"
         itemScope
         itemType="http://schema.org/Article"
       >
         <header>
-          <h1 className={styles.announceTitle} itemProp="headline">
+          <h1 styleName="announceTitle" itemProp="headline">
             {post.frontmatter.title}
           </h1>
-          <p className={styles.announceDate}>{post.frontmatter.date}</p>
+          <p styleName="announceDate">{post.frontmatter.date}</p>
         </header>
         <section
-          className={styles.announceBody}
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
         <hr />
         <footer>(Share buttons here)</footer>
       </article>
-      {/* <nav className={styles.blognav}>
+      {/* <nav styleName="blognav">
         <ul>
           <li>
             {previous && (

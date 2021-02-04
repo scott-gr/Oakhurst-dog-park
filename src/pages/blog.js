@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
-import styles from "../pages/styles/blog.module.css"
+import "../pages/styles/blog.module.css"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -31,24 +31,24 @@ const BlogIndex = ({ data, location }) => {
           return (
             <li key={post.fields.slug}>
               <article
-                className={styles.blogCard}
+                styleName="blogCard"
                 // className="post-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2 className={styles.blogTitle}>
+                  <h2 styleName="blogTitle">
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small className={styles.blogDate}>
+                  <small styleName="blogDate">
                     {post.frontmatter.date}
                   </small>
                 </header>
                 <section>
                   <p
-                    className={styles.blogDesc}
+                    styleName="blogDesc"
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
