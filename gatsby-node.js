@@ -6,27 +6,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
 
+
   const result = await graphql(
     `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
+    {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: ASC }
+        limit: 1000
+      ) {
+        nodes {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            featuredpost
           }
         }
       }
-    `
+    }
+  `
   )
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      `There was an error loading your posts`,
       result.errors
     )
     return
@@ -99,6 +103,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      featuredpost: Boolean
     }
 
     type Fields {

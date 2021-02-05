@@ -28,15 +28,16 @@
   transition: all 250ms ease-in;
   font-family: var(--lato);
   font-size: 2rem;
-  opacity: 100%;
   margin: 0;
   padding: 0;
   place-self: center;
+  z-index: 20;
 }
 
 .navItem:hover {
   transform: scale(1.2);
   color: var(--yellow);
+  z-index: 20;
 }
 
 
@@ -95,28 +96,3 @@
 
   }
 }
-/* .hamburger {
-  transform: ${props => (props.open ? "rotate(-45deg)" : "inherit")};
-
-  ::before,
-  ::after {
-    width: 30px;
-    height: 3px;
-    background-color: #111;
-    content: "";
-    position: absolute;
-    transition: all 0.3s linear;
-  }
-
-.hamburger 
-  ::before 
-    transform: ${props =>
-      props.open ? "rotate(-90deg) translate(-10px, 0px)" : "rotate(0deg)"};
-    top: -10px;
-  },
-
-  ::after {
-    opacity: ${props => (props.open ? "0" : "1")};
-    transform: ${props => (props.open ? "rotate(90deg) " : "rotate(0deg)")};
-    top: 10px;
-  } */

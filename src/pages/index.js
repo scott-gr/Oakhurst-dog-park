@@ -1,8 +1,9 @@
 import React from "react"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
-import styles from "./styles/index.module.css"
+import "./styles/index.module.css"
 import PhotoSlider from "../components/Slider/slider.js"
+import FeaturedPost from "../components/FeaturedPost/FeaturedPost.js"
 import { graphql } from "gatsby"
 // import Button from "../components/Button/Button.js"
 
@@ -13,12 +14,12 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
 
-        <h1 className={styles.bigText}>Oakhurst Dog Park</h1>
-        <h4 className={styles.smallText}>Some really great, eye-catching words about the dog park. This text is fun, not necessarily informative.</h4>
+        <h1 styleName="bigText">Oakhurst Dog Park</h1>
+        <h4 styleName="smallText">Some really great, eye-catching words about the dog park. This text is fun, not necessarily informative.</h4>
 
-      <div className={styles.overlay} />
+      <div styleName="overlay" />
       <PhotoSlider />
-      
+      < FeaturedPost />
     </Layout>
   )
 }
@@ -32,18 +33,6 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
+
   }
 `

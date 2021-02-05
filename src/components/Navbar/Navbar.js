@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 // import { Link } from "gatsby"
 import Burger from "./Burger.js"
-import styles from "./navbar.module.css"
+import "./navbar.module.css"
 import NavbarLinks from "./NavbarLinks.js"
 import Hero from "../Hero/Hero.js"
 
@@ -9,25 +9,25 @@ const NavBar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <nav className={styles.navwrapper}>
+    <nav styleName="navwrapper">
       <Hero />
       <div
-        className={styles.toggle}
+        styleName="toggle"
         open={navbarOpen}
         onClick={() => setNavbarOpen(!navbarOpen)}
       >
         {navbarOpen ? (
-          <Burger open className={styles.burgerOpen} />
+          <Burger open styleName="burgerOpen" />
         ) : (
-          <Burger className={styles.burger} />
+          <Burger styleName="burger" />
         )}
       </div>
       {navbarOpen ? (
-        <div className={styles.navBox}>
+        <div styleName="navBox">
           <NavbarLinks />
         </div>
       ) : (
-        <div className={styles.navBoxOpen} open>
+        <div styleName="navBoxOpen" open>
           <NavbarLinks />
         </div>
       )}
