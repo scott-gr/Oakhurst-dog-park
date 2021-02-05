@@ -5,9 +5,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
-  const announcement = path.resolve(
-    `./src/templates/announcementTemplate/announcementTemplate.js`
-  )
+
 
   const result = await graphql(
     `
@@ -20,6 +18,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id
           fields {
             slug
+          }
+          frontmatter {
+            featuredpost
           }
         }
       }
@@ -102,6 +103,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       title: String
       description: String
       date: Date @dateformat
+      featuredpost: Boolean
     }
 
     type Fields {

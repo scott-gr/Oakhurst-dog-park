@@ -3,7 +3,7 @@ import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 import "./styles/index.module.css"
 import PhotoSlider from "../components/Slider/slider.js"
-import Announcement from "../components/FeaturedPost/FeaturedPost.js"
+import FeaturedPost from "../components/FeaturedPost/FeaturedPost.js"
 import { graphql } from "gatsby"
 // import Button from "../components/Button/Button.js"
 
@@ -19,7 +19,7 @@ const HomePage = ({ data, location }) => {
 
       <div styleName="overlay" />
       <PhotoSlider />
-      < Announcement />
+      < FeaturedPost />
     </Layout>
   )
 }
@@ -33,18 +33,6 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
+
   }
 `
