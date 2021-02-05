@@ -5,30 +5,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
-  const announcement = path.resolve(`./src/templates/announcementTemplate/announcementTemplate.js`)
-
+  const announcement = path.resolve(
+    `./src/templates/announcementTemplate/announcementTemplate.js`
+  )
 
   const result = await graphql(
     `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
+    {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: ASC }
+        limit: 1000
+      ) {
+        nodes {
+          id
+          fields {
+            slug
           }
         }
       }
-    `
+    }
+  `
   )
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      `There was an error loading your posts`,
       result.errors
     )
     return

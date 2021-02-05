@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
-import styles from "./hero.module.css"
+import "./hero.module.css"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -22,9 +22,9 @@ const Hero = () => {
   }
 
   return (
-    <Link className={styles.heroLink} to="/">
+    <Link styleName="heroLink" to="/">
       <Img
-      className={styles.hero}
+      styleName="hero"
       fixed={data.heroImage.childImageSharp.fixed}
       durationFadeIn={50}
     />

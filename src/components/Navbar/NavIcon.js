@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styles from "./navbar.module.css"
+import "./navbar.module.css"
 
 const NavIcon = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +26,7 @@ const NavIcon = () => {
 
   return (
     <Img
-      className={styles.navIcon}
+      styleName="navIcon"
       fluid={data.iconImage.childImageSharp.fluid}
       height={100}
       width={100}

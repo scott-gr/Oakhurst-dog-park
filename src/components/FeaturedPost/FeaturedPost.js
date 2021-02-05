@@ -1,9 +1,9 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import SEO from "../seo.js"
-import styles from "./announcement.module.css"
+import "./featuredpost.module.css"
 
-const Announcement = () => {
+const FeaturedPost = () => {
   const data = useStaticQuery(graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -25,7 +25,7 @@ const Announcement = () => {
   if (posts.length === 0) {
     return (
       <>
-        <SEO title="Announcements" />
+        <SEO title="Featured Post" />
         <p>
           No announcements found. Add markdown posts to "content/announcements"
           (or the directory you specified for the "gatsby-source-filesystem"
@@ -41,24 +41,24 @@ const Announcement = () => {
 
         return (
           <article
-            className={styles.announcementCard}
+            styleName="featuredCard"
             // className="post-list-item"
             itemScope
             itemType="http://schema.org/Article"
           >
             <header>
-              <h2 className={styles.announcementTitle}>
+              <h2 styleName="featuredTitle">
                 <Link to={post.fields.slug} itemProp="url">
                   <span itemProp="headline">{title}</span>
                 </Link>
               </h2>
-              <small className={styles.announcementDate}>
+              <small styleName="featuredDate">
                 {post.frontmatter.date}
               </small>
             </header>
             <section>
               <p
-                className={styles.announcementDesc}
+                styleName="featuredDesc"
                 dangerouslySetInnerHTML={{
                   __html: post.frontmatter.description || post.excerpt,
                 }}
@@ -72,6 +72,6 @@ const Announcement = () => {
   )
 }
 
-export default Announcement
+export default FeaturedPost
 
 

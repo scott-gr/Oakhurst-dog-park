@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./layout.module.css"
+import "./layout.module.css"
 import NavBar from "../Navbar/Navbar.js"
 import Button from "../Button/Button.js"
 // import { useViewport, ViewportProvider } from "../../Hooks/useViewport.js"
@@ -7,11 +7,11 @@ import Button from "../Button/Button.js"
 const Layout = ({ children }) => {
   return (
     // <ViewportProvider>
-    <div className={styles.globalWrapper}>
+    <div styleName="globalWrapper">
       <NavBar />
       {children}
       <footer>
-        <section className={styles.btnRow}>
+        <section styleName="btnRow">
           <Button type="submit" text="Rules" />
           <Button type="submit" text="Blog" />
           <Button type="submit" text="Contact" />
