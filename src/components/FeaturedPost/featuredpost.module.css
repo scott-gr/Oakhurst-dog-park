@@ -1,0 +1,11 @@
+.featuredCard {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row: 5;
+  grid-column: 2/4;
+
+}
+
+.featuredTitle {
+  text-decoration: none;
+}

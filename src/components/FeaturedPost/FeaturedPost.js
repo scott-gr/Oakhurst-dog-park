@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, Link, graphql } from "gatsby"
-import SEO from "../seo.js"
 import "./featuredpost.module.css"
+import SEO from "../seo.js"
 
 const FeaturedPost = () => {
   const data = useStaticQuery(graphql`
@@ -12,10 +12,10 @@ const FeaturedPost = () => {
           fields {
             slug
           }
+          html
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
             featuredpost
           }
         }
@@ -45,25 +45,23 @@ const FeaturedPost = () => {
           return (
             <article
               styleName="featuredCard"
-              // className="post-list-item"
               itemScope
               itemType="http://schema.org/Article"
             >
               <header>
-                <h2 styleName="featuredTitle">
-                  <Link to={post.fields.slug} itemProp="url">
-                    <span itemProp="headline">{title}</span>
-                  </Link>
-                </h2>
+                <Link to={post.fields.slug} itemProp="url" styleName="featuredTitle">
+                  <h2 itemProp="headline" styleName="featuredTitle">
+                    {title}
+                  </h2>
+                </Link>
+
                 <small styleName="featuredDate">{post.frontmatter.date}</small>
               </header>
               <section>
-                <p
-                  styleName="featuredDesc"
-                  dangerouslySetInnerHTML={{
-                    __html: post.frontmatter.description || post.excerpt,
-                  }}
-                  itemProp="description"
+                <section
+                  styleName="featuredBody"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                  itemProp="articleBody"
                 />
               </section>
             </article>
