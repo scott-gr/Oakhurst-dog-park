@@ -3,6 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import "./navbar.module.css"
 
+// the white outline version of the logo
+
 const NavIcon = () => {
   const data = useStaticQuery(graphql`
     query {
