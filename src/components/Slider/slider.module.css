@@ -2,7 +2,7 @@
   /* grid-template-columns: subgrid;
   grid-template-rows: subgrid; */
   grid-row: 2/5;
-  grid-column: 1/8;
+  grid-column: 1/5;
   z-index: 0;
   height: max-content;
   margin: 0;
