@@ -17,8 +17,8 @@ const NavbarLinks = () => {
         Rules
       </Link>
 
-      <Link styleName="navItem" to="/contact">
-        Contact
+      <Link styleName="navItem" to="/getinvolved">
+        Get Involved
       </Link>
     </>
   )
