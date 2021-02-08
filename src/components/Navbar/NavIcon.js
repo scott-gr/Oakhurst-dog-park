@@ -8,9 +8,7 @@ import "./navbar.module.css"
 const NavIcon = () => {
   const data = useStaticQuery(graphql`
     query {
-      iconImage: file(
-        relativePath: { eq: "navicon.png" }
-      ) {
+      iconImage: file(relativePath: { eq: "navicon.png" }) {
         childImageSharp {
           fluid(maxWidth: 250) {
             ...GatsbyImageSharpFluid

@@ -24,10 +24,10 @@ const Hero = () => {
   return (
     <Link styleName="heroLink" to="/">
       <Img
-      styleName="hero"
-      fixed={data.heroImage.childImageSharp.fixed}
-      durationFadeIn={50}
-    />
+        styleName="hero"
+        fixed={data.heroImage.childImageSharp.fixed}
+        durationFadeIn={50}
+      />
     </Link>
   )
 }

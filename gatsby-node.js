@@ -6,26 +6,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
 
-
   const result = await graphql(
     `
-    {
-      allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: ASC }
-        limit: 1000
-      ) {
-        nodes {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            featuredpost
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: ASC }
+          limit: 1000
+        ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
+            frontmatter {
+              featuredpost
+            }
           }
         }
       }
-    }
-  `
+    `
   )
 
   if (result.errors) {

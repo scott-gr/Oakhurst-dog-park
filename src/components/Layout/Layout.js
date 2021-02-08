@@ -14,11 +14,12 @@ const Layout = ({ children }) => {
       {children}
       <footer>
         <section styleName="btnRow">
-          <a styleName="fbIcon"
+          <a
+            styleName="fbIcon"
             href="https://www.facebook.com/OakhurstDogPark"
             alt="Facebook Page"
           >
-            <FontAwesomeIcon  icon={faFacebook} />
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
         </section>
         <p>© Oakhurst Dog Park 2021</p>
