@@ -6,7 +6,7 @@
   --blue : #0491D7;
   --yellow : #FEAE25;
   --red : #E91929;
-  --black : #1f2022;
+  --black : #171717;
   --offwhite : #ECF0F1;
 }
 
@@ -18,7 +18,8 @@ body {
   background-color: var(--offwhite);
   height: 100%;
   width: 100%;
-
+  margin: 0;
+  padding: 0;
 }
 
 img {

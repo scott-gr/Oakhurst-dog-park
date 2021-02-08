@@ -14,12 +14,16 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
 
-        <h1 styleName="bigText">Oakhurst Dog Park</h1>
-        <h4 styleName="smallText">Some really great, eye-catching words about the dog park. This text is fun, not necessarily informative.</h4>
+      <h1 styleName="bigText">Oakhurst Dog Park</h1>
+      {/* <h4 styleName="smallText">Some really great, eye-catching words about the dog park. This text is fun, not necessarily informative.</h4> */}
 
       <div styleName="overlay" />
       <PhotoSlider />
-      < FeaturedPost />
+      <FeaturedPost />
+      <section styleName="brief">
+        {" "}
+        <p>Address</p>
+      </section>
     </Layout>
   )
 }
@@ -33,6 +37,5 @@ export const pageQuery = graphql`
         title
       }
     }
-
   }
 `

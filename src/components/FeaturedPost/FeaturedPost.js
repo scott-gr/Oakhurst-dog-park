@@ -49,7 +49,11 @@ const FeaturedPost = () => {
               itemType="http://schema.org/Article"
             >
               <header>
-                <Link to={post.fields.slug} itemProp="url" styleName="featuredTitle">
+                <Link
+                  to={post.fields.slug}
+                  itemProp="url"
+                  styleName="featuredTitle"
+                >
                   <h2 itemProp="headline" styleName="featuredTitle">
                     {title}
                   </h2>
