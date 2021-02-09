@@ -13,5 +13,5 @@
 }
 
 .heroLink {
-  place-self: center;
+  justify-self: flex-start ;
 }

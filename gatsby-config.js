@@ -1,3 +1,10 @@
+const myViews = {
+  mobile: '(max-width: 720px)',
+  tablet: '(max-width: 1007px)',
+  pc: '(min-width: 1008px)',
+  portrait: '(orientation: portrait)',
+};
+
 module.exports = {
   siteMetadata: {
     title: `Oakhurst Dog Park`,
@@ -31,6 +38,12 @@ module.exports = {
         path: `${__dirname}/content/assets/slides`,
       },
     },
+    {
+      resolve: "gatsby-plugin-breakpoints",
+      options: {
+          queries: myViews,
+      },
+  },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -1,7 +1,6 @@
 import React from "react"
 import "./layout.module.css"
 import NavBar from "../Navbar/Navbar.js"
-import Button from "../Button/Button.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
 // import { useViewport, ViewportProvider } from "../../Hooks/useViewport.js"

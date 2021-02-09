@@ -1,7 +1,7 @@
 .featuredCard {
   display: grid;
   grid-template-rows: auto auto;
-  grid-row: 5;
+  grid-row: 3;
   place-self: center;
   grid-column: 1/3;
 

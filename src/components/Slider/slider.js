@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel"
-import styles from "./slider.module.css"
+import "./slider.module.css"
 import "pure-react-carousel/dist/react-carousel.es.css"
 
 // Pure React Carousel Docs https://github.com/express-labs/pure-react-carousel
@@ -62,7 +62,7 @@ const PhotoSlider = () => {
   return (
     <CarouselProvider
       naturalSlideWidth={100}
-      naturalSlideHeight={100}
+      naturalSlideHeight={75}
       totalSlides={6}
       visibleSlides={2}
       infinite={true}
@@ -70,46 +70,45 @@ const PhotoSlider = () => {
       dragEnabled={true}
       isPlaying={true}
       isIntrinsicHeight={true}
-      // hasMasterSpinner={true}
       orientation={"horizontal"}
-      className={styles.slideGrid}
+      styleName="slideGrid"
     >
-      <Slider className={styles.carouselWrapper}>
+      <Slider styleName="carouselWrapper">
         <Slide index={0}>
           <Img
-            className={styles.first}
+            styleName="first"
             fluid={data.sliderImgOne.childImageSharp.fluid}
             durationFadeIn={50}
           />
         </Slide>
         <Slide index={1}>
           <Img
-            className={styles.second}
+            styleName="second"
             fluid={data.sliderImgTwo.childImageSharp.fluid}
             durationFadeIn={50}
           />
         </Slide>
         <Slide index={2}>
           <Img
-            className={styles.third}
+            styleName="third"
             fluid={data.sliderImgThree.childImageSharp.fluid}
           />
         </Slide>
         <Slide index={3}>
           <Img
-            className={styles.fourth}
+            styleName="fourth"
             fluid={data.sliderImgFour.childImageSharp.fluid}
           />
         </Slide>
         <Slide index={4}>
           <Img
-            className={styles.fifth}
+            styleName="fifth"
             fluid={data.sliderImgFive.childImageSharp.fluid}
           />
         </Slide>
         <Slide index={5}>
           <Img
-            className={styles.sixth}
+            styleName="sixth"
             fluid={data.sliderImgSix.childImageSharp.fluid}
           />
         </Slide>
