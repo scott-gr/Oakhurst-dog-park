@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav styleName="navwrapper">
       <Hero />
 
-      {breakpoints.mobile ? (
+      {breakpoints.tablet ? (
         <Toggle />
       ) : (
         <div styleName="navBox">

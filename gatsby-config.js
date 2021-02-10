@@ -1,5 +1,5 @@
 const myViews = {
-  mobile: '(max-width: 720px)',
+  mobile: '(max-width: 480px)',
   tablet: '(max-width: 1007px)',
   pc: '(min-width: 1008px)',
   portrait: '(orientation: portrait)',

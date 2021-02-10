@@ -4,7 +4,7 @@
 }
 
 .bigText {
-  font-size: 4.5rem;
+  font-size: 3rem;
   grid-row: 2;
   grid-column: 2/4;
   z-index: 12;

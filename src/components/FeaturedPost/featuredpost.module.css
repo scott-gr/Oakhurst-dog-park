@@ -4,9 +4,17 @@
   grid-row: 3;
   place-self: center;
   grid-column: 1/3;
-
+  padding-left: 2rem;
 }
 
 .featuredTitle {
   text-decoration: none;
+  color: var(--yellow);
+  font-family: var(--zilla);
+  font-size: 2rem;
+  margin: 0;
+}
+
+.featuredDate {
+  margin: 0;
 }

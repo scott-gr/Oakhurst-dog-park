@@ -12,15 +12,13 @@ const Layout = ({ children }) => {
       <NavBar />
       {children}
       <footer>
-        <section styleName="btnRow">
-          <a
-            styleName="fbIcon"
-            href="https://www.facebook.com/OakhurstDogPark"
-            alt="Facebook Page"
-          >
-            <FontAwesomeIcon icon={faFacebook} />
-          </a>
-        </section>
+        <a
+          styleName="fbIcon"
+          href="https://www.facebook.com/OakhurstDogPark"
+          alt="Facebook Page"
+        >
+          <FontAwesomeIcon icon={faFacebook} />
+        </a>
         <p>© Oakhurst Dog Park 2021</p>
       </footer>
     </div>
