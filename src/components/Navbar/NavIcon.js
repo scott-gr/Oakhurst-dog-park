@@ -10,10 +10,9 @@ const NavIcon = () => {
     query {
       iconImage: file(relativePath: { eq: "navicon.png" }) {
         childImageSharp {
-          fluid(maxWidth: 250) {
-            ...GatsbyImageSharpFluid
+          fluid(maxHeight: 60) {
             ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

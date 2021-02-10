@@ -1,33 +1,22 @@
-import React, { useState } from "react"
-// import { Link } from "gatsby"
-import Burger from "./Burger.js"
+import React from "react"
+import Toggle from "./Toggle.js"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import "./navbar.module.css"
 import NavbarLinks from "./NavbarLinks.js"
 import Hero from "../Hero/Hero.js"
 
-const NavBar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false)
+const Navbar = () => {
+  const breakpoints = useBreakpoint()
 
   return (
     <nav styleName="navwrapper">
       <Hero />
-      <div
-        styleName="toggle"
-        open={navbarOpen}
-        onClick={() => setNavbarOpen(!navbarOpen)}
-      >
-        {navbarOpen ? (
-          <Burger open styleName="burgerOpen" />
-        ) : (
-          <Burger styleName="burger" />
-        )}
-      </div>
-      {navbarOpen ? (
-        <div styleName="navBox">
-          <NavbarLinks />
-        </div>
+
+      {breakpoints.tablet ? (
+        <Toggle />
       ) : (
-        <div styleName="navBoxOpen" open>
+        <div styleName="navBox">
+          {" "}
           <NavbarLinks />
         </div>
       )}
@@ -35,4 +24,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default Navbar
