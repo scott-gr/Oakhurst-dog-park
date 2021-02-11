@@ -5,7 +5,7 @@
   grid-template-rows: max-content;
   grid-column: 1/5;
   background-color: var(--black);
-  margin: 0 2rem 0 2rem;
+  margin: .5rem 2rem 0 2rem;
   padding: 0;
   text-transform: uppercase;
 }

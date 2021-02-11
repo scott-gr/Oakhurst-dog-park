@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import Img from "gatsby-image"
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel"
 import "./slider.module.css"
@@ -59,17 +60,28 @@ const PhotoSlider = () => {
       }
     }
   `)
+
+  const breakpoints = useBreakpoint()
+  const visibleSlides = breakpoints.mobileXl
+    ? 1
+    : breakpoints.tablet
+    ? 2
+    : breakpoints.pc
+    ? 3
+    : breakpoints.pcXl ? 4: 5;
+
   return (
     <CarouselProvider
+      key = {visibleSlides}
       naturalSlideWidth={100}
       naturalSlideHeight={75}
       totalSlides={6}
-      visibleSlides={2}
+      visibleSlides={visibleSlides}
       infinite={true}
       touchEnabled={true}
       dragEnabled={true}
       isPlaying={true}
-      isIntrinsicHeight={true}
+      isIntrinsicHeight={false}
       orientation={"horizontal"}
       styleName="slideGrid"
     >

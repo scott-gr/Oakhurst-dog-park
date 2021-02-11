@@ -1,7 +1,9 @@
 const myViews = {
   mobile: '(max-width: 480px)',
-  tablet: '(max-width: 1007px)',
-  pc: '(min-width: 1008px)',
+  mobileXl: '(max-width: 700px)',
+  tablet: '(max-width: 980px)',
+  pc: '(max-width: 1350px)',
+  pcXl: '(min-width: 1351px)',
   portrait: '(orientation: portrait)',
 };
 
