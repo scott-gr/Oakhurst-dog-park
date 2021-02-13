@@ -10,6 +10,8 @@
   text-transform: uppercase;
 }
 
+
+
 .navItem {
   text-decoration: none;
   color: var(--offwhite);
@@ -33,7 +35,7 @@
   display: inline-flex;
   grid-column: 2;
   grid-row: 1;
-  font-size: 4rem;
+  font-size: 3rem;
   align-self: center;
   justify-self: right;
   right: 0;

@@ -13,47 +13,42 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(
-            maxWidth: 900
-            pngCompressionSpeed: 10
-            fit: COVER
-            cropFocus: EAST
-          ) {
+          fluid(maxHeight: 900, pngCompressionSpeed: 10, fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900, pngCompressionSpeed: 10, cropFocus: EAST) {
+          fluid(maxWidth: 900, fit: COVER, pngCompressionSpeed: 10, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
+          fluid(maxWidth: 900, fit: COVER, pngCompressionSpeed: 10, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFour: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
+          fluid(maxWidth: 900, fit: COVER, pngCompressionSpeed: 10, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFive: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
+          fluid(maxWidth: 900, fit: COVER, pngCompressionSpeed: 10, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
-          fluid(maxWidth: 900, pngCompressionSpeed: 10) {
+          fluid(maxWidth: 900, fit: COVER, pngCompressionSpeed: 10, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -68,15 +63,17 @@ const PhotoSlider = () => {
     ? 2
     : breakpoints.pc
     ? 3
-    : breakpoints.pcXl ? 4: 5;
+    : breakpoints.pcXl
+    ? 4
+    : 5
 
   return (
     <CarouselProvider
-      key = {visibleSlides}
+      key={visibleSlides}
       naturalSlideWidth={100}
       naturalSlideHeight={75}
       totalSlides={6}
-      visibleSlides={visibleSlides}
+      // visibleSlides={visibleSlides}
       infinite={true}
       touchEnabled={true}
       dragEnabled={true}
@@ -85,40 +82,40 @@ const PhotoSlider = () => {
       orientation={"horizontal"}
       styleName="slideGrid"
     >
-      <Slider styleName="carouselWrapper">
-        <Slide index={0}>
+      <Slider styleName="carouselWrapper" classNameTray="trayClass" classNameTrayWrap="wrapClass">
+        <Slide styleName="slide" innerClassName="innerClass" index={0}>
           <Img
             styleName="first"
             fluid={data.sliderImgOne.childImageSharp.fluid}
             durationFadeIn={50}
           />
         </Slide>
-        <Slide index={1}>
+        <Slide styleName="slide" index={1}>
           <Img
             styleName="second"
             fluid={data.sliderImgTwo.childImageSharp.fluid}
             durationFadeIn={50}
           />
         </Slide>
-        <Slide index={2}>
+        <Slide styleName="slide" index={2}>
           <Img
             styleName="third"
             fluid={data.sliderImgThree.childImageSharp.fluid}
           />
         </Slide>
-        <Slide index={3}>
+        <Slide styleName="slide" index={3}>
           <Img
             styleName="fourth"
             fluid={data.sliderImgFour.childImageSharp.fluid}
           />
         </Slide>
-        <Slide index={4}>
+        <Slide styleName="slide" index={4}>
           <Img
             styleName="fifth"
             fluid={data.sliderImgFive.childImageSharp.fluid}
           />
         </Slide>
-        <Slide index={5}>
+        <Slide styleName="slide" index={5}>
           <Img
             styleName="sixth"
             fluid={data.sliderImgSix.childImageSharp.fluid}

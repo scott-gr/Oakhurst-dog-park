@@ -19,9 +19,7 @@
 }
 
 @media (max-width: 425px) {
-  .heroLink {
-    justify-self: center;
-    grid-column: 1/3;
-    grid-row: 1;
+  .hero .heroLink {
+    height: 3rem;
   }
 }

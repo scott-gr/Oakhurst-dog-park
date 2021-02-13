@@ -27,7 +27,7 @@ p {
   display: grid;
   gap:.5rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: max-content max-content auto max-content;
+  grid-template-rows: max-content 50vh auto max-content;
   background-color: var(--black);
   color: white;
   font-family: var(--lato);
