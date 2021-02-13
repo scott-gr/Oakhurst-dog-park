@@ -29,6 +29,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `rules`,
+        path: `${__dirname}/content/rules`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `logos`,
         path: `${__dirname}/content/assets/logos`,
       },

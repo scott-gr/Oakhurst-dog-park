@@ -27,3 +27,17 @@ collections:
       - { name: image, label: Cover Image, widget: image, required: false}
       - { name: body, label: Body, widget: markdown }
 
+    - name: rules
+    label: Rules
+    label_singular: Rule
+    description: Tag Rules by category
+    folder: /content/rules
+    editor: 
+      preview: true
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}"
+    fields:
+      - { name: rulename, label: Rule Name, widget: string, hint: This is just a shorthand name for the data to reference. It won't display on the site.}
+      - { name: description, label: Full Description, widget: markdown }
+      - { name: selectcategory, label: Select Category, widget: select, options: ['a', 'b', 'c'], multiple: false }
