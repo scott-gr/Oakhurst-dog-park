@@ -15,7 +15,7 @@ const NavbarLinks = () => {
       </Link>
 
       <Link styleName="navItem" to="/rules">
-        Rules
+        Park Rules
       </Link>
 
       <Link styleName="navItem" to="/getinvolved">

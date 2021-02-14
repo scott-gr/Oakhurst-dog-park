@@ -4,7 +4,6 @@ footer {
   grid-column: 2/4;
   align-self: flex-end;
   position: relative;
-  padding-bottom: .5rem;
   text-align: center;
   height: min-content;
 
@@ -24,11 +23,11 @@ p {
 
 .globalWrapper {
   margin: 0;
-  padding-top: 0.5rem;
+  padding: 0;
   display: grid;
   gap:.5rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: max-content max-content auto max-content;
+  grid-template-rows: max-content 50vh auto max-content;
   background-color: var(--black);
   color: white;
   font-family: var(--lato);

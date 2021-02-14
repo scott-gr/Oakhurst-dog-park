@@ -5,10 +5,12 @@
   grid-template-rows: max-content;
   grid-column: 1/5;
   background-color: var(--black);
-  margin: 0 2rem 0 2rem;
+  margin: .5rem 2rem 0 2rem;
   padding: 0;
   text-transform: uppercase;
 }
+
+
 
 .navItem {
   text-decoration: none;
@@ -33,7 +35,7 @@
   display: inline-flex;
   grid-column: 2;
   grid-row: 1;
-  font-size: 4rem;
+  font-size: 3rem;
   align-self: center;
   justify-self: right;
   right: 0;

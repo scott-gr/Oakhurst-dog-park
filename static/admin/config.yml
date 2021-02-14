@@ -27,3 +27,19 @@ collections:
       - { name: image, label: Cover Image, widget: image, required: false}
       - { name: body, label: Body, widget: markdown }
 
+  - name: rules
+    label: Rules
+    label_singular: Rule
+    description: Each entry will display on the Park Rules page.
+    folder: /content/rules
+    editor: 
+      preview: true 
+    create: true  # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "{{slug}}"
+    fields: #fields to complete in admin page to create a new rule entry.
+      - { name: rulebrief, label: Rule Brief, widget: string, hint: This is a brief, to the point summary on the rule.}
+      - { name: date, label: Date, widget: datetime, allowInput: false, default: hidden}
+      - { name: description, label: Full Description, widget: markdown, hint: Expand upon the rule and give additional context.}
+      - { name: category, label: Select Category, widget: select, options: ['The Basics', 'Behavior', 'Covid-19 Protocol' 'Collars & Leashes', 'Children', 'Food & Drink', 'Additional Guidelines'], multiple: false, hint: Use 'Additional Guidelines' for miscellaneous items.}
+ #fix commas in options
