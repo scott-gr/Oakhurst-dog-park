@@ -10,8 +10,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
       {
         allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: ASC }
-          limit: 1000
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fields: { collection: { eq: "blog" } } }
         ) {
           nodes {
             id
@@ -63,7 +63,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `content/*/` })
+    const slug = createFilePath({ node, getNode, basePath: `content/blog/` })
     const parent = getNode(node.parent)
 
     let collection = parent.sourceInstanceName
@@ -73,7 +73,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       value: slug,
     })
-    // Need to resolve this
     createNodeField({
       node,
       name: "collection",
@@ -112,6 +111,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       featuredpost: Boolean
+      category: String
     }
 
     type Fields {
