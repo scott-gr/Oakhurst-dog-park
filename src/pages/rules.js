@@ -1,5 +1,4 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 import "../pages/styles/rules.module.css"
@@ -26,23 +25,19 @@ const RuleIndex = ({ data, location }) => {
       <SEO title="All rules" />
       <ol style={{ listStyle: `none` }}>
         {rules.map(rule => {
-          const rulebrief = rule.frontmatter.rulebrief|| rule.fields.slug
+          const rulebrief = rule.frontmatter.rulebrief || rule.fields.slug
           const category = rule.frontmatter.category
           return (
-            <li key={rule.fields.slug} >
+            <li key={rulebrief}>
               <article
                 styleName="ruleCard"
-                // className="rule-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2 styleName="ruleBrief">
-                    <Link to={rule.fields.slug} itemProp="url">
-                      <span itemProp="headline">{rulebrief}</span>
-                    </Link>
-                  </h2>
-                  {/* <small styleName="ruleDate">{rule.frontmatter.date}</small> */}
+                  <h3 styleName="ruleBrief" itemProp="headline">
+                    {rulebrief}
+                  </h3>
                 </header>
                 <section>
                   <p
@@ -68,18 +63,18 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        rulebrief
+        title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { collection: { eq: "rules" } } }
+    ) {
       nodes {
         excerpt
-        fields {
-          slug
-        }
         frontmatter {
-          date(formatString: "MMMM DD, YYYY")
           rulebrief
+          category
           description
         }
       }
