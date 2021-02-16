@@ -63,12 +63,21 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `content/blog/` })
+    const slug = createFilePath({ node, getNode, basePath: `content/*/` })
+    const parent = getNode(node.parent)
+
+    let collection = parent.sourceInstanceName
 
     createNodeField({
       node,
       name: `slug`,
       value: slug,
+    })
+    // Need to resolve this
+    createNodeField({
+      node,
+      name: "collection",
+      value: collection,
     })
   }
 }
@@ -107,6 +116,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Fields {
       slug: String
+      label: String
     }
   `)
 }
