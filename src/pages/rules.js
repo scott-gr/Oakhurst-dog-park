@@ -1,58 +1,40 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
+import Ruleblock from "../components/RuleBlock/Ruleblock.js"
 import "../pages/styles/rules.module.css"
 
 const RuleIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const rules = data.allMarkdownRemark.nodes
 
-  if (rules.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All rules" />
-        <p>
-          No rules found. Add markdown rules to "content/rules" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All rules" />
-      <ol style={{ listStyle: `none` }}>
-        {rules.map(rule => {
-          const rulebrief = rule.frontmatter.rulebrief || rule.fields.slug
-          const category = rule.frontmatter.category
-          return (
-            <li key={rulebrief}>
-              <article
-                styleName="ruleCard"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h3 styleName="ruleBrief" itemProp="headline">
-                    {rulebrief}
-                  </h3>
-                </header>
-                <section>
-                  <p
-                    styleName="ruleDesc"
-                    dangerouslySetInnerHTML={{
-                      __html: rule.frontmatter.description || rule.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+      <details>
+        <summary>The Basics</summary>
+        <Ruleblock value="The Basics" />
+      </details>
+      <details>
+        <summary>Behavior</summary>
+      </details>
+      <details>
+        <summary>Covid-19 Protocol</summary>
+      </details>
+      <details>
+        <summary>Collars & Leashes</summary>
+      </details>
+      <details>
+        <summary>Children</summary>
+      </details>
+      <details>
+        <summary>Food & Drink</summary>
+        <Ruleblock value="Food & Drink" />
+      </details>
+      <details>
+        <summary>Additional Guidelines</summary>
+      </details>
     </Layout>
   )
 }
