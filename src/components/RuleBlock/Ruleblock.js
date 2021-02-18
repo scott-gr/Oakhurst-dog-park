@@ -21,56 +21,39 @@ const Ruleblock = () => {
     }
   `)
   const rules = data.allMarkdownRemark.nodes
+  const ruleItems = rules.map(rule => (
+    <ruleItem
+      key={rule.frontmatter.category.toString()}
+      value={rule.frontmatter.category}
+    >
+      <article
+        styleName="ruleCard"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
+        <header>
+          <h3 styleName="ruleBrief" itemProp="headline">
+            {rule.frontmatter.rulebrief}
+          </h3>
+        </header>
+        <section>
+          <p
+            styleName="ruleDesc"
+            dangerouslySetInnerHTML={{
+              __html: rule.frontmatter.description || rule.excerpt,
+            }}
+            itemProp="description"
+          />
+        </section>
+      </article>
+    </ruleItem>
+  ))
   return (
-    <>
-      {rules.map(rule => {
-        const rulebrief = rule.frontmatter.rulebrief
-        const category = rule.frontmatter.category
-        return (
-            <li key={category.toString()}>
-              <article
-                styleName="ruleCard"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h3 styleName="ruleBrief" itemProp="headline">
-                    {rulebrief}
-                  </h3>
-                </header>
-                <section>
-                  <p
-                    styleName="ruleDesc"
-                    dangerouslySetInnerHTML={{
-                      __html: rule.frontmatter.description || rule.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-        )
-      })}{" "}
-    </>
+    <ol>
+      {ruleItems}
+    </ol>
   )
 }
 
-export default Ruleblock
 
-// export const pageQuery = graphql`
-//   query {
-//     allMarkdownRemark(
-//       sort: { fields: [frontmatter___date], order: DESC }
-//       filter: { fields: { collection: { eq: "rules" } } }
-//     ) {
-//       nodes {
-//         excerpt
-//         frontmatter {
-//           rulebrief
-//           category
-//           description
-//         }
-//       }
-//     }
-//   }
-// `
+export default Ruleblock
