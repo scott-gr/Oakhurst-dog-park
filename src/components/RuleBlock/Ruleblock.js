@@ -20,40 +20,25 @@ const Ruleblock = () => {
       }
     }
   `)
-  const rules = data.allMarkdownRemark.nodes
-  const ruleItems = rules.map(rule => (
-    <ruleItem
-      key={rule.frontmatter.category.toString()}
-      value={rule.frontmatter.category}
-    >
-      <article
-        styleName="ruleCard"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h3 styleName="ruleBrief" itemProp="headline">
-            {rule.frontmatter.rulebrief}
-          </h3>
-        </header>
-        <section>
-          <p
-            styleName="ruleDesc"
-            dangerouslySetInnerHTML={{
-              __html: rule.frontmatter.description || rule.excerpt,
-            }}
-            itemProp="description"
-          />
-        </section>
-      </article>
-    </ruleItem>
+  const rules = data.allMarkdownRemark.nodes.map(rule => (
+    <li>
+      <header>
+        <h3 styleName="ruleBrief" itemProp="headline">
+          {rule.frontmatter.rulebrief}
+        </h3>
+      </header>
+      <section>
+        <p
+          styleName="ruleDesc"
+          dangerouslySetInnerHTML={{
+            __html: rule.frontmatter.description || rule.excerpt,
+          }}
+          itemProp="description"
+        />
+      </section>
+    </li>
   ))
-  return (
-    <ol>
-      {ruleItems}
-    </ol>
-  )
+  return <ol>{rules}</ol>
 }
-
 
 export default Ruleblock

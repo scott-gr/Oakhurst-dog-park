@@ -2,20 +2,20 @@ import React from "react"
 import { graphql } from 'gatsby'
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
-// import Ruleblock from "../components/RuleBlock/Ruleblock.js"
+import Ruleblock from "../components/RuleBlock/Ruleblock.js"
 import "../pages/styles/rules.module.css"
 
 const RuleIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-
-
+  
+  
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All rules" />
       <details>
         <summary>The Basics</summary>
-
+        < Ruleblock/>
       </details>
       <details>
         <summary>Behavior</summary>
