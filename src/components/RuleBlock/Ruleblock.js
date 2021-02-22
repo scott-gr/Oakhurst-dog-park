@@ -20,8 +20,9 @@ const Ruleblock = () => {
       }
     }
   `)
-  const rules = data.allMarkdownRemark.nodes.map(rule => (
-    <li>
+  
+  const rules = data.allMarkdownRemark.nodes.filter(rule => rule.frontmatter.category === "Food & Drink").map(rule => (
+    <>
       <header>
         <h3 styleName="ruleBrief" itemProp="headline">
           {rule.frontmatter.rulebrief}
@@ -36,7 +37,7 @@ const Ruleblock = () => {
           itemProp="description"
         />
       </section>
-    </li>
+    </>
   ))
   return <ol>{rules}</ol>
 }
