@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import "./rules.module.css"
 
-const RuleBlock = (props) => {
+const RuleBlock = props => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -20,8 +20,6 @@ const RuleBlock = (props) => {
       }
     }
   `)
-
-
 
   const rules = data.allMarkdownRemark.nodes
     .filter(rule => rule.frontmatter.category === props.category)
@@ -43,7 +41,7 @@ const RuleBlock = (props) => {
         </section>
       </>
     ))
-  return  <ol>{rules}</ol>
+  return <ol>{rules}</ol>
 }
 
 export default RuleBlock
