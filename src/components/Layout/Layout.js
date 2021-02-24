@@ -3,11 +3,9 @@ import "./layout.module.css"
 import NavBar from "../Navbar/Navbar.js"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook } from "@fortawesome/free-brands-svg-icons"
-// import { useViewport, ViewportProvider } from "../../Hooks/useViewport.js"
 
 const Layout = ({ children }) => {
   return (
-    // <ViewportProvider>
     <div styleName="globalWrapper">
       <NavBar />
       {children}
