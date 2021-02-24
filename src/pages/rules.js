@@ -11,13 +11,15 @@ const RuleIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All rules" />
-      <RuleAccordian category="The Basics" />
-      <RuleAccordian category="Behavior" />
-      <RuleAccordian category="COVID-19 Protocol" />
-      <RuleAccordian category="Collars & Leashes" />
-      <RuleAccordian category="Children" />
-      <RuleAccordian category="Food & Drink" />
-      <RuleAccordian category="Additional Guidelines" />
+      <main>
+        <RuleAccordian category="The Basics" />
+        <RuleAccordian category="Behavior" />
+        <RuleAccordian category="COVID-19 Protocol" />
+        <RuleAccordian category="Collars & Leashes" />
+        <RuleAccordian category="Children" />
+        <RuleAccordian category="Food & Drink, and Smoking" />
+        <RuleAccordian category="Additional Guidelines" />
+      </main>
     </Layout>
   )
 }
