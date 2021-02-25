@@ -6,7 +6,7 @@ const RuleBlock = props => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { fields: [frontmatter___rulebrief], order: DESC }
         filter: { fields: { collection: { eq: "rules" } } }
       ) {
         nodes {
