@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 import RuleAccordian from "../components/RuleComponents/RuleAccordian.js"
-import "../pages/styles/rules.module.css"
+import "../pages/styles/rulespage.module.css"
 
 const RuleIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`

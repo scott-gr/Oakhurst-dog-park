@@ -1,0 +1,77 @@
+.ruleBrief {
+  font-size: 2rem;
+}
+
+.ruleDesc {
+  color: var(--offwhite);
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-family: var(--lato);
+}
+
+.category {
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  font-family: var(--zilla);
+  color: var(--blue);
+  box-sizing: border-box;
+  transition: all .3s;
+}
+
+.collapsedAccordian {
+  visibility: hidden;
+  position: absolute;
+}
+
+
+
+
+
+details[open] {
+  /* background-color: var(--offwhite); */
+  box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+}
+
+
+summary:focus {
+  outline: none;
+  
+}
+
+summary:focus::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+.controlIcon {
+  /* fill: rebeccapurple; */
+  transition: .3s ease;
+  pointer-events: none;
+}
+
+.controlIconClose {
+  display: none;
+}
+
+details[open] .controlIconClose {
+  display: initial;
+  transition: .3s ease;
+}
+
+details[open] .controlIconExpand {
+  display: none;
+}
