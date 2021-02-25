@@ -26,9 +26,9 @@ const RuleBlock = props => {
     .map(rule => (
       <>
         <header>
-          <h3 styleName="ruleBrief" itemProp="headline">
+          <h5 styleName="ruleBrief" itemProp="headline">
             {rule.frontmatter.rulebrief}
-          </h3>
+          </h5>
         </header>
         <section>
           <p

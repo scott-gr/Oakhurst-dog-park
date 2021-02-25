@@ -38,9 +38,9 @@ collections:
     # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     # path: "{{slug}}"
     fields: #fields to complete in admin page to create a new rule entry.
-      - { name: rulebrief, label: Rule Brief, widget: string, hint: This is a brief, to the point summary on the rule.}
+      - { name: rulebrief, label: Rule Brief, widget: string, hint: This is a brief summary of the rule.}
       - { name: date, label: Date, widget: datetime, allowInput: false, default: hidden}
-      - { name: category, label: Select Category, widget: select, options: ['The Basics', 'Behavior', 'Covid-19 Protocol', 'Collars & Leashes', 'Children', 'Food & Drink', 'Additional Guidelines'], multiple: false, hint: Use 'Additional Guidelines' for miscellaneous items.}
+      - { name: category, label: Select Category, widget: select, options: ['The Basics', 'Behavior', 'Covid-19 Protocol', 'Collars & Leashes', 'Children', 'Food & Drink, and Smoking', 'Additional Guidelines'], multiple: false, hint: Use 'Additional Guidelines' for miscellaneous items.}
       - { name: description, label: Full Description, widget: markdown, hint: Expand upon the rule and give additional context.}
 
  #fix commas in options
