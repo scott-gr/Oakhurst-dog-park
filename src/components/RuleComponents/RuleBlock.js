@@ -24,13 +24,13 @@ const RuleBlock = props => {
   const rules = data.allMarkdownRemark.nodes
     .filter(rule => rule.frontmatter.category === props.category)
     .map(rule => (
-      <>
-        <header >
+      <div styleName="ruleCard">
+        <header>
           <h5 styleName="ruleBrief" itemProp="headline">
             {rule.frontmatter.rulebrief}
           </h5>
         </header>
-        <section             styleName="ruleDesc">
+        <section styleName="ruleDesc">
           <p
             dangerouslySetInnerHTML={{
               __html: rule.frontmatter.description || rule.excerpt,
@@ -38,9 +38,9 @@ const RuleBlock = props => {
             itemProp="description"
           />
         </section>
-      </>
+      </div>
     ))
-  return <ol>{rules}</ol>
+  return <ol styleName="ruleList">{rules}</ol>
 }
 
 export default RuleBlock

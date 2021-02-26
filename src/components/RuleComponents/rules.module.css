@@ -1,5 +1,11 @@
 .ruleBrief {
   font-size: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.ruleCard {
+  margin-top: 1rem;
 }
 
 .ruleDesc {
@@ -7,6 +13,15 @@
   font-weight: 300;
   font-size: 1.5rem;
   font-family: var(--lato);
+}
+
+ol {
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+p {
+  margin-block: 0;
 }
 
 .category {
@@ -20,7 +35,7 @@
   font-family: var(--zilla);
   color: var(--blue);
   box-sizing: border-box;
-  transition: all .3s;
+  padding-bottom: 1rem;
 }
 
 .collapsedAccordian {
@@ -28,21 +43,17 @@
   position: absolute;
 }
 
-
-
-
-
 details[open] {
   /* background-color: var(--offwhite); */
-  box-shadow: 2px 2px 20px rgba(0,0,0,.2);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  transform-origin: top center;
+	transform: rotate(0.1deg);
 }
-
 
 summary:focus {
   outline: none;
-  
 }
-
 summary:focus::after {
   content: "";
   height: 100%;
@@ -54,12 +65,12 @@ summary:focus::after {
 }
 
 summary::-webkit-details-marker {
-  display: none
+  display: none;
 }
 
 .controlIcon {
   /* fill: rebeccapurple; */
-  transition: .3s ease;
+  transition: 0.3s ease;
   pointer-events: none;
 }
 
@@ -69,7 +80,7 @@ summary::-webkit-details-marker {
 
 details[open] .controlIconClose {
   display: initial;
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 details[open] .controlIconExpand {

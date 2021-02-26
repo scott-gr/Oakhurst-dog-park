@@ -19,7 +19,12 @@ const RuleIndex = ({ data, location }) => {
         <RuleAccordian category="Children" />
         <RuleAccordian category="Food & Drink, and Smoking" />
         <RuleAccordian category="Additional Guidelines" />
-        <p>Above all, please be courteous to other dog owners and ensure that your dog is getting along with the other dogs in the dog park. You wouldn’t want another dog to start a fight with your dog, and you wouldn’t want to step in a pile of dog poop!</p>
+        <p>
+          Above all, please be courteous to other dog owners and ensure that
+          your dog is getting along with the other dogs in the dog park. You
+          wouldn’t want another dog to start a fight with your dog, and you
+          wouldn’t want to step in a pile of dog poop!
+        </p>
       </main>
     </Layout>
   )
