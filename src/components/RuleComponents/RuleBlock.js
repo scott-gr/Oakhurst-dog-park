@@ -25,14 +25,13 @@ const RuleBlock = props => {
     .filter(rule => rule.frontmatter.category === props.category)
     .map(rule => (
       <>
-        <header>
+        <header >
           <h5 styleName="ruleBrief" itemProp="headline">
             {rule.frontmatter.rulebrief}
           </h5>
         </header>
-        <section>
+        <section             styleName="ruleDesc">
           <p
-            styleName="ruleDesc"
             dangerouslySetInnerHTML={{
               __html: rule.frontmatter.description || rule.excerpt,
             }}
