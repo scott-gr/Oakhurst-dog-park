@@ -1,11 +1,18 @@
 .ruleBrief {
   font-size: 2rem;
-  padding: 0;
+  padding-bottom: 1rem;
   margin: 0;
+  /* color: var(--yellow); */
 }
 
 .ruleCard {
   margin-top: 1rem;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color: var(--yellow);
+  border-style: solid;
+  padding: 1rem;
+
 }
 
 .ruleDesc {
@@ -20,15 +27,14 @@ ol {
   padding-inline-start: 0;
 }
 
-p {
-  margin-block: 0;
-}
+
 
 .category {
   font-size: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-content: left;
   font-weight: 500;
   cursor: pointer;
   position: relative;
@@ -43,36 +49,21 @@ p {
   position: absolute;
 }
 
-details[open] {
-  /* background-color: var(--offwhite); */
+/* details[open] {
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   transition: all 0.3s;
   transform-origin: top center;
 	transform: rotate(0.1deg);
-}
+} */
 
 summary:focus {
   outline: none;
 }
-summary:focus::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+
+summary[open]::-webkit-details-marker{
+  color: var(--yellow);
 }
 
-summary::-webkit-details-marker {
-  display: none;
-}
-
-.controlIcon {
-  /* fill: rebeccapurple; */
-  transition: 0.3s ease;
-  pointer-events: none;
-}
 
 .controlIconClose {
   display: none;
@@ -85,4 +76,8 @@ details[open] .controlIconClose {
 
 details[open] .controlIconExpand {
   display: none;
+}
+
+details[open] > summary::-webkit-details-marker{
+  color: var(--yellow)
 }
