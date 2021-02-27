@@ -4,7 +4,6 @@
   margin-left: 5rem;
   margin-right: 5rem;
   margin-top: 2rem;
-
 }
 
 .rulesIntro {
@@ -18,7 +17,5 @@
   border-style: solid;
   padding: 1rem;
   border-radius: 50px;
-box-shadow:  19px 19px 0px #222222, 
-             -19px -19px 0px #4a4a4a;
+  box-shadow: 19px 19px 0px #222222, -19px -19px 0px #4a4a4a;
 }
-
