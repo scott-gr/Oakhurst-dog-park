@@ -26,7 +26,7 @@
 }
 
 .navItem:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: var(--yellow);
   z-index: 20;
 }

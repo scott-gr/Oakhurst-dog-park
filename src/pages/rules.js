@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout/Layout.js"
 import SEO from "../components/seo.js"
 import RuleAccordian from "../components/RuleComponents/RuleAccordian.js"
-import "../pages/styles/rulespage.module.css"
+import "./styles/rulespage.module.css"
 
 const RuleIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -12,6 +12,16 @@ const RuleIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All rules" />
       <main styleName="container">
+        <section styleName="rulesIntro">
+          <p>
+            Thank you for observing these guidelines to help create a safe park
+            for dogs and their people.
+          </p>
+          <p>
+            Above all, please be courteous to other dog owners and ensure that
+            your dog is getting along with others.
+          </p>
+        </section>
         <RuleAccordian category="The Basics" />
         <RuleAccordian category="Behavior" />
         <RuleAccordian category="COVID-19 Protocol" />
@@ -19,7 +29,6 @@ const RuleIndex = ({ data, location }) => {
         <RuleAccordian category="Children" />
         <RuleAccordian category="Food & Drink, and Smoking" />
         <RuleAccordian category="Additional Guidelines" />
-        <p>Above all, please be courteous to other dog owners and ensure that your dog is getting along with the other dogs in the dog park. You wouldn’t want another dog to start a fight with your dog, and you wouldn’t want to step in a pile of dog poop!</p>
       </main>
     </Layout>
   )
