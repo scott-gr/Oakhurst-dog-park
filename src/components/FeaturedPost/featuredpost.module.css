@@ -7,6 +7,12 @@
   padding-left: 2rem;
 }
 
+@media (max-width: 480px) {
+  .featuredCard{
+    grid-column: 1/5;
+  }
+}
+
 .featuredTitle {
   text-decoration: none;
   color: var(--yellow);
