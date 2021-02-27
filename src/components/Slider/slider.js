@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { useBreakpoint } from "gatsby-plugin-breakpoints"
 import { CarouselProvider, Slider, Slide } from "pure-react-carousel"
 import "./slider.module.css"
 import "pure-react-carousel/dist/react-carousel.es.css"
@@ -13,8 +14,6 @@ const PhotoSlider = () => {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
           fluid(
-            maxHeight: 900
-            pngCompressionSpeed: 10
             fit: COVER
             cropFocus: CENTER
           ) {
@@ -25,9 +24,7 @@ const PhotoSlider = () => {
       sliderImgTwo: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 900
             fit: COVER
-            pngCompressionSpeed: 10
             cropFocus: CENTER
           ) {
             ...GatsbyImageSharpFluid_withWebp
@@ -37,9 +34,7 @@ const PhotoSlider = () => {
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 900
             fit: COVER
-            pngCompressionSpeed: 10
             cropFocus: CENTER
           ) {
             ...GatsbyImageSharpFluid_withWebp
@@ -49,9 +44,7 @@ const PhotoSlider = () => {
       sliderImgFour: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 900
             fit: COVER
-            pngCompressionSpeed: 10
             cropFocus: CENTER
           ) {
             ...GatsbyImageSharpFluid_withWebp
@@ -61,9 +54,7 @@ const PhotoSlider = () => {
       sliderImgFive: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 900
             fit: COVER
-            pngCompressionSpeed: 10
             cropFocus: CENTER
           ) {
             ...GatsbyImageSharpFluid_withWebp
@@ -73,9 +64,7 @@ const PhotoSlider = () => {
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
           fluid(
-            maxWidth: 900
             fit: COVER
-            pngCompressionSpeed: 10
             cropFocus: CENTER
           ) {
             ...GatsbyImageSharpFluid_withWebp
@@ -84,12 +73,22 @@ const PhotoSlider = () => {
       }
     }
   `)
+  const breakpoints = useBreakpoint()
+  const visibleSlides = breakpoints.mobileXl
+    ? 1
+    : breakpoints.tablet
+    ? 2
+    : breakpoints.pc
+    ? 3
+    : breakpoints.pcXl ? 4: 5;
 
   return (
     <CarouselProvider
+      key = {visibleSlides}
       naturalSlideWidth={100}
-      naturalSlideHeight={75}
+      naturalSlideHeight={100}
       totalSlides={6}
+      visibleSlides={visibleSlides}
       infinite={true}
       touchEnabled={true}
       dragEnabled={true}

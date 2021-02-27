@@ -14,15 +14,18 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
 
-      <h2 styleName="bigText">Oakhurst Dog Park</h2>
-      {/* <h4 styleName="smallText">Some really great, eye-catching words about the dog park. This text is fun, not necessarily informative.</h4> */}
+      <h2 styleName="bigText"></h2>
+      <h4 styleName="smallText">
+        A great place to unleash
+        <div styleName="smallTextOffset" />
+      </h4>
 
       <div styleName="overlay" />
       <PhotoSlider />
       <FeaturedPost />
       <section styleName="brief">
         {" "}
-        <p>Address</p>
+        <p styleName="directions">Address</p>
       </section>
     </Layout>
   )

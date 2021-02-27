@@ -5,19 +5,17 @@
   grid-template-rows: max-content;
   grid-column: 1/5;
   background-color: var(--black);
-  margin: .5rem 2rem 0 2rem;
+  margin: 0.5rem 2rem 0 2rem;
   padding: 0;
   text-transform: uppercase;
 }
-
-
 
 .navItem {
   text-decoration: none;
   color: var(--offwhite);
   transition: all 250ms ease-in;
   font-family: var(--zilla);
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 0;
   padding: 0;
   place-self: center;
@@ -25,10 +23,23 @@
   white-space: nowrap;
 }
 
+/* forward slashes to visually break up nav links */
+.navItem:before {
+  content: " // ";
+  position: relative;
+  left: -2px;
+  color: var(--blue);
+}
+
+
+
 .navItem:hover {
-  transform: scale(1.1);
-  color: var(--yellow);
+  transform: scale(1.01);
   z-index: 20;
+  margin: -10px -10px 10px 10px;
+  box-shadow: -10px 10px 0 -3px var(--black), -10px 10px var(--blue);
+  /* -30px 30px 0 -3px var(--black), -30px 30px var(--red) */
+  ;
 }
 
 .toggle {
