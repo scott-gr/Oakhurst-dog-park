@@ -9,7 +9,7 @@ const Hero = () => {
     query {
       heroImage: file(relativePath: { eq: "tricolor.png" }) {
         childImageSharp {
-          fixed(height: 150, pngCompressionSpeed: 10) {
+          fixed(height: 100, pngCompressionSpeed: 10) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }

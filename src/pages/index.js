@@ -17,16 +17,12 @@ const HomePage = ({ data, location }) => {
       <h2 styleName="bigText"></h2>
       <h4 styleName="smallText">
         A great place to unleash
-        <div styleName="smallTextOffset" />
       </h4>
 
       <div styleName="overlay" />
       <PhotoSlider />
       <FeaturedPost />
-      <section styleName="brief">
-        {" "}
-        <p styleName="directions">Address</p>
-      </section>
+      <section styleName="featured"> </section>
     </Layout>
   )
 }
