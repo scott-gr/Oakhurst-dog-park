@@ -3,17 +3,6 @@
   grid-template-rows: subgrid;
 }
 
-.bigText {
-  font-size: 3rem;
-  grid-row: 2;
-  grid-column: 2/4;
-  z-index: 12;
-  font-weight: 300;
-  place-self: center;
-  text-align: center;
-  text-shadow: 2px 2px 5px var(--black);
-  margin: 0;
-}
 .smallText {
   align-self: flex-end;
   justify-self: center;
