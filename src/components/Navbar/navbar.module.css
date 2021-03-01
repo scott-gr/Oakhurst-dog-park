@@ -21,6 +21,7 @@
   place-self: center;
   z-index: 20;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 /* forward slashes to visually break up nav links */
@@ -36,6 +37,7 @@
 .navItem:hover {
   transform: scale(1.01);
   z-index: 20;
+  cursor: pointer;
   margin: -10px -10px 10px 10px;
   box-shadow: -10px 10px 0 -3px var(--black), -10px 10px var(--blue);
   /* -30px 30px 0 -3px var(--black), -30px 30px var(--red) */
@@ -63,6 +65,8 @@
   column-gap: 1rem;
   grid-auto-columns: auto;
   justify-content: right;
+  height: max-content;
+  align-self: center;
   margin: 0;
   padding: 0;
 }
