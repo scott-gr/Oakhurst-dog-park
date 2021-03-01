@@ -4,6 +4,7 @@
   grid-row: 3;
   place-self: center;
   grid-column: 2/4;
+  box-shadow: -10px 10px 0 -3px var(--black), -10px 10px var(--yellow);
 }
 
 @media (max-width: 480px) {

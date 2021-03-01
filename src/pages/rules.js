@@ -18,6 +18,7 @@ const RuleIndex = ({ data, location }) => {
             for dogs and their people.
           </p>
         </section>
+
         <section styleName="accordians">
           <RuleAccordian category="The Basics" />
           <RuleAccordian category="Behavior" />
