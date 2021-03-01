@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
         >
           <FontAwesomeIcon icon={faFacebook} />
         </a>
-        <p styleName="copywright">© Oakhurst Dog Park 2021</p>
+        <p styleName="copywright"> © Oakhurst Dog Park 2021</p>
       </footer>
     </div>
     // </ViewportProvider>

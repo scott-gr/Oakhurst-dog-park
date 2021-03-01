@@ -1,24 +1,22 @@
 .ruleBrief {
-  font-size: 2rem;
-  padding-bottom: 1rem;
+  font-size: 1rem;
   margin: 0;
-  /* color: var(--yellow); */
 }
 
 .ruleCard {
-  margin-top: 1rem;
-  border-radius: 15px;
+  margin-top: .5rem;
+  border-radius: 5px;
   border-width: 2px;
   border-color: var(--yellow);
   border-style: solid;
-  padding: 1rem;
+  padding: .5rem;
 
 }
 
 .ruleDesc {
   color: var(--offwhite);
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: var(--lato);
 }
 
@@ -28,20 +26,23 @@ ol {
 }
 
 
-
 .category {
-  font-size: 3rem;
-  display: flex;
-  justify-content: space-between;
+  font-size: 1.6rem;
   align-items: center;
+  width: 100%;
   justify-content: left;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
   font-family: var(--zilla);
   color: var(--blue);
   box-sizing: border-box;
-  padding-bottom: 1rem;
+  padding-bottom: .25rem;
+}
+
+@media (minWidth: 540px){
+  .category{
+    font-size: 3rem;
+  }
 }
 
 .collapsedAccordian {

@@ -17,18 +17,16 @@ const RuleIndex = ({ data, location }) => {
             Thank you for observing these guidelines to help create a safe park
             for dogs and their people.
           </p>
-          <p>
-            Above all, please be courteous to other dog owners and ensure that
-            your dog is getting along with others.
-          </p>
         </section>
-        <RuleAccordian category="The Basics" />
-        <RuleAccordian category="Behavior" />
-        <RuleAccordian category="COVID-19 Protocol" />
-        <RuleAccordian category="Collars & Leashes" />
-        <RuleAccordian category="Children" />
-        <RuleAccordian category="Food & Drink, and Smoking" />
-        <RuleAccordian category="Additional Guidelines" />
+        <section styleName="accordians">
+          <RuleAccordian category="The Basics" />
+          <RuleAccordian category="Behavior" />
+          <RuleAccordian category="COVID-19 Protocol" />
+          <RuleAccordian category="Collars & Leashes" />
+          <RuleAccordian category="Children" />
+          <RuleAccordian category="Food & Drink, and Smoking" />
+          <RuleAccordian category="Additional Guidelines" />
+        </section>
       </main>
     </Layout>
   )
