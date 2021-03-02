@@ -2,12 +2,11 @@
   display: grid;
   margin-left: 5%;
   margin-right: 5%;
-  padding-left: .5rem;
   border-radius: 5px;
-  border: none;
   grid-template-rows: auto auto;
   grid-row: 3;
   place-self: center;
+  padding-left: .5rem;
   grid-column: 2/4;
   box-shadow: -10px 10px 0 -3px var(--black), -10px 10px var(--yellow);
 }
@@ -22,9 +21,15 @@
   text-decoration: none;
   color: var(--yellow);
   font-family: var(--zilla);
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 0;
 }
+
+@media (max-width: 330px) {
+  .featuredTitle {
+    font-size: 1.25rem;
+  }}
+
 
 .featuredDate {
   margin: 0;
