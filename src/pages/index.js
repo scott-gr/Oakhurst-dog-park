@@ -13,11 +13,7 @@ const HomePage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Home Page" />
-
-      <h2 styleName="bigText"></h2>
-      <h4 styleName="smallText">
-        A great place to unleash
-      </h4>
+      <h4 styleName="smallText">A great place to unleash</h4>
 
       <div styleName="overlay" />
       <PhotoSlider />
