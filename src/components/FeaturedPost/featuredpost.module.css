@@ -1,5 +1,10 @@
 .featuredCard {
   display: grid;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: .5rem;
+  border-radius: 5px;
+  border: none;
   grid-template-rows: auto auto;
   grid-row: 3;
   place-self: center;
