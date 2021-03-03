@@ -1,9 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
-import "./navbar.module.css"
+import React from 'react'
+import { Link } from 'gatsby'
+import './navbar.module.css'
 
 const NavbarLinks = () => {
-
   return (
     <>
       <Link styleName="navItem" to="/about">

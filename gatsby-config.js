@@ -5,7 +5,7 @@ const myViews = {
   pc: '(max-width: 1350px)',
   pcXl: '(min-width: 1351px)',
   portrait: '(orientation: portrait)',
-};
+}
 
 module.exports = {
   siteMetadata: {
@@ -26,7 +26,7 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
-    
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,17 +49,17 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-breakpoints",
+      resolve: 'gatsby-plugin-breakpoints',
       options: {
-          queries: myViews,
+        queries: myViews,
       },
-  },
-  {
-    resolve: `gatsby-plugin-postcss`,
-    options: {
-      postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
     },
-  },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -123,7 +123,7 @@ module.exports = {
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify-cms`,
-    "gatsby-plugin-netlify",
+    'gatsby-plugin-netlify',
     `gatsby-plugin-react-helmet`,
   ],
 }

@@ -1,10 +1,10 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
-import { CarouselProvider, Slider, Slide } from "pure-react-carousel"
-import "./slider.module.css"
-import "pure-react-carousel/dist/react-carousel.es.css"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import { CarouselProvider, Slider, Slide } from 'pure-react-carousel'
+import './slider.module.css'
+import 'pure-react-carousel/dist/react-carousel.es.css'
 
 // Pure React Carousel Docs https://github.com/express-labs/pure-react-carousel
 
@@ -13,60 +13,42 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: CENTER
-          ) {
+          fluid(fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: CENTER
-          ) {
+          fluid(fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: CENTER
-          ) {
+          fluid(fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFour: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: CENTER
-          ) {
+          fluid(fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFive: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: CENTER
-          ) {
+          fluid(fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: CENTER
-          ) {
+          fluid(fit: COVER, cropFocus: CENTER) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -80,11 +62,13 @@ const PhotoSlider = () => {
     ? 2
     : breakpoints.pc
     ? 3
-    : breakpoints.pcXl ? 4: 5;
+    : breakpoints.pcXl
+    ? 4
+    : 5
 
   return (
     <CarouselProvider
-      key = {visibleSlides}
+      key={visibleSlides}
       naturalSlideWidth={100}
       naturalSlideHeight={100}
       totalSlides={6}
@@ -93,8 +77,7 @@ const PhotoSlider = () => {
       touchEnabled={true}
       dragEnabled={true}
       isPlaying={true}
-      isIntrinsicHeight={false}
-      orientation={"horizontal"}
+      orientation={'horizontal'}
       styleName="slideGrid"
     >
       <Slider

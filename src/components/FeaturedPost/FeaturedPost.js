@@ -1,7 +1,7 @@
-import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
-import "./featuredpost.module.css"
-import SEO from "../seo.js"
+import React from 'react'
+import { useStaticQuery, Link, graphql } from 'gatsby'
+import './featuredpost.module.css'
+import SEO from '../seo.js'
 
 const FeaturedPost = () => {
   const data = useStaticQuery(graphql`
@@ -37,7 +37,7 @@ const FeaturedPost = () => {
   }
   return (
     <>
-      {posts.map(post => {
+      {posts.map((post) => {
         const title = post.frontmatter.title || post.fields.slug
         const featured = post.frontmatter.featuredpost
 

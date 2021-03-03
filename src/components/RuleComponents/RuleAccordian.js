@@ -1,8 +1,8 @@
-import React from "react"
-import RuleBlock from "./RuleBlock.js"
-import "./rules.module.css"
+import React from 'react'
+import RuleBlock from './RuleBlock.js'
+import './rules.module.css'
 
-const RuleAccordian = props => {
+const RuleAccordian = (props) => {
   return (
     <details styleName="categoryBox">
       <summary styleName="category">{props.category}</summary>

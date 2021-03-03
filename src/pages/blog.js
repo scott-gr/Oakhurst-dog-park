@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/Layout/Layout.js"
-import SEO from "../components/seo.js"
-import "../pages/styles/blog.module.css"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/Layout/Layout.js'
+import SEO from '../components/seo.js'
+import '../pages/styles/blog.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
+        {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
@@ -74,7 +74,8 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fields: { collection: { eq: "blog" } } }
-    ) { nodes {
+    ) {
+      nodes {
         excerpt
         fields {
           slug
