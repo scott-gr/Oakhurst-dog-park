@@ -1,5 +1,5 @@
-import React from "react"
-import "./button.module.css"
+import React from 'react'
+import './button.module.css'
 
 export default class Button extends React.Component {
   render() {

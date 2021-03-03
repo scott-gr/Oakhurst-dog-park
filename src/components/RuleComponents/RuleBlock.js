@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import "./rules.module.css"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import './rules.module.css'
 
-const RuleBlock = props => {
+const RuleBlock = (props) => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -22,8 +22,8 @@ const RuleBlock = props => {
   `)
 
   const rules = data.allMarkdownRemark.nodes
-    .filter(rule => rule.frontmatter.category === props.category)
-    .map(rule => (
+    .filter((rule) => rule.frontmatter.category === props.category)
+    .map((rule) => (
       <div styleName="ruleCard">
         <header>
           <h5 styleName="ruleBrief" itemProp="headline">

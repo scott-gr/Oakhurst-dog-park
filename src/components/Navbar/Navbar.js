@@ -1,9 +1,9 @@
-import React from "react"
-import Toggle from "./Toggle.js"
-import { useBreakpoint } from "gatsby-plugin-breakpoints"
-import "./navbar.module.css"
-import NavbarLinks from "./NavbarLinks.js"
-import Hero from "../Hero/Hero.js"
+import React from 'react'
+import Toggle from './Toggle.js'
+import { useBreakpoint } from 'gatsby-plugin-breakpoints'
+import './navbar.module.css'
+import NavbarLinks from './NavbarLinks.js'
+import Hero from '../Hero/Hero.js'
 
 const Navbar = () => {
   const breakpoints = useBreakpoint()
@@ -16,7 +16,7 @@ const Navbar = () => {
         <Toggle />
       ) : (
         <div styleName="navBox">
-          {" "}
+          {' '}
           <NavbarLinks />
         </div>
       )}

@@ -1,8 +1,8 @@
-import React from "react"
-import "./layout.module.css"
-import NavBar from "../Navbar/Navbar.js"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFacebook } from "@fortawesome/free-brands-svg-icons"
+import React from 'react'
+import './layout.module.css'
+import NavBar from '../Navbar/Navbar.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const Layout = ({ children }) => {
   return (

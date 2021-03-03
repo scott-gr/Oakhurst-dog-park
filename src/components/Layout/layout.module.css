@@ -31,7 +31,7 @@ footer {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: max-content 50vh auto max-content;
   background-color: var(--black);
-  color: white;
+  color: var(--offwhite);
   font-family: var(--lato);
   justify-self: center;
   width: 100vw;

@@ -75,7 +75,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
     createNodeField({
       node,
-      name: "collection",
+      name: 'collection',
       value: collection,
     })
   }
