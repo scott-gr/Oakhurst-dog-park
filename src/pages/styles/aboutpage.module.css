@@ -7,6 +7,17 @@
   box-shadow: -10px 10px 0 -3px var(--black), -10px 10px var(--red);
 }
 
+@media (maxWidth: 840px){
+  .sidebar {
+    grid-row:4/5;
+    grid-column: 1/5;
+  }
+  .aboutContainer {
+    grid-row: 2/4;
+    grid-column: 1/5;
+  }
+}
+
 .aboutHeader{
   text-align: center;
   justify-self: center;
@@ -33,5 +44,5 @@
 }
 
 .historyText {
-  font-size: 3rem;
+  font-size: 1.25rem;
 }

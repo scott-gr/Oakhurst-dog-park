@@ -13,6 +13,8 @@ const AboutPage = ({ data, location }) => {
       <SEO title="About" />
       <aside styleName="sidebar">
         <AboutPhoto />
+        
+        {/* quick facts about the park */}
         <ul>
           <li>one</li>
           <li>two</li>
