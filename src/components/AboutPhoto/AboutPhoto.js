@@ -1,20 +1,24 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import './aboutphoto.module.css'
 
 const AboutPhoto = () => {
   const data = useStaticQuery(graphql`
     query {
       photo: file(relativePath: { eq: "fieldfall.png" }) {
         childImageSharp {
-          fluid(fit: COVER) {
+          fluid(fit: CONTAIN) {
             ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluidLimitPresentationSize
           }
         }
       }
     }
   `)
-  return <Img fluid={data.photo.childImageSharp.fluid} durationFadeIn={100} />
+  return (
+    <Img className="parkPhoto" tag="image"fluid={data.photo.childImageSharp.fluid} durationFadeIn={100} />
+  )
 }
 
 export default AboutPhoto
