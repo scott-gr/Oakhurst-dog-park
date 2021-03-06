@@ -12,10 +12,10 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Home Page" />
-      <h4 styleName="smallText">A great place to unleash</h4>
+      <SEO title="Oakhurst Dog Park" />
+      <h4 styleName="smallText">A great place to unleash and unwind</h4>
 
-      <div styleName="overlay" />
+      {/* <div styleName="overlay" /> */}
       <PhotoSlider />
       <FeaturedPost />
       <section styleName="featured"> </section>

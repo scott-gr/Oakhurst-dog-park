@@ -1,16 +1,29 @@
-.parkPhoto {
-  grid-column:1;
-  grid-row: 2;
-  position: relative;
+.heroBox {
+  grid-row: 2/3;
+  grid-column: 1/5;
+  display: flex;
+  width: 100%;
+  justify-self: center;
+  justify-items: center;
+  justify-content: center;
   margin: 0;
-  max-height: min-content;
+  margin-block-end: 0;
+  margin-inline-end: 0;
 }
 
-@media (max-width: 982px){
-  .parkPhoto {
-    max-height: 308px;
-    object-fit: scale-down;
-    grid-column: 1;
-    grid-row: 2;
-  }
+.aboutHeader {
+  display: flex;
+  place-self: center;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  font-size: 2rem;
+
+  padding: 1rem;
+  background-color: var(--black);
+  color: var(--offwhite);
+
+  border-radius: 5px;
+  box-shadow: -5px 5px var(--blue), -10px 10px var(--yellow),
+    -15px 15px var(--red);
 }

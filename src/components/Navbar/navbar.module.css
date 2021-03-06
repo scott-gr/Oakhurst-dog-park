@@ -5,15 +5,15 @@
   grid-template-rows: max-content;
   grid-column: 1/5;
   background-color: var(--black);
-  margin: 0.5rem 2rem 0 2rem;
-  padding: 0;
+  margin: 0;
+  padding:  0.5rem 1rem 0.5rem 1rem;
   text-transform: uppercase;
 }
 
 .navItem {
   text-decoration: none;
   color: var(--offwhite);
-  transition: all 250ms ease-in;
+  transition: all 200ms ease-in;
   font-family: var(--zilla);
   font-size: 1.75rem;
   margin: 0;
@@ -29,6 +29,7 @@
   content: " // ";
   position: relative;
   left: -2px;
+  
   color: var(--blue);
 }
 
@@ -54,24 +55,31 @@
   justify-self: right;
   right: 0;
   margin-bottom: 1rem;
-  color: var(--grey);
+  color: var(--offwhite);
   cursor: pointer;
 }
 
 .navBox {
-  display: grid;
+  display:flex;
   grid-row: 1;
-  grid-auto-flow: column;
+  flex-direction: row;
   grid-column: 2/3;
   column-gap: 1rem;
-  grid-auto-columns: auto;
   justify-content: right;
   height: max-content;
   align-self: center;
   margin: 0;
   padding: 0;
   cursor: pointer;
+  width: max-content;
 }
+
+@media (maxWidth: 880px){
+  .navItem{
+    font-size: 1.5rem;
+  }
+}
+
 
 .navBoxMobile {
   background-color: var(--black);
