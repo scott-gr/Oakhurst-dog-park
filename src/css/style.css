@@ -7,7 +7,6 @@
   --yellow : #FEAE25;
   --red : #E91929;
   --black : #171717;
-  /* --offwhite : #ECF0F1; */
   --offwhite: #f0eff0;
 }
 
@@ -20,7 +19,7 @@ p {
 }
 
 body {
-  background-color: var(--black);
+  background-color: var(--offwhite);
   height: 100%;
   width: 100%;
   margin: 0;
@@ -32,3 +31,4 @@ img {
   margin: 0;
   padding: 0;
 }
+

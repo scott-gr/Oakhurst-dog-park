@@ -11,12 +11,9 @@ const AboutPage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="About" />
+      <AboutPhoto />
 
-      <aside styleName="sidebar">
-        <h1 styleName="aboutHeader">About the Park</h1>
-        <AboutPhoto />
-
-        {/* quick facts about the park */}
+      {/* <aside styleName="sidebar">
         <ul styleName="facts">
           <li>Fully fenced-in</li>
           <li>All dogs share one area (no size seperation)</li>
@@ -25,7 +22,8 @@ const AboutPage = ({ data, location }) => {
           <li>Benches for humans</li>
           <li>Open 365 days a year</li>
         </ul>
-      </aside>
+      </aside> */}
+
       <main styleName="aboutContainer">
         <article styleName="historyText">
           <p>
