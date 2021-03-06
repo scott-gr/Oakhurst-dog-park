@@ -11,14 +11,14 @@ const Hero = () => {
     query {
       heroMobile: file(relativePath: { eq: "tricolor.png" }) {
         childImageSharp {
-          fixed(height: 80, pngCompressionSpeed: 10) {
+          fixed(height: 80, pngCompressionSpeed: 6) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       heroDesktop: file(relativePath: { eq: "tricolor.png" }) {
         childImageSharp {
-          fixed(height: 150, pngCompressionSpeed: 10) {
+          fixed(height: 150, pngCompressionSpeed: 6) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }

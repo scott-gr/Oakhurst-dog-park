@@ -1,0 +1,16 @@
+.parkPhoto {
+  grid-column:1;
+  grid-row: 2;
+  position: relative;
+  margin: 0;
+  max-height: min-content;
+}
+
+@media (max-width: 982px){
+  .parkPhoto {
+    max-height: 308px;
+    object-fit: scale-down;
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
