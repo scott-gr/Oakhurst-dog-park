@@ -18,12 +18,14 @@ const AboutPhoto = () => {
   `)
   return (
     <BackgroundImage
-        styleName= "heroBox"
-        tag="section"
-        fluid={data.photo.childImageSharp.fluid}
-        durationFadeIn={50}
-      >
-      <span styleName="aboutHeader"><h2 styleName="headerText">About the Park</h2></span>
+      styleName="heroBox"
+      tag="section"
+      fluid={data.photo.childImageSharp.fluid}
+      durationFadeIn={50}
+    >
+      <span styleName="aboutHeader">
+        <h2 styleName="headerText">About the Park</h2>
+      </span>
     </BackgroundImage>
   )
 }
