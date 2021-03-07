@@ -30,7 +30,7 @@ footer {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: max-content 50vh auto max-content;
+  grid-template-rows: max-content 2fr auto max-content;
   background-color: var(--offwhite);
   color: var(--black);
   font-family: var(--lato);

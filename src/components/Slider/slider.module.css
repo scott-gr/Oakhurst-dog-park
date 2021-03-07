@@ -1,18 +1,20 @@
 .slideGrid {
-  /* grid-template-columns: subgrid;
-  grid-template-rows: subgrid; */
   grid-row: 2;
   grid-column: 1/5;
   z-index: 0;
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
+  overflow-x: hidden;
   object-fit:inherit;
   object-position: -80% 0;
+  filter: brightness(75%);
 }
 
-.slide .trayClass .wrapClass .innerClass .carouselWrapper {
-  height: inherit;
+.innerClass {
+  height: min-content;
+}
+
+.slide .trayClass .wrapClass .innerClass .carouselWrapper  {
   object-fit: contain;
   grid-row: 2;
 

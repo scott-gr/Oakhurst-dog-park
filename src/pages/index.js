@@ -5,6 +5,8 @@ import './styles/index.module.css'
 import PhotoSlider from '../components/Slider/slider.js'
 import FeaturedPost from '../components/FeaturedPost/FeaturedPost.js'
 import { graphql } from 'gatsby'
+import Hero from '../components/Hero/Hero.js'
+
 // import Button from "../components/Button/Button.js"
 
 const HomePage = ({ data, location }) => {
@@ -13,9 +15,7 @@ const HomePage = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="Oakhurst Dog Park" />
-      <h4 styleName="smallText">A great place to unleash and unwind</h4>
-
-      {/* <div styleName="overlay" /> */}
+      <Hero />
       <PhotoSlider />
       <FeaturedPost />
       <section styleName="featured"> </section>
