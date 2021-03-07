@@ -9,7 +9,7 @@ const Hero = () => {
     query {
       heroImage: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
-          fixed(height: 240, pngCompressionSpeed: 6) {
+          fixed(height: 240, quality: 100) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
@@ -18,9 +18,7 @@ const Hero = () => {
   `)
   const heroImage = data.heroImage.childImageSharp.fixed
 
-  return (
-      <Img styleName="hero" fixed={heroImage} durationFadeIn={50} />
-  )
+  return <Img styleName="hero" fixed={heroImage} durationFadeIn={50} />
 }
 
 export default Hero

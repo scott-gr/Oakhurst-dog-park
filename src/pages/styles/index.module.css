@@ -6,29 +6,3 @@
   padding: 0;
   margin: 0;
 }
-
-.featured {
-  grid-column: 2/4;
-  grid-row: 3;
-  place-self: center;
-  text-align: center;
-}
-
-@media (maxwidth: 480px) {
-  .featured {
-    grid-column: 1/5;
-  }
-}
-
-.banner {
-
-  margin-top: 1rem;
-  border-radius: 12%;
-  background-color: var(--blackfade);
-  color: var(--offwhite);
-  padding: 0.5rem;
-  /* box-shadow: -3px 3px var(--blue), -6px 6px var(--yellow),
-    -9px 9px var(--red); */
-  height: min-content;
-  width: min-content;
-}

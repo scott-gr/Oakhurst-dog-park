@@ -56,15 +56,17 @@ const PhotoSlider = () => {
     }
   `)
   const breakpoints = useBreakpoint()
-  const visibleSlides = breakpoints.mobileXl
+  const visibleSlides = breakpoints.mobile
     ? 1
+    : breakpoints.mobileXl
+    ? 2
     : breakpoints.tablet
     ? 2
     : breakpoints.pc
     ? 3
     : breakpoints.pcXl
-    ? 4
-    : 5
+    ? 3
+    : 4
 
   return (
     <CarouselProvider
@@ -75,6 +77,7 @@ const PhotoSlider = () => {
       visibleSlides={visibleSlides}
       infinite={true}
       touchEnabled={false}
+      isIntrinsicHeight={true}
       dragEnabled={false}
       isPlaying={true}
       orientation={'horizontal'}

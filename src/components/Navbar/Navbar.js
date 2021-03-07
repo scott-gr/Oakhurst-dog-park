@@ -9,7 +9,6 @@ const Navbar = () => {
 
   return (
     <nav styleName="navwrapper">
-
       {breakpoints.mobileXl ? (
         <Toggle />
       ) : (
