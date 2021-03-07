@@ -20,7 +20,6 @@ const Layout = ({ children }) => {
         <p styleName="copywright"> © Oakhurst Dog Park 2021</p>
       </footer>
     </div>
-    // </ViewportProvider>
   )
 }
 
