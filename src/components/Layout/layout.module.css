@@ -1,12 +1,14 @@
 footer {
   font-family: var(--zilla);
-  justify-self: center;
   width: 100%;
-  position: absolute;
+  grid-row: 5/6;
+  grid-column: 1/5;
   text-align: center;
+  position: relative;
   height: auto;
   color: var(--black);
   padding-bottom: .5rem;
+  margin-top: auto;
   bottom: 0;
   background-color: var(--offwhite);
 }
