@@ -48,19 +48,18 @@ const FeaturedPost = () => {
               itemScope
               itemType="http://schema.org/Article"
             >
-              <header>
-                <Link
-                  to={post.fields.slug}
-                  itemProp="url"
-                  styleName="featuredTitle"
-                >
-                  <h2 itemProp="headline" styleName="featuredTitle">
-                    {title}
-                  </h2>
-                </Link>
+              <Link
+                to={post.fields.slug}
+                itemProp="url"
+                styleName="featuredTitle"
+              >
+                <h2 itemProp="headline" styleName="featuredTitle">
+                  {title}
+                </h2>
+              </Link>
 
-                <small styleName="featuredDate">{post.frontmatter.date}</small>
-              </header>
+              <small styleName="featuredDate">{post.frontmatter.date}</small>
+
               <section>
                 <section
                   styleName="featuredBody"

@@ -13,42 +13,42 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFour: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFive: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -56,26 +56,29 @@ const PhotoSlider = () => {
     }
   `)
   const breakpoints = useBreakpoint()
-  const visibleSlides = breakpoints.mobileXl
+  const visibleSlides = breakpoints.mobile
     ? 1
+    : breakpoints.mobileXl
+    ? 2
     : breakpoints.tablet
     ? 2
     : breakpoints.pc
     ? 3
     : breakpoints.pcXl
-    ? 4
-    : 5
+    ? 3
+    : 4
 
   return (
     <CarouselProvider
       key={visibleSlides}
       naturalSlideWidth={100}
-      naturalSlideHeight={100}
+      naturalSlideHeight={175}
       totalSlides={6}
       visibleSlides={visibleSlides}
       infinite={true}
-      touchEnabled={true}
-      dragEnabled={true}
+      touchEnabled={false}
+      isIntrinsicHeight={true}
+      dragEnabled={false}
       isPlaying={true}
       orientation={'horizontal'}
       styleName="slideGrid"
@@ -89,25 +92,43 @@ const PhotoSlider = () => {
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
             durationFadeIn={50}
+            tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={1}>
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
             durationFadeIn={50}
+            tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={2}>
-          <Img fluid={data.sliderImgThree.childImageSharp.fluid} />
+          <Img
+            fluid={data.sliderImgThree.childImageSharp.fluid}
+            durationFadeIn={50}
+            tag="img"
+          />
         </Slide>
         <Slide styleName="slide" index={3}>
-          <Img fluid={data.sliderImgFour.childImageSharp.fluid} />
+          <Img
+            fluid={data.sliderImgFour.childImageSharp.fluid}
+            durationFadeIn={50}
+            tag="img"
+          />
         </Slide>
         <Slide styleName="slide" index={4}>
-          <Img fluid={data.sliderImgFive.childImageSharp.fluid} />
+          <Img
+            fluid={data.sliderImgFive.childImageSharp.fluid}
+            durationFadeIn={50}
+            tag="img"
+          />
         </Slide>
         <Slide styleName="slide" index={5}>
-          <Img fluid={data.sliderImgSix.childImageSharp.fluid} />
+          <Img
+            fluid={data.sliderImgSix.childImageSharp.fluid}
+            durationFadeIn={50}
+            tag="img"
+          />
         </Slide>
       </Slider>
     </CarouselProvider>
