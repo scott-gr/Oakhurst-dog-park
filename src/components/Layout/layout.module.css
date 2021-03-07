@@ -1,14 +1,14 @@
 footer {
   font-family: var(--zilla);
-  grid-row: 5/6;
+  grid-row: 6;
   grid-column: 1/5;
-  align-self: flex-end;
-  position: relative;
+  position: sticky;
   text-align: center;
   justify-self: center;
-  height: max-content;
+  justify-items: center;
+  justify-content: center;
+  height: auto;
   color: var(--black);
-  margin-bottom: 0;
   bottom: 0;
   background-color: var(--offwhite);
 }
@@ -30,7 +30,7 @@ footer {
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: max-content auto auto auto max-content;
+  grid-template-rows: max-content auto auto 1fr auto;
   background-color: var(--offwhite);
   color: var(--black);
   font-family: var(--lato);
