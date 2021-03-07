@@ -45,6 +45,12 @@
   ;
 }
 
+.navIcon {
+  object-fit:fill;
+  height: 61px;
+  width: 100px;
+}
+
 .toggle {
   display: inline-flex;
   grid-column: 2;
