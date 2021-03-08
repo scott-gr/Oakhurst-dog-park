@@ -1,5 +1,5 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import './navbar.module.css'
 
@@ -10,26 +10,22 @@ const NavIcon = () => {
     query {
       iconImage: file(relativePath: { eq: "navicon.png" }) {
         childImageSharp {
-          fluid(maxHeight: 60) {
-            ...GatsbyImageSharpFluidLimitPresentationSize
-            ...GatsbyImageSharpFluid_withWebp
+          fixed(height: 100, fit: CONTAIN) {
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
     }
   `)
 
-  if (!data?.iconImage?.childImageSharp?.fluid) {
+  if (!data?.iconImage?.childImageSharp?.fixed) {
     return <div>Picture not found</div>
   }
 
   return (
-    <Img
-      styleName="navIcon"
-      fluid={data.iconImage.childImageSharp.fluid}
-      height={100}
-      width={100}
-    />
+    <Link to="/">
+      <Img styleName="navIcon" fluid={data.iconImage.childImageSharp.fixed} />
+    </Link>
   )
 }
 

@@ -55,9 +55,7 @@ const Hero = () => {
     return <div>Picture not found</div>
   }
 
-  return (
-      <Img styleName="hero" fixed={heroImage} durationFadeIn={100} />
-  )
+  return <Img styleName="hero" fixed={heroImage} durationFadeIn={100} />
 }
 
 export default Hero
