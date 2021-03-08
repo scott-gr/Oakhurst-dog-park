@@ -10,7 +10,7 @@ const NavIcon = () => {
     query {
       iconImage: file(relativePath: { eq: "navicon.png" }) {
         childImageSharp {
-          fixed(height: 80, fit: CONTAIN) {
+          fixed(height: 100, fit: CONTAIN) {
             ...GatsbyImageSharpFixed_withWebp
           }
         }
