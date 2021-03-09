@@ -22,7 +22,7 @@ const RuleBlock = (props) => {
   `)
 
   const rules = data.allMarkdownRemark.nodes
-    .filter((rule) => rule.frontmatter.category === props.category)
+    .filter((rule) => rule.frontmatter.category.toLowerCase() === props.category.toLowerCase())
     .map((rule) => (
       <div styleName="ruleCard">
         <header>
