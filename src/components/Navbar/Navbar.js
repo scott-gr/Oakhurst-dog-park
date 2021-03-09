@@ -1,5 +1,6 @@
 import React from 'react'
-import Toggle from './Toggle.js'
+// import Toggle from './Toggle.js'
+import MobileMenu from './MobileMenu.js'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import './navbar.module.css'
 import NavbarLinks from './NavbarLinks.js'
@@ -13,7 +14,7 @@ const Navbar = () => {
       <NavIcon />
 
       {breakpoints.mobileXl ? (
-        <Toggle />
+        <MobileMenu />
       ) : (
         <div styleName="navBox">
           {' '}
