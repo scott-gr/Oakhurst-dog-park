@@ -21,11 +21,20 @@
   z-index: 20;
   white-space: nowrap;
   cursor: pointer;
+  
 }
 
 @media (min-Width: 701px){
   .navItem {
-    font-size: 1.5rems
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-Width: 700px){
+  .navItem {
+    font-size: 2.5rem;
+    justify-self: center;
+    overflow-wrap: normal;
   }
 }
 
@@ -52,6 +61,10 @@
   object-fit:fill;
   height: 60px;
   width: 100px;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-self: center;
 }
 
 
@@ -68,11 +81,5 @@
   padding: 0;
   cursor: pointer;
   width: max-content;
-}
-
-@media (maxWidth: 880px){
-  .navItem{
-    font-size:s 1.5rem;
-  }
 }
 

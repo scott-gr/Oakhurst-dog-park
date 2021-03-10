@@ -24,14 +24,17 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 50px;
-  width: 50px;
+  height: 2rem;
+  width: 3px;
   position: relative;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
   background: var(--yellow);
+  right: 12px;
+  min-height: 40px;
+  min-width: 6px;
 }
 
 /*
@@ -46,8 +49,6 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* General sidebar styles */
 .bm-menu {
   background: var(--black);
-  padding: 2.5rem 1.5rem 0;
-  font-size: 3rem;
   width: 100%;
 }
 
@@ -55,27 +56,21 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: var(--offwhite);
   height: 100%;
-  padding-top: 20%;
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
   flex-direction: column;
-  row-gap: 6rem;
-}
-
-@media (maxwidth: 700px) {
-  .bm-item-list .navItem {
-    font-size: 4rem;
-  }
-  .bm-item-list .navIcon{
-    justify-self: center;
-  }
+  margin: 0;
+  padding: 0;
+  margin-top: -2rem;
+  text-align: center;
 }
 
 /* Individual item */
+.bm-item {
+  justify-self: center;
+}
 
-
-/* Styling of overlay
-.bm-overlay {
-  background: var(--black);
-  width: 50%;
-} */
+.menuList [href$="/"]{ 
+  display: flex;
+  justify-content: center;
+}

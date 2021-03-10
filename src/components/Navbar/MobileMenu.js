@@ -10,9 +10,9 @@ class MobileMenu extends Component {
 
   render() {
     return (
-      <Menu right width="100%">
-        <NavIcon />
-        <NavbarLinks className="menu-item" />
+      <Menu right width="100%" itemListClassName={ "menuList" }>
+        <NavIcon/>
+        <NavbarLinks/>
       </Menu>
     )
   }
