@@ -23,9 +23,9 @@ const RuleIndex = ({ data, location }) => {
           <RuleAccordian category="The Basics" />
           <RuleAccordian category="Behavior" />
           <RuleAccordian category="COVID-19 Protocol" />
-          <RuleAccordian category="Collars & Leashes" />
+          <RuleAccordian category="Collars and Leashes" />
           <RuleAccordian category="Children" />
-          <RuleAccordian category="Food & Drink, and Smoking" />
+          <RuleAccordian category="Food, Drink, and Smoking" />
           <RuleAccordian category="Additional Guidelines" />
         </section>
       </main>

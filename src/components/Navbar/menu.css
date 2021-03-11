@@ -1,0 +1,76 @@
+/* Position and sizing of burger button */
+.bm-burger-button {
+  width: 2rem;
+  height: 2rem;
+  grid-column: 2/3;
+  right: 1rem;
+  top: 1rem;
+  text-align: right;
+  grid-row: 1;
+  position: absolute;
+  color: var(--offwhite);
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--offwhite);
+  border-radius: 5px;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: var(--yellow);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 2rem;
+  width: 3px;
+  position: relative;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: var(--yellow);
+  right: 12px;
+  min-height: 40px;
+  min-width: 6px;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: var(--black);
+  width: 100%;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: var(--offwhite);
+  height: 100%;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  margin-top: -2rem;
+  text-align: center;
+}
+
+/* Individual item */
+.bm-item {
+  justify-self: center;
+}
+
+.menuList [href$="/"]{ 
+  display: flex;
+  justify-content: center;
+}
