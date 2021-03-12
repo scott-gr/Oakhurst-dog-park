@@ -24,8 +24,8 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 2rem;
-  width: 3px;
+  min-height: 3.5rem;
+  min-width: 3.5rem;
   position: relative;
 }
 

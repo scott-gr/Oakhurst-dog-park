@@ -5,7 +5,7 @@ import './navbar.module.css'
 const NavbarLinks = () => {
   return (
     <>
-      <Link styleName="navItem" to="/about">
+      <Link tag="nav" styleName="navItem" to="/about">
         About
       </Link>
 
