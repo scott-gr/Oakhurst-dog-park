@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Menu from 'react-burger-menu/lib/menus/slide'
 import NavbarLinks from './NavbarLinks.js'
-import NavIcon from "./NavIcon.js"
+import NavIcon from './NavIcon.js'
 import './menu.css'
 class MobileMenu extends Component {
   showSettings(event) {
@@ -10,9 +10,9 @@ class MobileMenu extends Component {
 
   render() {
     return (
-      <Menu right width="100%" itemListClassName={ "menuList" }>
-        <NavIcon/>
-        <NavbarLinks/>
+      <Menu right width="100%" itemListClassName={'menuList'}>
+        <NavIcon />
+        <NavbarLinks />
       </Menu>
     )
   }

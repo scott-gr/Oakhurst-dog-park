@@ -120,7 +120,6 @@ module.exports = {
         // PLACEHOLDER
       },
     },
-    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify',
