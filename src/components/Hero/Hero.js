@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
-import Img from 'gatsby-image'
+import StaticImage from 'gatsby-image'
 import { Link } from 'gatsby'
 import './hero.module.css'
 
@@ -55,7 +55,15 @@ const Hero = () => {
     return <div>Picture not found</div>
   }
 
-  return <Img styleName="hero" fixed={heroImage} durationFadeIn={100} />
+  return (
+    <StaticImage
+      styleName="hero"
+      fixed={heroImage}
+      durationFadeIn={25}
+      loading="eager"
+      alt="Park logo, 3 happy dogs- blue, yellow, red"
+    />
+  )
 }
 
 export default Hero
