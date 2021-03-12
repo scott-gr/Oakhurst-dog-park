@@ -14,7 +14,7 @@ module.exports = {
       name: `Scott Griffin`,
       summary: `Web developer based in Atlanta. Looking for opportunities! - https://yoscott.com `,
     },
-    description: `A community page with guidelines and news about the Oakhurst Dog Park`,
+    description: `Visit Oakhurst Dog Park in Decatur, GA`,
     siteUrl: `https://oakhurstdogpark.com`,
   },
 
