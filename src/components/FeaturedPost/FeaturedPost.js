@@ -5,7 +5,7 @@ import SEO from '../seo.js'
 
 const FeaturedPost = () => {
   const data = useStaticQuery(graphql`
-    {
+    query {
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           excerpt
