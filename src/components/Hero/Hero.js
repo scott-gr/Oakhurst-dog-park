@@ -1,29 +1,9 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
-import Img from 'gatsby-image'
-import { Link } from 'gatsby'
+import StaticImage from 'gatsby-image'
 import './hero.module.css'
 
-// queries for mobile and desktop sized icons
-// const Hero = () => {
-//   const data = useStaticQuery(graphql`
-//     query {
-//       heroImage: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
-//         childImageSharp {
-//           fixed(height: 240, quality: 100) {
-//             ...GatsbyImageSharpFixed_withWebp
-//           }
-//         }
-//       }
-//     }
-//   `)
-//   const heroImage = data.heroImage.childImageSharp.fixed
-
-//   return <Img styleName="hero" fixed={heroImage} durationFadeIn={50} />
-// }
-
-// export default Hero
 const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -55,7 +35,14 @@ const Hero = () => {
     return <div>Picture not found</div>
   }
 
-  return <Img styleName="hero" fixed={heroImage} durationFadeIn={100} />
+  return (
+    <StaticImage
+      styleName="hero"
+      fixed={heroImage}
+      loading="eager"
+      durationFadeIn={25}
+    />
+  )
 }
 
 export default Hero

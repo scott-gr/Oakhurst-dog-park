@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import StaticImage from 'gatsby-image'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel'
 import './slider.module.css'
@@ -89,42 +89,42 @@ const PhotoSlider = () => {
         classNameTrayWrap="wrapClass"
       >
         <Slide styleName="slide" innerClassName="innerClass" index={0}>
-          <Img
+          <StaticImage
             fluid={data.sliderImgOne.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={1}>
-          <Img
+          <StaticImage
             fluid={data.sliderImgTwo.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={2}>
-          <Img
+          <StaticImage
             fluid={data.sliderImgThree.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={3}>
-          <Img
+          <StaticImage
             fluid={data.sliderImgFour.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={4}>
-          <Img
+          <StaticImage
             fluid={data.sliderImgFive.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={5}>
-          <Img
+          <StaticImage
             fluid={data.sliderImgSix.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
