@@ -91,14 +91,14 @@ const PhotoSlider = () => {
         <Slide styleName="slide" innerClassName="innerClass" index={0}>
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
-            durationFadeIn={50}
+            durationFadeIn={25}
             tag="img"
           />
         </Slide>
         <Slide styleName="slide" index={1}>
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
-            durationFadeIn={50}
+            durationFadeIn={25}
             tag="img"
           />
         </Slide>

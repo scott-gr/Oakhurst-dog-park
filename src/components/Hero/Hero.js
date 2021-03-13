@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
 import './hero.module.css'
 
 // queries for mobile and desktop sized icons
