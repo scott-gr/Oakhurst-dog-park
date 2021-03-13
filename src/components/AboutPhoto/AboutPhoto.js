@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
-import './aboutphoto.module.css'
+import * as style from './aboutphoto.module.css'
 
 const AboutPhoto = () => {
   const data = useStaticQuery(graphql`
@@ -18,13 +18,13 @@ const AboutPhoto = () => {
   `)
   return (
     <BackgroundImage
-      styleName="heroBox"
+      className={style.heroBox}
       tag="section"
       fluid={data.photo.childImageSharp.fluid}
       durationFadeIn={50}
     >
-      <span styleName="aboutHeader">
-        <h2 styleName="headerText">About the Park</h2>
+      <span className={style.aboutHeader}>
+        <h2 className={style.headerText}>About the Park</h2>
       </span>
     </BackgroundImage>
   )

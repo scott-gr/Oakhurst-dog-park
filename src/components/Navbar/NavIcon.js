@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import StaticImage from 'gatsby-image'
-import './navbar.module.css'
+import {navIcon} from './navbar.module.css'
 
 // the white outline version of the logo
 
@@ -25,7 +25,7 @@ const NavIcon = () => {
   return (
     <Link to="/">
       <StaticImage
-        styleName="navIcon"
+        className={navIcon}
         durationFadeIn={50}
         fluid={data.iconImage.childImageSharp.fixed}
       />

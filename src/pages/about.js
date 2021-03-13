@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
-import '../pages/styles/aboutpage.module.css'
+import {aboutContainer, historyText} from '../pages/styles/aboutpage.module.css'
 import { graphql } from 'gatsby'
 import AboutPhoto from '../components/AboutPhoto/AboutPhoto.js'
 
@@ -13,19 +13,8 @@ const AboutPage = ({ data, location }) => {
       <SEO title="About" />
       <AboutPhoto />
 
-      {/* <aside styleName="sidebar">
-        <ul styleName="facts">
-          <li>Fully fenced-in</li>
-          <li>All dogs share one area (no size seperation)</li>
-          <li>One-third of park is wooded area</li>
-          <li>Large, open field for play</li>
-          <li>Benches for humans</li>
-          <li>Open 365 days a year</li>
-        </ul>
-      </aside> */}
-
-      <main styleName="aboutContainer">
-        <article styleName="historyText">
+      <main className={aboutContainer}>
+        <article className={historyText}>
           <p>
             The Oakhurst Dog Park is one of three dog parks in the city of
             Decatur and is 100% community-maintained. The city provides

@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import './navbar.module.css'
+import {navItem}  from './navbar.module.css'
 
 const NavbarLinks = () => {
   return (
     <>
-      <Link tag="nav" styleName="navItem" to="/about">
+      <Link tag="nav" className={navItem} to="/about">
         About
       </Link>
 
-      <Link styleName="navItem" to="/blog">
+      <Link className={navItem} to="/blog">
         Blog
       </Link>
 
-      <Link styleName="navItem" to="/rules">
+      <Link className={navItem} to="/rules">
         Park Rules
       </Link>
 
-      <Link styleName="navItem" to="/getinvolved">
+      <Link className={navItem} to="/getinvolved">
         Get Involved
       </Link>
     </>

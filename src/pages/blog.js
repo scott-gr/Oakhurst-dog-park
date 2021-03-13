@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
-import '../pages/styles/blog.module.css'
+import {blogDesc, blogTitle, blogCard, blogList} from  '../pages/styles/blog.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -24,29 +24,29 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <ol styleName="blogList" style={{ listStyle: `none` }}>
+      <ol className={blogList} style={{ listStyle: `none` }}>
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
             <li key={post.fields.slug}>
               <article
-                styleName="blogCard"
+                className={blogCard}
                 // className="post-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
                 <header>
-                  <h2 styleName="blogTitle">
+                  <h2 className={blogTitle}>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small styleName="blogDate">{post.frontmatter.date}</small>
+                  <small className={blogDate}>{post.frontmatter.date}</small>
                 </header>
                 <section>
                   <p
-                    styleName="blogDesc"
+                    className={blogDesc}
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import RuleAccordian from '../components/RuleComponents/RuleAccordian.js'
-import './styles/rulespage.module.css'
+import {container, rulesIntro, accordians} from './styles/rulespage.module.css'
 
 const RuleIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -11,15 +11,15 @@ const RuleIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All rules" />
-      <main styleName="container">
-        <section styleName="rulesIntro">
+      <main className={container}>
+        <section className={rulesIntro}>
           <p>
             Thank you for observing these guidelines to help create a safe park
             for dogs and their people.
           </p>
         </section>
 
-        <section styleName="accordians">
+        <section className={accordians}>
           <RuleAccordian category="The Basics" />
           <RuleAccordian category="Behavior" />
           <RuleAccordian category="COVID-19 Protocol" />

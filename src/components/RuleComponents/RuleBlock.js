@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import './rules.module.css'
+import {ruleBrief, ruleCard, ruleList, ruleDesc} from './rules.module.css'
 
 const RuleBlock = (props) => {
   const data = useStaticQuery(graphql`
@@ -27,13 +27,13 @@ const RuleBlock = (props) => {
         rule.frontmatter.category.toLowerCase() === props.category.toLowerCase()
     )
     .map((rule) => (
-      <div styleName="ruleCard">
+      <div className={ruleCard}>
         <header>
-          <h5 styleName="ruleBrief" itemProp="headline">
+          <h5 className={ruleBrief} itemProp="headline">
             {rule.frontmatter.rulebrief}
           </h5>
         </header>
-        <section styleName="ruleDesc">
+        <section className={ruleDesc}>
           <p
             dangerouslySetInnerHTML={{
               __html: rule.frontmatter.description || rule.excerpt,
@@ -43,7 +43,7 @@ const RuleBlock = (props) => {
         </section>
       </div>
     ))
-  return <ol styleName="ruleList">{rules}</ol>
+  return <ol className={ruleList}>{rules}</ol>
 }
 
 export default RuleBlock
