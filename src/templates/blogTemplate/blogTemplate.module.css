@@ -6,6 +6,11 @@
   padding: 0,
 }
 
+[itemprop="url"] {
+  text-decoration: none;
+  color: var(--black);
+}
+
 .blogTitle , .blogDate {
   font-family: var(--zilla);
 }

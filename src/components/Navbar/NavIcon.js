@@ -24,7 +24,7 @@ const NavIcon = () => {
 
   return (
     <Link to="/">
-      <Img styleName="navIcon" fluid={data.iconImage.childImageSharp.fixed} />
+      <Img styleName="navIcon" fluid={data.iconImage.childImageSharp.fixed} durationFadeIn={50}/>
     </Link>
   )
 }

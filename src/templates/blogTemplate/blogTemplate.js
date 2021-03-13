@@ -31,8 +31,6 @@ const BlogTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
-        <footer>(Share buttons here)</footer>
       </article>
       <nav styleName="blognav">
         <ul>

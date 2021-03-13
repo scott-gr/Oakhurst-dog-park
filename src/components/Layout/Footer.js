@@ -10,6 +10,7 @@ const Footer = () => {
         styleName="fbIcon"
         href="https://www.facebook.com/OakhurstDogPark"
         alt="Facebook Page"
+        target="_blank"
       >
         <FontAwesomeIcon icon={faFacebook} />
       </a>
