@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, Link, graphql } from 'gatsby'
-import * as style from './featuredpost.module.css'
+import {featuredBody, featuredCard, featuredDate, featuredTitle} from './featuredpost.module.css'
 import SEO from '../seo.js'
 
 const FeaturedPost = () => {
@@ -44,25 +44,25 @@ const FeaturedPost = () => {
         if (featured) {
           return (
             <article
-              className={style.featuredCard}
+              className={featuredCard}
               itemScope
               itemType="http://schema.org/Article"
             >
               <Link
                 to={post.fields.slug}
                 itemProp="url"
-                className={style.featuredTitle}
+                className={featuredTitle}
               >
-                <h2 itemProp="headline" className={style.featuredTitle}>
+                <h2 itemProp="headline" className={featuredTitle}>
                   {title}
                 </h2>
               </Link>
 
-              <small className={style.featuredDate}>{post.frontmatter.date}</small>
+              <small className={featuredDate}>{post.frontmatter.date}</small>
 
               <section>
                 <section
-                  className={style.featuredBody}
+                  className={featuredBody}
                   dangerouslySetInnerHTML={{ __html: post.html }}
                   itemProp="articleBody"
                 />

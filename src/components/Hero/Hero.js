@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import StaticImage from 'gatsby-image'
-import * as style from './hero.module.css'
+import {hero} from './hero.module.css'
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -37,7 +37,7 @@ const Hero = () => {
 
   return (
     <StaticImage
-      className={style.hero}
+      className={hero}
       fixed={heroImage}
       loading="eager"
       durationFadeIn={25}

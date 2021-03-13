@@ -9,4 +9,4 @@ const wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>
 }
 
-export default wrapPageElement
+wrapPageElement()

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
-import {blogDesc, blogTitle, blogCard, blogList} from  '../pages/styles/blog.module.css'
+import {blogDesc, blogTitle, blogCard, blogList, blogDate} from  '../pages/styles/blog.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`

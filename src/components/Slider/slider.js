@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import StaticImage from 'gatsby-image'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import { CarouselProvider, Slider, Slide } from 'pure-react-carousel'
-import './slider.module.css'
+import {slide, slideGrid, carouselWrapper} from './slider.module.css'
 import 'pure-react-carousel/dist/react-carousel.es.css'
 
 // Pure React Carousel Docs https://github.com/express-labs/pure-react-carousel
@@ -81,49 +81,49 @@ const PhotoSlider = () => {
       dragEnabled={false}
       isPlaying={true}
       orientation={'horizontal'}
-      styleName="slideGrid"
+      className={slideGrid}
     >
       <Slider
-        styleName="carouselWrapper"
+        className={carouselWrapper}
         classNameTray="trayClass"
         classNameTrayWrap="wrapClass"
       >
-        <Slide styleName="slide" innerClassName="innerClass" index={0}>
+        <Slide className={slide} innerClassName="innerClass" index={0}>
           <StaticImage
             fluid={data.sliderImgOne.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
-        <Slide styleName="slide" index={1}>
+        <Slide className={slide} index={1}>
           <StaticImage
             fluid={data.sliderImgTwo.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
-        <Slide styleName="slide" index={2}>
+        <Slide className={slide} index={2}>
           <StaticImage
             fluid={data.sliderImgThree.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
-        <Slide styleName="slide" index={3}>
+        <Slide className={slide} index={3}>
           <StaticImage
             fluid={data.sliderImgFour.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
-        <Slide styleName="slide" index={4}>
+        <Slide className={slide} index={4}>
           <StaticImage
             fluid={data.sliderImgFive.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
         </Slide>
-        <Slide styleName="slide" index={5}>
+        <Slide className={slide} index={5}>
           <StaticImage
             fluid={data.sliderImgSix.childImageSharp.fluid}
             durationFadeIn={50}
