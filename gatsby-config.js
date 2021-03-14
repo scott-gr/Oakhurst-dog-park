@@ -84,12 +84,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD google TRACKING ID HERE`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-react-css-modules`,
       options: {
         // *.css files are included by default.
