@@ -11,6 +11,7 @@ const Footer = () => {
         href="https://www.facebook.com/OakhurstDogPark"
         alt="Facebook Page"
         target="_blank"
+        rel="noreferrer"
       >
         <FontAwesomeIcon icon={faFacebook} />
       </a>
