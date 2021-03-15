@@ -29,8 +29,11 @@
     -12px 12px var(--red);
 }
 
-@media (maxWidth: 475){
+@media (max-width: 475px){
   .aboutHeader {
     font-size: 1.5rem;
+  }
+  .heroBox {
+    max-height: 200px;
   }
 }
