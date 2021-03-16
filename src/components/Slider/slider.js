@@ -18,7 +18,7 @@ const PhotoSlider = () => {
           }
         }
       }
-      sliderImgTwo: file(relativePath: { eq: "doglooking.png" }) {
+      sliderImgTwo: file(relativePath: { eq: "happylab.png" }) {
         childImageSharp {
           fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -32,14 +32,14 @@ const PhotoSlider = () => {
           }
         }
       }
-      sliderImgFour: file(relativePath: { eq: "twodogs.png" }) {
+      sliderImgFour: file(relativePath: { eq: "stump.png" }) {
         childImageSharp {
           fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
-      sliderImgFive: file(relativePath: { eq: "falltrees.png" }) {
+      sliderImgFive: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
           fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -47,6 +47,20 @@ const PhotoSlider = () => {
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
+        childImageSharp {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      sliderImgSeven: file(relativePath: { eq: "falltrees.png" }) {
+        childImageSharp {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      sliderImgEight: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
           fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
@@ -73,7 +87,7 @@ const PhotoSlider = () => {
       key={visibleSlides}
       naturalSlideWidth={100}
       naturalSlideHeight={175}
-      totalSlides={6}
+      totalSlides={8}
       visibleSlides={visibleSlides}
       infinite={true}
       touchEnabled={false}
@@ -126,6 +140,20 @@ const PhotoSlider = () => {
         <Slide styleName="slide" index={5}>
           <Img
             fluid={data.sliderImgSix.childImageSharp.fluid}
+            durationFadeIn={50}
+            tag="img"
+          />
+        </Slide>
+        <Slide styleName="slide" index={6}>
+          <Img
+            fluid={data.sliderImgSeven.childImageSharp.fluid}
+            durationFadeIn={50}
+            tag="img"
+          />
+        </Slide>
+        <Slide styleName="slide" index={7}>
+          <Img
+            fluid={data.sliderImgEight.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
           />
