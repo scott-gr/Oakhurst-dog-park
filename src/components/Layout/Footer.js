@@ -15,6 +15,7 @@ const Footer = () => {
       >
         <FontAwesomeIcon icon={faFacebook} />
       </a>
+      <p>450 E Lake Dr, Decatur, GA 30030</p>
       <p styleName="copywright"> © Oakhurst Dog Park 2021</p>
     </footer>
   )
