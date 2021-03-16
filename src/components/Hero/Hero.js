@@ -36,7 +36,7 @@ const Hero = () => {
       heroDesktop: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
           fixed(height: 300, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }

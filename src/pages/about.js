@@ -25,7 +25,7 @@ const AboutPage = ({ data, location }) => {
           </p>
         </aside>
         <section styleName="aboutContainer">
-          <ul styleName="facts"> 
+          <ul styleName="facts">
             <li>Fully fenced-in</li>
             <li>All dogs share one area (no size separation)</li>
             <li>Large, open field for play</li>
