@@ -1,62 +1,17 @@
-.container {
-  grid-row: 2/5;
-  margin-left: 12.5%;
-  margin-right: 12.5%;
-  margin-top: 1rem;
-  align-self: baseline;
-  grid-column: 1/5;
-  justify-items: center;
-}
-
 .accordians {
-  margin-top: 4rem;
-  width: 100%;
-  justify-self: center;
+  grid-row: 4/5;
+  margin: 0 3rem 0.5rem 3rem;
+  place-content: center;
+  grid-column: 1/5;
+  padding: 0 1rem 1rem 1rem;
+  margin: 2rem 3rem 0.5rem 3rem;
 }
 
-.rulesIntro {
-  align-self: baseline;
-  text-align: center;
-  justify-self: center;
-  font-size: 2rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
-  text-align: center;
-  background-color: var(--black);
-  color: var(--offwhite);
 
-  padding: 0.5rem;
-  border-radius: 5px;
-  box-shadow: -5px 5px var(--blue), -10px 10px var(--yellow),
-  -15px 15px var(--red);
-}
 
 @media (max-width: 630px) {
-  .rulesIntro {
-    font-size: 1.25rem;
-
-  }
-  .container {
+  .accordians {
     margin-left: 5%;
     margin-right: 5%;
   }
 }
-
-/* @media (min-width: 481px) {
-  .rulesIntro {
-    font-size: 1.1rem;
-    margin-left: .5rem;
-    margin-right: .5rem;
-    text-align: center;
-    border-width: 2px;
-    background-color: var(--black);
-    color: var(--offwhite);
-    border-color: var(--offwhite);
-    border-style: solid;
-    padding: 0 0.5rem 0 0.5rem;
-    border-radius: 5px;
-    box-shadow: -5px 5px 0 -3px var(--black), -5px 5px var(--blue),
-      -10px 10px 0 -3px var(--black), -10px 10px var(--yellow),
-      -15px 15px 0 -3px var(--black), -15px 15px var(--red);
-  }
-} */

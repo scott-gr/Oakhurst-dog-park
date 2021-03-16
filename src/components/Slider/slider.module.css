@@ -7,15 +7,15 @@
   overflow-x: hidden;
   object-fit:inherit;
   object-position: -80% 0;
-  filter: brightness(75%);
+  filter: brightness(80%);
   height: min-content;
+  
 }
 
 .slide .trayClass .wrapClass .innerClass .carouselWrapper  {
   object-fit: contain;
   grid-row: 2;
   padding: 0;
-
 }
 
 

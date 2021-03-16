@@ -11,7 +11,7 @@ const NavIcon = () => {
       iconImage: file(relativePath: { eq: "navicon.png" }) {
         childImageSharp {
           fixed(height: 100, fit: CONTAIN) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
