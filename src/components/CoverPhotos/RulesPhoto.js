@@ -8,10 +8,7 @@ const RulesPhoto = () => {
     query {
       rulesphoto: file(relativePath: { eq: "beagle.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: NORTH
-            ) {
+          fluid(fit: COVER, cropFocus: NORTH) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

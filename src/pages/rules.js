@@ -11,7 +11,7 @@ const RuleIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All rules" />
+      <SEO title="Park Rules" />
       <RulesPhoto />
       <section styleName="accordians">
         <RuleAccordian category="The Basics" />

@@ -11,6 +11,6 @@
   z-index: 10;
   justify-self: center;
   place-content: center;
-  align-self:unset;
+  align-self:flex-end;
 }
 

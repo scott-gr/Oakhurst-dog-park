@@ -10,7 +10,7 @@ const AboutPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="About" />
+      <SEO title="About the Park" />
       <AboutPhoto />
       <main styleName="container">
         <aside styleName="aboutBrief">

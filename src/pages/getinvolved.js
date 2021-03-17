@@ -10,7 +10,7 @@ const GetInvolvedPage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All rules" />
+      <SEO title="Get Involved" />
       <GetInvolvedPhoto />
 
       {/* 
@@ -18,7 +18,6 @@ const GetInvolvedPage = ({ data, location }) => {
       -ways to volunteer
       -donate button 
       */}
-
     </Layout>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import Toggle from './Toggle.js'
 import MobileMenu from './MobileMenu.js'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
@@ -8,7 +8,6 @@ import NavIcon from './NavIcon.js'
 
 const Navbar = () => {
   const breakpoints = useBreakpoint()
-
   return (
     <nav styleName="navwrapper">
       <NavIcon />
