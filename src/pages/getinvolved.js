@@ -1,26 +1,48 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
-import { graphql } from 'gatsby'
+import GetInvolvedPhoto from '../components/CoverPhotos/GetInvolvedPhoto.js'
+import './styles/getinvolved.module.css'
 
-const ContactPage = ({ data, location }) => {
+const GetInvolvedPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Contact" />
-      <div></div>
+      <SEO title="All rules" />
+      <GetInvolvedPhoto />
+
+      {/* 
+      -Summary of community involvement
+      -ways to volunteer
+      -donate button 
+      */}
+
     </Layout>
   )
 }
 
-export default ContactPage
+export default GetInvolvedPage
 
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { collection: { eq: "rules" } } }
+    ) {
+      nodes {
+        excerpt
+        frontmatter {
+          rulebrief
+          category
+          description
+        }
       }
     }
   }

@@ -3,7 +3,7 @@ import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import '../pages/styles/aboutpage.module.css'
 import { graphql } from 'gatsby'
-import AboutPhoto from '../components/AboutPhoto/AboutPhoto.js'
+import AboutPhoto from '../components/CoverPhotos/AboutPhoto.js'
 
 const AboutPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
