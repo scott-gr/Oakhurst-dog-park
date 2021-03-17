@@ -1,13 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-
-import './aboutphoto.module.css'
+import './coverphoto.module.css'
 
 const AboutPhoto = () => {
   const data = useStaticQuery(graphql`
     query {
-      photo: file(relativePath: { eq: "fieldfall.png" }) {
+      aboutphoto: file(relativePath: { eq: "fieldfall.png" }) {
         childImageSharp {
           fluid(fit: COVER) {
             ...GatsbyImageSharpFluid_withWebp
@@ -20,10 +19,10 @@ const AboutPhoto = () => {
     <BackgroundImage
       styleName="heroBox"
       tag="section"
-      fluid={data.photo.childImageSharp.fluid}
+      fluid={data.aboutphoto.childImageSharp.fluid}
       durationFadeIn={50}
     >
-      <span styleName="aboutHeader">
+      <span styleName="pageHeader">
         <h2 styleName="headerText">About the Park</h2>
       </span>
     </BackgroundImage>

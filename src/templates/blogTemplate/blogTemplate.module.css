@@ -17,6 +17,7 @@
 
 .blogBody {
   font-family: var(--lato);
+  font-size: 1rem;
 }
 
 .blogCard {

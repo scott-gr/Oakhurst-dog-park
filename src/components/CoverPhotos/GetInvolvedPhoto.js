@@ -1,13 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import './coverphoto.module.css'
 
-import './rulesphoto.module.css'
-
-const RulesPhoto = () => {
+const GetInvolvedPhoto = () => {
   const data = useStaticQuery(graphql`
-    query { 
-      photo: file(relativePath: { eq: "beagle.png" }) {
+    query {
+      getinvolvedphoto: file(relativePath: { eq: "wheelbarrow.png" }) {
         childImageSharp {
           fluid(fit: COVER) {
             ...GatsbyImageSharpFluid_withWebp
@@ -18,16 +17,16 @@ const RulesPhoto = () => {
   `)
   return (
     <BackgroundImage
-      styleName="heroBox"
+      styleName={`heroBox heroBoxGetInv`}
       tag="section"
-      fluid={data.photo.childImageSharp.fluid}
+      fluid={data.getinvolvedphoto.childImageSharp.fluid}
       durationFadeIn={50}
     >
-      <span styleName="rulesHeader">
-        <h2 styleName="headerText">Park Rules</h2>
+      <span styleName="pageHeader">
+        <h2 styleName="headerText">Get Involved</h2>
       </span>
     </BackgroundImage>
   )
 }
 
-export default RulesPhoto
+export default GetInvolvedPhoto

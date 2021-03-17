@@ -14,7 +14,7 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Oakhurst Dog Park" />
+      <SEO title="Welcome" />
       <Hero />
       <PhotoSlider />
       <FeaturedPost />
