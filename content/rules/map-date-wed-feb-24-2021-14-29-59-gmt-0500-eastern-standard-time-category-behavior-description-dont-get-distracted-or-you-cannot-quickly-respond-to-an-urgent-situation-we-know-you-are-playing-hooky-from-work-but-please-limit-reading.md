@@ -1,5 +1,5 @@
 ---
-rulebrief: Pay attention to your dog
+rulebrief: Pay attention to your dog, and pick up their poop!
 date: 2021-02-24T19:29:59.128Z
 category: Behavior
 description: Don't get distracted, or you cannot quickly respond to an urgent
