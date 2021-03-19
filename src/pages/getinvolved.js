@@ -15,8 +15,16 @@ const GetInvolvedPage = ({ data, location }) => {
 
       {/* 
       -Summary of community involvement
+      Follow blog and on facebook for announcements
+
       -ways to volunteer
-      -donate button 
+      Friday mornings are volunteer work days. show up at 9, work til 11:30/12.
+      spread mulch, maintain paths, clean and clear debris
+
+
+
+
+      -donate button - ask Lee
       */}
     </Layout>
   )

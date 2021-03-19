@@ -6,7 +6,9 @@
   grid-column: 1/5;
   background-color: var(--black);
   margin: 0;
-  padding:  0.3rem 1rem 0.3rem 1rem;
+  align-content: center;
+  height: 60px;
+  padding: 0.3rem 1rem 0.3rem 1rem;
   text-transform: uppercase;
 }
 
@@ -21,16 +23,15 @@
   z-index: 20;
   white-space: nowrap;
   cursor: pointer;
-  
 }
 
-@media (min-Width: 701px){
+@media (min-width: 701px) {
   .navItem {
     font-size: 1.5rem;
   }
 }
 
-@media (max-Width: 700px){
+@media (max-width: 700px) {
   .navItem {
     font-size: 2.5rem;
     justify-self: center;
@@ -40,14 +41,12 @@
 
 /* forward slashes to visually break up nav links */
 .navItem:before {
-  content: " // ";
+  content: ' // ';
   position: relative;
   left: -2px;
-  
+
   color: var(--blue);
 }
-
-
 
 .navItem:hover {
   transform: scale(1.01);
@@ -58,7 +57,7 @@
 }
 
 .navIcon {
-  object-fit:fill;
+  object-fit: fill;
   height: 60px;
   width: 100px;
   padding: 0;
@@ -67,9 +66,8 @@
   justify-self: center;
 }
 
-
 .navBox {
-  display:flex;
+  display: flex;
   grid-row: 1;
   flex-direction: row;
   grid-column: 2/3;
@@ -82,4 +80,3 @@
   cursor: pointer;
   width: max-content;
 }
-
