@@ -72,6 +72,11 @@ export const pageQuery = graphql`
         title
       }
     }
+
+    feedFacebookPage {
+      title
+      link
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { fields: { collection: { eq: "blog" } } }
@@ -88,5 +93,6 @@ export const pageQuery = graphql`
         }
       }
     }
+
   }
 `

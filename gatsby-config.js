@@ -101,7 +101,6 @@ module.exports = {
         // For all the options check babel-plugin-react-css-modules README link provided above
       },
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -113,6 +112,13 @@ module.exports = {
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
         // PLACEHOLDER
+      },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `http://fetchrss.com/rss/604ec97bb80be95dfe033a82604ec924974a2114787f6d62.xml`,
+        name: `FacebookPage`,
       },
     },
     `gatsby-plugin-fontawesome-css`,
