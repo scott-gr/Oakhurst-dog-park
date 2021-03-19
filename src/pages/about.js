@@ -31,21 +31,17 @@ const AboutPage = ({ data, location }) => {
             <li>Large, open field for play</li>
             <li>One-third of park is wooded area</li>
             <li>Benches for humans</li>
+            <li>Poop bags, water bowls, and tennis balls available</li>
+            <li>Water hose outside for rinsing off</li>
             <li>Open 365 days a year</li>
           </ul>
           <article>
             <p>
               The Oakhurst Dog Park is one of three dog parks in the city of
-              Decatur and is 100% community-maintained. The city provides
-              resources, but it’s the park-goers who keep the grounds clean and
-              welcoming.
-            </p>
-            <br></br>
-            <p>
-              We are proud to be first dog park to be named a wildlife sanctuary
-              by the Atlanta Audubon Society. There are several birdhouses and
-              bat houses and a 1300 sqft pollinator garden, where no unnatural
-              chemicals are used.
+              Decatur and serves a large community of friendly pets and people.
+              We are proud to be the first dog park to be named a wildlife
+              sanctuary by the Atlanta Audubon Society. There are several
+              birdhouses, bat houses, and a 1300 sqft pollinator garden.
             </p>
           </article>
         </section>

@@ -65,7 +65,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        icon: `static/admin/favicon.ico`,
+        icon: `static/favicon.ico`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
