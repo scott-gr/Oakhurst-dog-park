@@ -80,7 +80,6 @@ module.exports = {
             },
           },
           `gatsby-remark-copy-linked-files`,
-          `gatsby-transformer-xml`
           `gatsby-remark-smartypants`,
         ],
       },
@@ -101,6 +100,13 @@ module.exports = {
         handleMissingStyleName: `warn`,
         // For all the options check babel-plugin-react-css-modules README link provided above
       },
+    },
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `http://fetchrss.com/rss/604ec97bb80be95dfe033a82604ec924974a2114787f6d62.xml`,
+        name: `FacebookPage`,
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
