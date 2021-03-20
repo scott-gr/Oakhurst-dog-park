@@ -80,6 +80,7 @@ module.exports = {
             },
           },
           `gatsby-remark-copy-linked-files`,
+          `gatsby-transformer-xml`
           `gatsby-remark-smartypants`,
         ],
       },
@@ -114,13 +115,7 @@ module.exports = {
         // PLACEHOLDER
       },
     },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: `http://fetchrss.com/rss/604ec97bb80be95dfe033a82604ec924974a2114787f6d62.xml`,
-        name: `FacebookPage`,
-      },
-    },
+
     `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify-cms`,

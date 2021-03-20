@@ -74,8 +74,12 @@ export const pageQuery = graphql`
     }
 
     feedFacebookPage {
-      title
-      link
+      channel {
+        item {
+          title
+          link
+        }
+      }
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
@@ -93,6 +97,5 @@ export const pageQuery = graphql`
         }
       }
     }
-
   }
 `
