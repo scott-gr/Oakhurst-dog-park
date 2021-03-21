@@ -43,7 +43,13 @@ const RuleBlock = (props) => {
         </section>
       </div>
     ))
-  return <ol styleName="ruleList">{rules}</ol>
+  return (
+    <ol
+    //  styleName="ruleList"
+    >
+      {rules}
+    </ol>
+  )
 }
 
 export default RuleBlock

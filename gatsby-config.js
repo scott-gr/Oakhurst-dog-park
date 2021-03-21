@@ -16,6 +16,7 @@ module.exports = {
     },
     description: `Visit Oakhurst Dog Park in Decatur, GA`,
     siteUrl: `https://oakhurstdogpark.com`,
+    icon: `static/favicon.ico`
   },
 
   plugins: [
@@ -65,7 +66,6 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        icon: `static/favicon.ico`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
@@ -101,7 +101,13 @@ module.exports = {
         // For all the options check babel-plugin-react-css-modules README link provided above
       },
     },
-    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-source-rss-feed`,
+      options: {
+        url: `http://fetchrss.com/rss/604ec97bb80be95dfe033a82604ec924974a2114787f6d62.xml`,
+        name: `FacebookPage`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -112,10 +118,9 @@ module.exports = {
         theme_color: `#FEAE25`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
-        // PLACEHOLDER
       },
     },
-    `gatsby-plugin-fontawesome-css`,
+
     `gatsby-plugin-netlify-cache`,
     `gatsby-plugin-netlify-cms`,
     'gatsby-plugin-netlify',

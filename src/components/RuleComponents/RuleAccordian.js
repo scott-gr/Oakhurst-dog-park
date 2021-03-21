@@ -4,7 +4,7 @@ import './rules.module.css'
 
 const RuleAccordian = (props) => {
   return (
-    <details styleName="categoryBox">
+    <details>
       <summary styleName="category">{props.category}</summary>
       <RuleBlock category={props.category} />
     </details>
