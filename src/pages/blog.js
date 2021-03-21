@@ -6,31 +6,30 @@ import '../pages/styles/blog.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allFeedFacebookPage.edges.node
 
-  if (posts.length === 0) {
-    return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="Blog" />
-        <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
-        </p>
-      </Layout>
-    )
-  }
+  // if (posts.length === 0) {
+  //   return (
+  //     <Layout location={location} title={siteTitle}>
+  //       <SEO title="Blog" />
+  //       <p>
+  //         No blog posts found. Add markdown posts to "content/blog" (or the
+  //         directory you specified for the "gatsby-source-filesystem" plugin in
+  //         gatsby-config.js).
+  //       </p>
+  //     </Layout>
+  //   )
+  // }
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <ol styleName="blogList" style={{ listStyle: `none` }}>
         {posts.map((post) => {
-          const title = post.frontmatter.title || post.fields.slug
-
+          const title = post.title      
           return (
-            <li key={post.fields.slug}>
-              <Link to={post.fields.slug} itemProp="url">
+            <li key={post.id}>
+              <Link to={post.link} itemProp="url">
                 <article
                   styleName="blogCard"
                   // className="post-list-item"
@@ -41,14 +40,12 @@ const BlogIndex = ({ data, location }) => {
                     <h2 styleName="blogTitle">
                       <span itemProp="headline">{title}</span>
                     </h2>
-                    <small styleName="blogDate">{post.frontmatter.date}</small>
+                    <small styleName="blogDate">{post.pubDate}</small>
                   </header>
                   <section>
                     <p
-                      styleName="blogDesc"
                       dangerouslySetInnerHTML={{
-                        __html:
-                          post.frontmatter.description + '...' || post.excerpt,
+                        __html: post.description + '...' || post.excerpt,
                       }}
                       itemProp="description"
                     />
@@ -65,11 +62,28 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const pageQuery = graphql`
-  query {
+export const query = graphql`
+  {
     site {
       siteMetadata {
         title
+      }
+    }
+    allFeedFacebookPage(sort: { order: DESC, fields: pubDate }) {
+      edges {
+        node {
+          id
+          pubDate
+          link
+          media {
+            content {
+              attrs {
+                url
+              }
+            }
+          }
+          content
+        }
       }
     }
   }
