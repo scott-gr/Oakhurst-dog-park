@@ -72,30 +72,23 @@ export const pageQuery = graphql`
         title
       }
     }
-
-    feedFacebookPage {
-      channel {
-        item {
-          title
-          link
-        }
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { collection: { eq: "blog" } } }
-    ) {
-      nodes {
-        excerpt
-        fields {
-          slug
-        }
-        frontmatter {
-          date(formatString: "MMMM DD, YYYY")
-          title
-          description
-        }
-      }
-    }
   }
 `
+
+// allMarkdownRemark(
+//   sort: { fields: [frontmatter___date], order: DESC }
+//   filter: { fields: { collection: { eq: "blog" } } }
+// ) {
+//   nodes {
+//     excerpt
+//     fields {
+//       slug
+//     }
+//     frontmatter {
+//       date(formatString: "MMMM DD, YYYY")
+//       title
+//       description
+//     }
+//   }
+// }
+// }

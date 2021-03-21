@@ -60,7 +60,7 @@ summary:focus {
   outline: none;
 }
 
-summary[open]::-webkit-details-marker {
+summary[open]::marker {
   color: var(--yellow);
 }
 

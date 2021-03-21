@@ -62,7 +62,6 @@ const FeaturedPost = () => {
 
               <section>
                 <section
-                  styleName="featuredBody"
                   dangerouslySetInnerHTML={{ __html: post.html }}
                   itemProp="articleBody"
                 />
@@ -70,6 +69,7 @@ const FeaturedPost = () => {
             </article>
           )
         }
+        return null
       })}
     </>
   )

@@ -16,7 +16,7 @@ const HomePage = ({ data, location }) => {
       <Hero />
       <PhotoSlider />
       <FeaturedPost />
-      <section styleName="featured"></section>
+      {/* <section styleName="featured"></section> */}
     </Layout>
   )
 }

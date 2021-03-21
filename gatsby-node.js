@@ -79,6 +79,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: collection,
     })
   }
+  if (node.internal.type === 'FeedFacebookPage') {  
+    createNodeField({
+      node,
+      name: 'description',
+      value: node.description.split(`<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="http://fetchrss.com" target="_blank">FetchRSS</a>)</span>`)
+    })
+  }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
