@@ -28,23 +28,44 @@ const BlogIndex = ({ data, location }) => {
         {posts.map((post) => {
           return (
             <li key={post.id} styleName="blogCard">
-              <article
-                
-                itemType="http://schema.org/Article"
-              >
+              <article itemType="http://schema.org/Article">
                 <header>
                   <h2 styleName="blogTitle">
                     <span itemProp="headline">{post.title}</span>
                   </h2>
                   <small styleName="blogDate">{post.pubDate}</small>
                 </header>
-                <section >
+                <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post.content,
+                      __html: post.content
+                        .replace(
+                          `\n\n<br/><br/><span style=\"font-size:12px; color: gray;\">(Feed generated with <a href=\"http://fetchrss.com\" target=\"_blank\">FetchRSS</a>)</span>`,
+                          `<br/><br/>`
+                        )
+                        .replace(
+                          `allowFullScreen=\"true\"`,
+                          `seamless no-referrer allowFullScreen=\"false\""`
+                        )
+                        .replace(
+                          `background-size: cover`,
+                          `background-size: contain`
+                        )
+                        .replace(
+                          `-webkit-background-size: cover`,
+                          `-webkit-background-size: contain`
+                        ),
                     }}
                     itemProp="content"
                     styleName="blogContent"
+                    style={{
+                      width: '300px',
+                      height: 'fit-content',
+                      objectFit: 'scale-down',
+                      webkitBackgroundSize: 'scale-down',
+                      padding: 0,
+                      gridColumn: 1/5,
+                    }}
                   />
                 </section>
               </article>
@@ -65,7 +86,7 @@ export const query = graphql`
         title
       }
     }
-    allFeedFacebookPage(sort: {fields: pubDate, order: DESC}) {
+    allFeedFacebookPage(sort: { fields: pubDate, order: DESC }) {
       nodes {
         content
         link
