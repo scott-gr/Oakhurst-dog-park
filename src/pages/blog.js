@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import '../pages/styles/blog.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const posts = data.allFeedFacebookPage.nodes
 
   if (posts.length === 0) {
     return (
@@ -24,37 +24,51 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <ol styleName="blogList" style={{ listStyle: `none` }}>
+      <ol styleName="blogList">
         {posts.map((post) => {
-          const title = post.frontmatter.title || post.fields.slug
-
           return (
-            <li key={post.fields.slug}>
-              <Link to={post.fields.slug} itemProp="url">
-                <article
-                  styleName="blogCard"
-                  // className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <header>
-                    <h2 styleName="blogTitle">
-                      <span itemProp="headline">{title}</span>
-                    </h2>
-                    <small styleName="blogDate">{post.frontmatter.date}</small>
-                  </header>
-                  <section>
-                    <p
-                      styleName="blogDesc"
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          post.frontmatter.description + '...' || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </section>
-                </article>
-              </Link>
+            <li key={post.id} styleName="blogCard">
+              <article itemType="http://schema.org/Article">
+                <header>
+                  <h2 styleName="blogTitle">
+                    <span itemProp="headline">{post.title}</span>
+                  </h2>
+                  <small styleName="blogDate">{post.pubDate}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.content
+                        .replace(
+                          `\n\n<br/><br/><span style=\"font-size:12px; color: gray;\">(Feed generated with <a href=\"http://fetchrss.com\" target=\"_blank\">FetchRSS</a>)</span>`,
+                          `<br/><br/>`
+                        )
+                        .replace(
+                          `allowFullScreen=\"true\"`,
+                          `seamless no-referrer allowFullScreen=\"false\""`
+                        )
+                        .replace(
+                          `background-size: cover`,
+                          `background-size: contain`
+                        )
+                        .replace(
+                          `-webkit-background-size: cover`,
+                          `-webkit-background-size: contain`
+                        ),
+                    }}
+                    itemProp="content"
+                    styleName="blogContent"
+                    style={{
+                      width: '300px',
+                      height: 'fit-content',
+                      objectFit: 'scale-down',
+                      webkitBackgroundSize: 'scale-down',
+                      padding: 0,
+                      gridColumn: 1/5,
+                    }}
+                  />
+                </section>
+              </article>
             </li>
           )
         })}
@@ -65,11 +79,20 @@ const BlogIndex = ({ data, location }) => {
 
 export default BlogIndex
 
-export const pageQuery = graphql`
-  query {
+export const query = graphql`
+  {
     site {
       siteMetadata {
         title
+      }
+    }
+    allFeedFacebookPage(sort: { fields: pubDate, order: DESC }) {
+      nodes {
+        content
+        link
+        pubDate
+        title
+        id
       }
     }
   }

@@ -79,13 +79,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: collection,
     })
   }
-  if (node.internal.type === 'FeedFacebookPage') {  
-    createNodeField({
-      node,
-      name: 'description',
-      value: node.description.split(`<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="http://fetchrss.com" target="_blank">FetchRSS</a>)</span>`)
-    })
-  }
+  /////// will just remove this on the component after querying
+  // if (node.internal.type === 'FeedFacebookPage') {
+  //   const parent = getNode(node.parent)
+
+  //   let description = parent.description
+  //   createNodeField({
+  //     node,
+  //     name: 'description',
+  //     value: description
+  //   })
+  // }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
@@ -111,6 +115,13 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
       fields: Fields
+    }
+    type FacebookPage implements Node {
+      id: String
+      title: String
+      link: String
+      content: String
+      pubDate: Date @dateformat
     }
 
     type Frontmatter {
