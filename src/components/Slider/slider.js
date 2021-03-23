@@ -77,7 +77,7 @@ const PhotoSlider = () => {
     : breakpoints.tablet
     ? 2
     : breakpoints.pc
-    ? 3
+    ? 2
     : breakpoints.pcXl
     ? 3
     : 4
