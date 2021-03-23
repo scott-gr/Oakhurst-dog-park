@@ -9,14 +9,14 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: blog
-    label: Blog
+  - name: announcements
+    label: Announcments
     label_singular: Post
-    description: The most recent Featured Post will appear on the home page.
-    folder: /content/blog
+    description: The announcement will appear on the home page. Edit this post to change it.
+    folder: /content/announcement
     editor: 
       preview: true
-    create: true
+    create: false
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     path: "{{slug}}"
     fields:

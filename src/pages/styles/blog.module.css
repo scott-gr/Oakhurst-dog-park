@@ -10,32 +10,25 @@
   display: flex;
   margin: 5%;
   border-radius: 5px;
-  flex-flow: row wrap;
   justify-self: center;
-  padding: 0 1rem 0 1rem;
-  box-shadow: -5px 5px var(--yellow);
+  padding: 0 1rem 0.5rem 1rem;
+  max-height: fit-content;
+  box-shadow: -5px 5px var(--blue);
 }
 
-.blogContent img{
-  width: 300px;
+.blogContent {
   height: fit-content;
-  object-fit: scale-down;
-  padding: 0;
-  grid-column: 1/5
 }
 
-.blogContent i{
-  height: 300px;
-  width: auto;
-  object-fit: scale-down;
+[itemprop='content'] > img,
+i,
+iframe {
+  max-height: 400px;
+  width: 100%;
+  object-fit: contain;
+  text-align: left;
+  padding: 0.5rem 0.5rem 0 0;
 }
-
-.blogContent iframe{
-  height: 300px;
-  width: auto;
-  object-fit: scale-down;
-}
-
 
 element.style {
   border: none;
@@ -57,7 +50,15 @@ element.style {
 }
 
 .blogDate {
-  color: var(--yellow);
+  color: var(--blue);
   font-size: 1rem;
   font-family: var(--zilla);
 }
+
+.fbLink {
+  color: var(--black);
+  font-family: var(--zilla);
+  padding: 0;
+}
+
+

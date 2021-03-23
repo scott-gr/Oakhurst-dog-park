@@ -4,9 +4,7 @@ import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import './navbar.module.css'
 import NavbarLinks from './NavbarLinks.js'
 import NavIcon from './NavIcon.js'
-import { useLocation } from '@reach/router';
-
-
+import { useLocation } from '@reach/router'
 
 const Navbar = () => {
   const location = useLocation()

@@ -28,9 +28,9 @@ const FeaturedPost = () => {
       <>
         <SEO title="Featured Post" />
         <p>
-          No announcements found. Add markdown posts to "content/announcements"
-          (or the directory you specified for the "gatsby-source-filesystem"
-          plugin in gatsby-config.js).
+          No announcements found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
         </p>
       </>
     )
@@ -44,6 +44,7 @@ const FeaturedPost = () => {
         if (featured) {
           return (
             <article
+              key={title}
               styleName="featuredCard"
               itemScope
               itemType="http://schema.org/Article"

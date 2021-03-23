@@ -1,63 +1,65 @@
-const path = require(`path`)
+// const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+/////////// This can be used to programatically create blog pages. Feature is off for now, because admin posts via Facebook, which is queried on blog.js page
 
-  const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
+// exports.createPages = async ({ graphql, actions, reporter }) => {
+//   const { createPage } = actions
 
-  const result = await graphql(
-    `
-      {
-        allMarkdownRemark(
-          sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { collection: { eq: "blog" } } }
-        ) {
-          nodes {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              featuredpost
-            }
-          }
-        }
-      }
-    `
-  )
+//   const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
 
-  if (result.errors) {
-    reporter.panicOnBuild(
-      `There was an error loading your posts`,
-      result.errors
-    )
-    return
-  }
+//   const result = await graphql(
+//     `
+//       {
+//         allMarkdownRemark(
+//           sort: { fields: [frontmatter___date], order: DESC }
+//           filter: { fields: { collection: { eq: "blog" } } }
+//         ) {
+//           nodes {
+//             id
+//             fields {
+//               slug
+//             }
+//             frontmatter {
+//               featuredpost
+//             }
+//           }
+//         }
+//       }
+//     `
+//   )
 
-  const posts = result.data.allMarkdownRemark.nodes
+//   if (result.errors) {
+//     reporter.panicOnBuild(
+//       `There was an error loading your posts`,
+//       result.errors
+//     )
+//     return
+//   }
 
-  // Create blog posts pages
-  // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
-  // `context` is available in the template as a prop and as a variable in GraphQL
+//   const posts = result.data.allMarkdownRemark.nodes
 
-  if (posts.length > 0) {
-    posts.forEach((post, index) => {
-      const previousPostId = index === 0 ? null : posts[index - 1].id
-      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+// Create blog posts pages
+// But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
+// `context` is available in the template as a prop and as a variable in GraphQL
 
-      createPage({
-        path: post.fields.slug,
-        component: blogPost,
-        context: {
-          id: post.id,
-          previousPostId,
-          nextPostId,
-        },
-      })
-    })
-  }
-}
+//   if (posts.length > 0) {
+//     posts.forEach((post, index) => {
+//       const previousPostId = index === 0 ? null : posts[index - 1].id
+//       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+
+//       createPage({
+//         path: post.fields.slug,
+//         component: blogPost,
+//         context: {
+//           id: post.id,
+//           previousPostId,
+//           nextPostId,
+//         },
+//       })
+//     })
+//   }
+// }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -79,17 +81,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value: collection,
     })
   }
-  /////// will just remove this on the component after querying
-  // if (node.internal.type === 'FeedFacebookPage') {
-  //   const parent = getNode(node.parent)
-
-  //   let description = parent.description
-  //   createNodeField({
-  //     node,
-  //     name: 'description',
-  //     value: description
-  //   })
-  // }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
