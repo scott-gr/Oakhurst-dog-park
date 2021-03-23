@@ -1,5 +1,5 @@
 const myViews = {
-  mobile: '(max-width: 480px)',
+  mobile: '(max-width: 485px)',
   mobileXl: '(max-width: 700px)',
   tablet: '(max-width: 980px)',
   pc: '(max-width: 1350px)',
