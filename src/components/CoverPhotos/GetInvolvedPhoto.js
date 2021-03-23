@@ -17,13 +17,13 @@ const GetInvolvedPhoto = () => {
   `)
   return (
     <BackgroundImage
-      styleName={`heroBox heroBoxGetInv`}
+      styleName={`heroBox`}
       tag="section"
       fluid={data.getinvolvedphoto.childImageSharp.fluid}
       durationFadeIn={50}
     >
       <span styleName="pageHeader">
-        <h2 styleName="headerText">Get Involved</h2>
+        <h2>Get Involved</h2>
       </span>
     </BackgroundImage>
   )

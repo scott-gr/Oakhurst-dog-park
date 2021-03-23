@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import '../pages/styles/blog.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -33,27 +35,21 @@ const BlogIndex = ({ data, location }) => {
                   <h2 styleName="blogTitle">
                     <span itemProp="headline">{post.title}</span>
                   </h2>
-                  <small styleName="blogDate">{post.pubDate}</small>
+                  <small styleName="blogDate">
+                    {post.pubDate.replace(`+0000`, ``)}
+                  </small>
                 </header>
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.content
                         .replace(
-                          `\n\n<br/><br/><span style=\"font-size:12px; color: gray;\">(Feed generated with <a href=\"http://fetchrss.com\" target=\"_blank\">FetchRSS</a>)</span>`,
+                          `<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="http://fetchrss.com" target="_blank">FetchRSS</a>)</span>`,
                           `<br/><br/>`
                         )
                         .replace(
-                          `allowFullScreen=\"true\"`,
-                          `seamless no-referrer allowFullScreen=\"false\""`
-                        )
-                        .replace(
-                          `background-size: cover`,
-                          `background-size: contain`
-                        )
-                        .replace(
-                          `-webkit-background-size: cover`,
-                          `-webkit-background-size: contain`
+                          `allowFullScreen="true"`,
+                          `seamless no-referrer allowFullScreen="false"`
                         ),
                     }}
                     itemProp="content"
@@ -61,6 +57,16 @@ const BlogIndex = ({ data, location }) => {
                     loading="eager"
                   />
                 </section>
+                <a
+                  styleName="fbLink"
+                  href="https://www.facebook.com/OakhurstDogPark"
+                  alt="Facebook Page"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faFacebook} />
+                  /OakhurstDogPark
+                </a>
               </article>
             </li>
           )

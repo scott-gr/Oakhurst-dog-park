@@ -23,7 +23,7 @@ const RulesPhoto = () => {
       durationFadeIn={50}
     >
       <span styleName="pageHeader">
-        <h2 styleName="headerText">Park Rules</h2>
+        <h2>Park Rules</h2>
       </span>
     </BackgroundImage>
   )

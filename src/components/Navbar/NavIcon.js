@@ -10,15 +10,15 @@ const NavIcon = () => {
     query {
       iconImage: file(relativePath: { eq: "navicon.png" }) {
         childImageSharp {
-          fixed(height: 100, fit: CONTAIN) {
-            ...GatsbyImageSharpFixed_withWebp_tracedSVG
+          fluid(maxHeight: 100, fit: CONTAIN) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
     }
   `)
 
-  if (!data?.iconImage?.childImageSharp?.fixed) {
+  if (!data?.iconImage?.childImageSharp?.fluid) {
     return <div>Picture not found</div>
   }
 
@@ -26,7 +26,7 @@ const NavIcon = () => {
     <Link to="/">
       <Img
         styleName="navIcon"
-        fluid={data.iconImage.childImageSharp.fixed}
+        fluid={data.iconImage.childImageSharp.fluid}
         durationFadeIn={50}
       />
     </Link>

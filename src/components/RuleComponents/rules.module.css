@@ -33,7 +33,7 @@ ol {
   font-weight: 500;
   cursor: pointer;
   font-family: var(--zilla);
-  color: var(--blue);
+  color: var(--black);
   box-sizing: border-box;
   margin-bottom: 1.25rem;
 }
@@ -61,7 +61,10 @@ summary:focus {
 }
 
 summary[open]::marker {
-  color: var(--yellow);
+  color: var(--blue);
+}
+summary::marker {
+  color: var(--blue);
 }
 
 .controlIconClose {
