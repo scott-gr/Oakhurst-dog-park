@@ -4,6 +4,8 @@
   "description": "A page for the park and community",
   "version": "0.1.0",
   "license": "MIT",
+  "keywords": ["oakhurst", "dog", "park", "decatur", "dogpark", "dogs", "play", "outdoor", "best dog park decatur", "atlanta"],
+  "homepage": "https://oakhurstdogpark.com",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -16,8 +18,6 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
-    "@fortawesome/free-regular-svg-icons": "^5.15.2",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^2.30",
     "gatsby-background-image": "^1.4.1",
@@ -28,7 +28,6 @@
     "gatsby-plugin-netlify": "^2.8.0",
     "gatsby-plugin-netlify-cache": "^1.2.0",
     "gatsby-plugin-netlify-cms": "^4.7.0",
-    "gatsby-plugin-offline": "^3.7.1",
     "gatsby-plugin-postcss": "^3.7.0",
     "gatsby-plugin-react-css-modules": "^2.10.0",
     "gatsby-plugin-react-helmet": "^3.7.0",

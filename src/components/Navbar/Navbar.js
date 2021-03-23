@@ -4,13 +4,17 @@ import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import './navbar.module.css'
 import NavbarLinks from './NavbarLinks.js'
 import NavIcon from './NavIcon.js'
+import { useLocation } from '@reach/router';
+
+
 
 const Navbar = () => {
-  const pathname = window.location.pathname
+  const location = useLocation()
   const breakpoints = useBreakpoint()
+
   return (
     <nav styleName="navwrapper">
-      {pathname !== '/' ? <NavIcon /> : null}
+      {location.pathname !== '/' ? <NavIcon /> : null}
 
       {breakpoints.mobileXl ? (
         <MobileMenu />
