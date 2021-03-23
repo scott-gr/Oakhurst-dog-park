@@ -12,6 +12,6 @@
   justify-self: center;
   place-content: center;
   align-self:flex-end;
-  background-image: radial-gradient( circle farthest-side at 50% 85%,  var(--blackfade), rgba(255,0,0,0) );
+  background-image: radial-gradient( circle farthest-corner at 50% 90%,  var(--blackfade),rgb(23, 23, 23, .37), rgba(255,0,0,0), rgba(255,0,0,0) ) ;
 }
 
