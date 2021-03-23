@@ -13,17 +13,6 @@ const AboutPage = ({ data, location }) => {
       <SEO title="About the Park" />
       <AboutPhoto />
       <main styleName="container">
-        <aside styleName="aboutBrief">
-          <p>
-            Located at 450 E Lake Dr, Decatur, GA 30030, next to the Boys &
-            Girls Club. Parking available at Oakhurst Park and Oakhurst
-            Presbyterian Church -{' '}
-            <i>
-              no church parking on Sundays and no parking at the Boys & Girls
-              Club.
-            </i>
-          </p>
-        </aside>
         <section styleName="aboutContainer">
           <ul styleName="facts">
             <li>Fully fenced-in</li>
@@ -36,6 +25,16 @@ const AboutPage = ({ data, location }) => {
             <li>Open 365 days a year</li>
           </ul>
           <article>
+            <p>
+              Located at 450 E Lake Dr, Decatur, GA 30030, next to the Boys &
+              Girls Club. Parking available at Oakhurst Park and Oakhurst
+              Presbyterian Church -{' '}
+              <i>
+                no church parking on Sundays and no parking at the Boys & Girls
+                Club.
+              </i>
+            </p>
+            <br></br>
             <p>
               The Oakhurst Dog Park is one of three dog parks in the city of
               Decatur and serves a large community of friendly pets and people.
