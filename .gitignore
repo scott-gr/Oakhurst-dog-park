@@ -12,10 +12,11 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
-
+.github/
 # dotenv environment variable files
 .env*
 
 # gatsby files
 .cache/
 public
+gatsby-config.js
