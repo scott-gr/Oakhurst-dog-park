@@ -4,6 +4,9 @@ import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import GetInvolvedPhoto from '../components/CoverPhotos/GetInvolvedPhoto.js'
 import './styles/getinvolved.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faPhone, faCity } from '@fortawesome/free-solid-svg-icons'
 
 const GetInvolvedPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -12,7 +15,49 @@ const GetInvolvedPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Get Involved" />
       <GetInvolvedPhoto />
-
+      <main styleName="container">
+        <section styleName="contactList">
+          <a
+            styleName="contact"
+            href="https://www.facebook.com/OakhurstDogPark"
+            alt="Facebook Page"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faFacebook} /> Facebook Page
+          </a>
+          <a
+            styleName="contact"
+            href=""
+            alt="Email"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faEnvelope} /> Email
+          </a>
+          <span styleName="contact">
+            <FontAwesomeIcon icon={faPhone} /> Phone
+          </span>
+          <a
+            styleName="contact"
+            href="https://www.decaturga.com/activeliving/page/dog-parks"
+            alt="City of Decatur parks site"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FontAwesomeIcon icon={faCity} /> City of Decatur Dog Parks
+          </a>
+        </section>
+        <article>
+          <p>
+            Oakhurst Dog Park is 100% community-maintained. The city provides
+            resources: water fountains, signage, waste bags, but it is an army
+            of volunteers who handle the upkeep. Projects include spreading wood
+            chips to fill in muddy areas, cleaning up paths through the woods,
+            and keeping the gate and water fountains clean and accessible.
+          </p>
+        </article>
+      </main>
       {/* 
       -Summary of community involvement
       Follow blog and on facebook for announcements
@@ -37,19 +82,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { collection: { eq: "rules" } } }
-    ) {
-      nodes {
-        excerpt
-        frontmatter {
-          rulebrief
-          category
-          description
-        }
       }
     }
   }
