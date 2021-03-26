@@ -1,65 +1,60 @@
 // const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-/////////// This can be used to programatically create blog pages. Feature is off for now, because admin posts via Facebook, which is queried on blog.js page
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
 
-// exports.createPages = async ({ graphql, actions, reporter }) => {
-//   const { createPage } = actions
+  const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
 
-//   const blogPost = path.resolve(`./src/templates/blogTemplate/blogTemplate.js`)
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fields: { collection: { eq: "blog" } } }
+        ) {
+          nodes {
+            id
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    `
+  )
 
-//   const result = await graphql(
-//     `
-//       {
-//         allMarkdownRemark(
-//           sort: { fields: [frontmatter___date], order: DESC }
-//           filter: { fields: { collection: { eq: "blog" } } }
-//         ) {
-//           nodes {
-//             id
-//             fields {
-//               slug
-//             }
-//             frontmatter {
-//               featuredpost
-//             }
-//           }
-//         }
-//       }
-//     `
-//   )
+  if (result.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading your posts`,
+      result.errors
+    )
+    return
+  }
 
-//   if (result.errors) {
-//     reporter.panicOnBuild(
-//       `There was an error loading your posts`,
-//       result.errors
-//     )
-//     return
-//   }
-
-//   const posts = result.data.allMarkdownRemark.nodes
+  const posts = result.data.allMarkdownRemark.nodes
 
 // Create blog posts pages
 // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
 // `context` is available in the template as a prop and as a variable in GraphQL
 
-//   if (posts.length > 0) {
-//     posts.forEach((post, index) => {
-//       const previousPostId = index === 0 ? null : posts[index - 1].id
-//       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
+  if (posts.length > 0) {
+    posts.forEach((post, index) => {
+      const previousPostId = index === 0 ? null : posts[index - 1].id
+      const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
-//       createPage({
-//         path: post.fields.slug,
-//         component: blogPost,
-//         context: {
-//           id: post.id,
-//           previousPostId,
-//           nextPostId,
-//         },
-//       })
-//     })
-//   }
-// }
+      createPage({
+        path: post.fields.slug,
+        component: blogPost,
+        context: {
+          id: post.id,
+          previousPostId,
+          nextPostId,
+        },
+      })
+    })
+  }
+}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -106,13 +101,6 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
       fields: Fields
-    }
-    type FacebookPage implements Node {
-      id: String
-      title: String
-      link: String
-      content: String
-      pubDate: Date @dateformat
     }
 
     type Frontmatter {
