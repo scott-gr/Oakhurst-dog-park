@@ -6,7 +6,9 @@ import SEO from '../seo.js'
 const FeaturedPost = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(
+        filter: { fields: { collection: { eq: "announcements" } } }
+      ) {
         nodes {
           excerpt
           fields {
@@ -16,7 +18,6 @@ const FeaturedPost = () => {
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            featuredpost
           }
         }
       }
@@ -28,9 +29,7 @@ const FeaturedPost = () => {
       <>
         <SEO title="Featured Post" />
         <p>
-          No announcements found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+          No announcements found. Add markdown posts to "content/announcements"
         </p>
       </>
     )
@@ -39,38 +38,33 @@ const FeaturedPost = () => {
     <>
       {posts.map((post) => {
         const title = post.frontmatter.title || post.fields.slug
-        const featured = post.frontmatter.featuredpost
-
-        if (featured) {
-          return (
-            <article
-              key={title}
-              styleName="featuredCard"
-              itemScope
-              itemType="http://schema.org/Article"
+        return (
+          <article
+            key={title}
+            styleName="featuredCard"
+            itemScope
+            itemType="http://schema.org/Article"
+          >
+            <Link
+              to={post.fields.slug}
+              itemProp="url"
+              styleName="featuredTitle"
             >
-              <Link
-                to={post.fields.slug}
-                itemProp="url"
-                styleName="featuredTitle"
-              >
-                <h2 itemProp="headline" styleName="featuredTitle">
-                  {title}
-                </h2>
-              </Link>
+              <h2 itemProp="headline" styleName="featuredTitle">
+                {title}
+              </h2>
+            </Link>
 
-              <small styleName="featuredDate">{post.frontmatter.date}</small>
+            <small styleName="featuredDate">{post.frontmatter.date}</small>
 
-              <section>
-                <section
-                  dangerouslySetInnerHTML={{ __html: post.html }}
-                  itemProp="articleBody"
-                />
-              </section>
-            </article>
-          )
-        }
-        return null
+            <section>
+              <section
+                dangerouslySetInnerHTML={{ __html: post.html }}
+                itemProp="articleBody"
+              />
+            </section>
+          </article>
+        )
       })}
     </>
   )
