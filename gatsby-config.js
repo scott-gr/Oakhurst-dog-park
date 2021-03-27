@@ -24,7 +24,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `announcements`,
-        path: `${__dirname}/content/announcement`,
+        path: `${__dirname}/content/announcements`,
       },
     },
     {
@@ -105,13 +105,6 @@ module.exports = {
         exclude: `node_modules`,
         handleMissingStyleName: `warn`,
         // For all the options check babel-plugin-react-css-modules README link provided above
-      },
-    },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        url: `http://fetchrss.com/rss/604ec97bb80be95dfe033a82604ec924974a2114787f6d62.xml`,
-        name: `FacebookPage`,
       },
     },
     {
