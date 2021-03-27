@@ -3,7 +3,7 @@ import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import './styles/index.module.css'
 import PhotoSlider from '../components/Slider/slider.js'
-import FeaturedPost from '../components/FeaturedPost/FeaturedPost.js'
+import AnnouncementPost from '../components/AnnouncementPost/AnnouncementPost.js'
 import { graphql } from 'gatsby'
 import Hero from '../components/Hero/Hero.js'
 
@@ -15,7 +15,7 @@ const HomePage = ({ data, location }) => {
       <SEO title="Welcome" />
       <Hero />
       <PhotoSlider />
-      <FeaturedPost />
+      <AnnouncementPost />
       {/* <section styleName="featured"></section> */}
     </Layout>
   )
