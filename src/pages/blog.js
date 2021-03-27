@@ -1,10 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import '../pages/styles/blog.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
+
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -26,47 +25,36 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <ol styleName="blogList">
-        {posts.map((post) => {
+      <ol style={{ listStyle: `none` }}>
+        {posts.map(post => {
+          const title = post.frontmatter.title || post.fields.slug
+
           return (
-            <li key={post.id} styleName="blogCard">
-              <article itemType="http://schema.org/Article">
+            <li key={post.fields.slug}>
+              <article
+                styleName="blogCard"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
                 <header>
                   <h2 styleName="blogTitle">
-                    <span itemProp="headline">{post.title}</span>
+                    <Link to={post.fields.slug} itemProp="url">
+                      <span itemProp="headline">{title}</span>
+                    </Link>
                   </h2>
                   <small styleName="blogDate">
-                    {post.pubDate.replace(`+0000`, ``)}
+                    {post.frontmatter.date}
                   </small>
                 </header>
                 <section>
                   <p
+                    styleName="blogDesc"
                     dangerouslySetInnerHTML={{
-                      __html: post.content
-                        .replace(
-                          `<br/><br/><span style="font-size:12px; color: gray;">(Feed generated with <a href="http://fetchrss.com" target="_blank">FetchRSS</a>)</span>`,
-                          `<br/><br/>`
-                        )
-                        .replace(
-                          `allowFullScreen="true"`,
-                          `seamless no-referrer allowFullScreen="false"`
-                        ),
+                      __html: post.frontmatter.description || post.excerpt,
                     }}
-                    itemProp="content"
-                    styleName="blogContent"
-                    loading="eager"
+                    itemProp="description"
                   />
                 </section>
-                <a
-                  styleName="fbLink"
-                  href="https://www.facebook.com/OakhurstDogPark"
-                  alt="Facebook Page"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FontAwesomeIcon icon={faFacebook} />
-                  /OakhurstDogPark
-                </a>
               </article>
             </li>
           )
@@ -79,19 +67,26 @@ const BlogIndex = ({ data, location }) => {
 export default BlogIndex
 
 export const query = graphql`
-  {
+  query {
     site {
       siteMetadata {
         title
       }
     }
-    allFeedFacebookPage(sort: { fields: pubDate, order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { collection: { eq: "blog" } } }
+    ) {
       nodes {
-        content
-        link
-        pubDate
-        title
-        id
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
+        }
       }
     }
   }

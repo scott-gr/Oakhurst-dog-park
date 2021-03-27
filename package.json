@@ -29,6 +29,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "gatsby": "^2.30",
     "gatsby-background-image": "^1.4.1",
@@ -48,7 +50,6 @@
     "gatsby-remark-responsive-iframe": "^2.8.0",
     "gatsby-remark-smartypants": "^2.7.0",
     "gatsby-source-filesystem": "^2.8.1",
-    "gatsby-source-rss-feed": "^1.2.2",
     "gatsby-transformer-remark": "^2.13.1",
     "gatsby-transformer-sharp": "^2.9.0",
     "netlify-cms-app": "^2.14.8",

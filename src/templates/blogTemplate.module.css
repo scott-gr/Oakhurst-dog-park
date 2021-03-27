@@ -1,0 +1,28 @@
+.blognav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0,
+}
+
+.blogTitle , .blogDate {
+  font-family: var(--zilla);
+}
+
+.blogBody {
+  font-family: var(--lato);
+}
+
+.blogCard {
+
+border-radius: 10px;
+padding-top: 1rem;
+padding-inline-start: 1rem;
+min-width: fit-content;
+max-width: 40rem;
+}
+
+
+
+/* https://codepen.io/ambiva/pen/bGNWwyg */
