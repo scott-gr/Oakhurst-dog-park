@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import "./blogTemplate.module.css"
-import Layout from "../../components/Layout/Layout.js"
-import SEO from "../../components/seo.js"
+import Layout from "../components/Layout/Layout.js"
+import SEO from "../components/seo.js"
 
 const BlogTemplate = ({ data, location }) => {
   const post = data.markdownRemark

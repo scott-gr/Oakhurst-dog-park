@@ -1,9 +1,9 @@
 import React from 'react'
 import { useStaticQuery, Link, graphql } from 'gatsby'
-import './featuredpost.module.css'
+import './announcementpost.module.css'
 import SEO from '../seo.js'
 
-const FeaturedPost = () => {
+const AnnouncementPost = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
@@ -70,4 +70,4 @@ const FeaturedPost = () => {
   )
 }
 
-export default FeaturedPost
+export default AnnouncementPost
