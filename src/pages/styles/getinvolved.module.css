@@ -7,10 +7,13 @@
   place-self: center;
   margin: 0rem 3rem 0.5rem 3rem;
   font-size: 1rem;
+  text-decoration: none;
+  color: var(--black);
 }
 
 .contactList {
   display: grid;
+  text-decoration: none;
   grid-template-rows: min-content min-content min-content min-content;
   border-radius: 5px;
   box-shadow: -5px 5px var(--red);
@@ -24,8 +27,14 @@
   color: var(--black);
   font-family: var(--zilla);
   width: 100%;
-  text-decoration: none;
+
   height: fit-content;
+}
+
+.contactList a {
+  text-decoration: none;
+
+  color: var(--black);
 }
 
 @media (max-width: 900px) {

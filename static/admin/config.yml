@@ -9,8 +9,6 @@ media_folder: content/assets/media
 public_folder: /assets
 
 collections:
-
-collections:
   - name: blog
     label: Blog
     label_singular: Blog Post
