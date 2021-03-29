@@ -1,11 +1,34 @@
-import React from "react"
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/seo"
+import React from 'react'
+import Layout from '../components/Layout/Layout.js'
+import SEO from '../components/seo.js'
+import './styles/index.module.css'
+import PhotoSlider from '../components/Slider/slider.js'
+import AnnouncementPost from '../components/AnnouncementPost/AnnouncementPost.js'
+import { graphql } from 'gatsby'
+import Hero from '../components/Hero/Hero.js'
 
-export default function Home() {
+const HomePage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata?.title || `Title`
+
   return (
-    <Layout>
-      <SEO title="About" />
+    <Layout location={location} title={siteTitle}>
+      <SEO title="Welcome" />
+      <Hero />
+      <PhotoSlider />
+      <AnnouncementPost />
+      {/* <section styleName="featured"></section> */}
     </Layout>
   )
 }
+
+export default HomePage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

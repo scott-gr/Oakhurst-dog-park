@@ -1,38 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import styles from "./layout.module.css"
-import Navbar from "../Navbar/Navbar.js"
-
+import React from 'react'
+import './layout.module.css'
+import Footer from './Footer.js'
+import NavBar from '../Navbar/Navbar.js'
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
-      <Navbar />
-      <div className={styles.container}>
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <main styleName="globalWrapper">
+        <NavBar />
+        {children}
+        <Footer />
+      </main>
     </>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout

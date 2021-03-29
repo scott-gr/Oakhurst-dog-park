@@ -1,0 +1,51 @@
+.container {
+  grid-column: 1/5;
+  grid-row: 4;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  place-self: center;
+  margin: 0rem 3rem 0.5rem 3rem;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.contactList {
+  display: grid;
+  text-decoration: none;
+  grid-template-rows: min-content min-content min-content min-content;
+  border-radius: 5px;
+  box-shadow: -5px 5px var(--red);
+  padding: 0 0 0.5rem 0.75rem;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0 2rem 0 0;
+  line-break: normal;
+  line-height: 175%;
+  font-size: 1.25rem;
+  color: var(--black);
+  font-family: var(--zilla);
+  width: 100%;
+
+  height: fit-content;
+}
+
+.contactList a {
+  text-decoration: none;
+
+  color: var(--black);
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin: 2rem 1rem 2rem 1rem;
+    flex-direction: column-reverse;
+  }
+  .contactList {
+    margin: 1rem 0 0 0;
+  }
+  .brief {
+    padding-left: 0;
+  }
+}

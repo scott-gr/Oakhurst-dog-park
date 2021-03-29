@@ -1,0 +1,48 @@
+.container {
+  grid-column: 1/5;
+  grid-row: 4;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  place-self: center;
+  margin: 2rem 3rem 0.5rem 3rem;
+  font-size: 1rem;
+}
+
+.facts {
+  border-radius: 5px;
+  box-shadow: -5px 5px var(--yellow);
+  padding: 0 0 0.5rem 0.75rem;
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0 2rem 0 0;
+  line-break: normal;
+  line-height: 125%;
+  font-size: 1.25rem;
+  color: var(--black);
+  font-family: var(--zilla);
+  width: 100%;
+  height: fit-content;
+}
+
+@media (max-width: 900px) {
+
+  .container {
+    margin: 2rem 1rem 2rem 1rem;
+    flex-direction: column-reverse;
+  }
+  .facts {
+    margin: 1rem 0 0 0;
+  }
+  .aboutBrief {
+    padding-left: 0;
+  }
+}
+
+.facts li:before {
+  content: ' - ';
+  position: relative;
+  left: -2px;
+
+  color: var(--yellow);
+}
