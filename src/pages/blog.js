@@ -35,7 +35,11 @@ const BlogIndex = ({ data, location }) => {
               itemType="http://schema.org/Article"
             >
               <header>
-                <Link styleName="blogTitle" to={post.fields.slug} itemProp="url">
+                <Link
+                  styleName="blogTitle"
+                  to={post.fields.slug}
+                  itemProp="url"
+                >
                   <span itemProp="headline">{title}</span>
                 </Link>
               </header>
@@ -44,7 +48,7 @@ const BlogIndex = ({ data, location }) => {
                 <p
                   styleName="blogDesc"
                   dangerouslySetInnerHTML={{
-                    __html: post.frontmatter.description || post.excerpt, 
+                    __html: post.frontmatter.description || post.excerpt,
                   }}
                   itemProp="description"
                 />

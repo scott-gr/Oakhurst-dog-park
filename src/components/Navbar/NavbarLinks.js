@@ -9,12 +9,16 @@ const NavbarLinks = () => {
         About
       </Link>
 
+      <Link styleName="navItem" to="/rules">
+        Park Rules 
+      </Link>
+
       <Link styleName="navItem" to="/blog">
         Blog
       </Link>
 
-      <Link styleName="navItem" to="/rules">
-        Park Rules
+      <Link styleName="navItem" to="/resources">
+        Resources
       </Link>
 
       <Link styleName="navItem" to="/getinvolved">
