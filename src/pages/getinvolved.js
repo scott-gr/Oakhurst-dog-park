@@ -45,7 +45,7 @@ const GetInvolvedPage = ({ data, location }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faCity} /> City of Decatur Dog Parks
+            <FontAwesomeIcon icon={faCity} /> City of Decatur Parks
           </a>
         </section>
         <article>
@@ -55,6 +55,14 @@ const GetInvolvedPage = ({ data, location }) => {
             of volunteers who handle the upkeep. Projects include spreading wood
             chips to fill in muddy areas, cleaning up paths through the woods,
             and keeping the gate and water fountains clean and accessible.
+          </p>
+          <br></br>
+          <p>
+            {' '}
+            Volunteer hours are every Friday beginning at 9 AM, and finishing by
+            noon. Volunteers may come inside without their dogs, and any dogs
+            brought along should not disrupt the work. Tools (rakes, shovels,
+            wheelbarrows) are available at the park.
           </p>
         </article>
       </main>

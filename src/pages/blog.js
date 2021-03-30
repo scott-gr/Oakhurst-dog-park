@@ -4,7 +4,6 @@ import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import '../pages/styles/blog.module.css'
 
-
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -25,37 +24,31 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
+      <ol styleName="blogList">
+        {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
-              <article
-                styleName="blogCard"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2 styleName="blogTitle">
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small styleName="blogDate">
-                    {post.frontmatter.date}
-                  </small>
-                </header>
-                <section>
-                  <p
-                    styleName="blogDesc"
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
+            <li
+              key={post.fields.slug}
+              styleName="blogCard"
+              itemType="http://schema.org/Article"
+            >
+              <header>
+                <Link styleName="blogTitle" to={post.fields.slug} itemProp="url">
+                  <span itemProp="headline">{title}</span>
+                </Link>
+              </header>
+              <small styleName="blogDate">{post.frontmatter.date}</small>
+              <section>
+                <p
+                  styleName="blogDesc"
+                  dangerouslySetInnerHTML={{
+                    __html: post.frontmatter.description || post.excerpt, 
+                  }}
+                  itemProp="description"
+                />
+              </section>
             </li>
           )
         })}

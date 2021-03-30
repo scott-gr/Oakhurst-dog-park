@@ -31,22 +31,22 @@ const BlogTemplate = ({ data, location }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        <hr />
-        <footer>(Share buttons here)</footer>
+        {/* <hr /> */}
+        {/* <footer>(Share buttons here)</footer> */}
       </article>
       <nav styleName="blognav">
         <ul>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                ← {previous.frontmatter.title} - {previous.frontmatter.date}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title} - {next.frontmatter.date} →
               </Link>
             )}
           </li>
@@ -85,6 +85,7 @@ export const query = graphql`
       }
       frontmatter {
         title
+        date(formatString: "MMMM DD")
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -93,6 +94,7 @@ export const query = graphql`
       }
       frontmatter {
         title
+        date(formatString: "MMMM DD")
       }
     }
   }
