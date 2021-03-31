@@ -34,6 +34,7 @@ collections:
     editor: 
       preview: true
     create: false #users cannot create new posts, but just edit the single post.
+    delete: false #users cannot delte posts, just edit.
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     path: "{{slug}}"
     fields:
@@ -57,3 +58,17 @@ collections:
       - { name: date, label: Date, widget: datetime, allowInput: false, default: hidden}
       - { name: category, label: Select Category, widget: select, options: ['The Basics', 'Behavior', 'COVID-19 Protocol', 'Collars and Leashes', 'Children', 'Food, Drink, and Smoking', 'Additional Guidelines'], multiple: false, hint: Use 'Additional Guidelines' for miscellaneous items.}
       - { name: description, label: Full Description, widget: markdown, hint: Expand upon the rule and give additional context.}
+  
+  - name: resources
+    label: Resources
+    label_singular: Resource
+    description: Permanent Links and helpful info for dog owners.
+    folder: /content/resources
+    editor: 
+      preview: true 
+    create: true  # Allow users to create new documents in this collection
+    slug: "{{name}}"
+    fields: 
+      - { name: name, label: Name, widget: string, hint: Name of the linked page or resources. Keep this field short.}
+      - { name: date, label: Date, widget: datetime, allowInput: false, default: hidden}
+      - { name: content, label: Content, widget: markdown, hint: Add the link and any commentary on it here.}
