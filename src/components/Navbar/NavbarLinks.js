@@ -10,7 +10,7 @@ const NavbarLinks = () => {
       </Link>
 
       <Link styleName="navItem" to="/rules">
-        Park Rules 
+        Park Rules
       </Link>
 
       <Link styleName="navItem" to="/blog">

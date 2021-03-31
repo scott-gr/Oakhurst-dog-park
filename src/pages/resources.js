@@ -11,8 +11,6 @@ const resources = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Resources" />
       <ResourcesPhoto />
-
-
     </Layout>
   )
 }

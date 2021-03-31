@@ -8,7 +8,7 @@ const GetInvolvedPhoto = () => {
     query {
       getinvolvedphoto: file(relativePath: { eq: "wheelbarrow.png" }) {
         childImageSharp {
-          fluid(fit: COVER) {
+          fluid(fit: COVER, quality: 100, pngCompressionSpeed: 1) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
