@@ -37,18 +37,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// cut from pageQuery, is in ruleblock component
-// allMarkdownRemark(
-//   sort: { fields: [frontmatter___date], order: DESC }
-//   filter: { fields: { collection: { eq: "rules" } } }
-// ) {
-//   nodes {
-//     excerpt
-//     frontmatter {
-//       rulebrief
-//       category
-//       description
-//     }
-//   }
-// }

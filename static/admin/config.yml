@@ -70,5 +70,5 @@ collections:
     slug: "{{name}}"
     fields: 
       - { name: name, label: Name, widget: string, hint: Name of the linked page or resources. Keep this field short.}
-      - { name: date, label: Date, widget: datetime, allowInput: false, default: hidden}
+      - { name: date, label: Date, widget: datetime, allowInput: false}
       - { name: content, label: Content, widget: markdown, hint: Add the link and any commentary on it here.}
