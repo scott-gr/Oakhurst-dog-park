@@ -3,12 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import './coverphoto.module.css'
 
-const RulesPhoto = () => {
+const ResourcesPhoto = () => {
   const data = useStaticQuery(graphql`
     query {
-      rulesphoto: file(relativePath: { eq: "beagle.png" }) {
+      resourcesphoto: file(relativePath: { eq: "gate.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: NORTH, quality: 100, pngCompressionSpeed: 1) {
+          fluid(fit: COVER, quality: 100, pngCompressionSpeed: 1) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -17,16 +17,18 @@ const RulesPhoto = () => {
   `)
   return (
     <BackgroundImage
-      styleName={`heroBoxRules heroBox`}
+      styleName={`heroBox`}
       tag="section"
-      fluid={data.rulesphoto.childImageSharp.fluid}
+      fluid={data.resourcesphoto.childImageSharp.fluid}
       durationFadeIn={50}
+
+      
     >
       <span styleName="pageHeader">
-        <h2>Park Rules</h2>
+        <h2>Resources</h2>
       </span>
     </BackgroundImage>
   )
 }
 
-export default RulesPhoto
+export default ResourcesPhoto
