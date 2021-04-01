@@ -56,7 +56,7 @@ collections:
     fields: #fields to complete in admin page to create a new rule entry.
       - { name: rulebrief, label: Rule Brief, widget: string, hint: This is a brief summary of the rule.}
       - { name: date, label: Date, widget: datetime, allowInput: false, default: hidden}
-      - { name: category, label: Select Category, widget: select, options: ['The Basics', 'Behavior', 'COVID-19 Protocol', 'Collars and Leashes', 'Children', 'Food, Drink, and Smoking', 'Additional Guidelines'], multiple: false, hint: Use 'Additional Guidelines' for miscellaneous items.}
+      - { name: category, label: Select Category, widget: select, options: ['The Basics', 'Behavior', 'COVID-19 Protocol', 'Collars and Leashes', 'Children', 'Food, Drink, and Smoking', 'Additional Guidelines'], multiple: false, hint: Use 'Additional Guidelines' for miscellaneous items., required: true}
       - { name: description, label: Full Description, widget: markdown, hint: Expand upon the rule and give additional context.}
   
   - name: resources
@@ -70,5 +70,6 @@ collections:
     slug: "{{name}}"
     fields: 
       - { name: name, label: Name, widget: string, hint: Name of the linked page or resources. Keep this field short.}
-      - { name: date, label: Date, widget: datetime, allowInput: false, default: hidden}
-      - { name: content, label: Content, widget: markdown, hint: Add the link and any commentary on it here.}
+      - { name: date, label: Date, widget: datetime, allowInput: false}
+      - { name: link, label: Link, widget: string, hint: Paste the complete URL here, required: true}
+      - { name: comment, label: Comment, widget: text, hint: Add any commentary on it here., required: false}

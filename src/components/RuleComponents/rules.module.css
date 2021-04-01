@@ -49,12 +49,6 @@ ol {
   position: absolute;
 }
 
-/* details[open] {
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s;
-  transform-origin: top center;
-	transform: rotate(0.1deg);
-} */
 
 summary:focus {
   outline: none;
@@ -88,5 +82,5 @@ details[open] .controlIconExpand {
 }
 
 details[open] > summary::-webkit-details-marker {
-  color: var(--yellow);
+  color: var(--blue);
 }

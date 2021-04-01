@@ -1,0 +1,13 @@
+.resourceCard {
+  box-shadow: -7.5px 7.5px 0 -3px var(--red);
+  border-radius: 8px;
+  border-width: 2px;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+
+.resourceName {
+  font-size: 1.5rem;
+  font-family: var(--zilla);
+}
+

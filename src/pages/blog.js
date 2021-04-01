@@ -23,17 +23,13 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Blog" />
       <ol styleName="blogList">
         {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li
-              key={post.fields.slug}
-              styleName="blogCard"
-              itemType="http://schema.org/Article"
-            >
+            <li key={post.fields.slug} styleName="blogCard">
               <header>
                 <Link
                   styleName="blogTitle"

@@ -1,0 +1,12 @@
+.resourceList {
+  grid-column: 1/5;
+  grid-row: 4;
+  display: flex;
+  flex-flow: row wrap ;
+  font-size: 1rem;
+
+  color: var(--black);
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 1rem 3rem 0.5rem 3rem;
+}
