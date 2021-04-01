@@ -13,7 +13,8 @@ const ResourceBlock = () => {
           excerpt
           frontmatter {
             name
-            content
+            comment
+            link
           }
         }
       }
@@ -22,17 +23,16 @@ const ResourceBlock = () => {
 
   const resources = data.allMarkdownRemark.nodes.map((resource) => (
     <div styleName="resourceCard">
-      <header>
-        <h5 styleName="resourceName" itemProp="headline">
-          {resource.frontmatter.name}
-        </h5>
+      <header styleName="resourceName" itemProp="headline">
+        {resource.frontmatter.name}
       </header>
       <section styleName="resourceContent">
+        <a href={resource.frontmatter.link}>{resource.frontmatter.link}</a>
         <p
           dangerouslySetInnerHTML={{
-            __html: resource.frontmatter.content || resource.excerpt,
+            __html: resource.frontmatter.comment,
           }}
-          itemProp="content"
+          itemProp="comment"
         />
       </section>
     </div>

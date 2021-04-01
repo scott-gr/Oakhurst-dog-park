@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
-import './styles/resourcepage.module.css'
 import ResourceBlock from '../components/Resources/ResourceBlock.js'
 import ResourcesPhoto from '../components/CoverPhotos/ResourcesPhoto.js'
+import './styles/resourcepage.module.css'
 
 const ResourcePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -13,7 +13,9 @@ const ResourcePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Resources" />
       <ResourcesPhoto />
-      <ResourceBlock />
+      <section styleName="resourceList">
+        <ResourceBlock />
+      </section>
     </Layout>
   )
 }
