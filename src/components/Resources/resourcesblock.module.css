@@ -4,6 +4,9 @@
   border-width: 2px;
   margin-bottom: 2rem;
   padding: 0.5rem;
+  display: grid;
+  grid-auto-flow: row;
+  gap: .5rem;
 }
 
 .resourceName {
