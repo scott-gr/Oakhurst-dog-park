@@ -3,6 +3,11 @@ import { Link, graphql } from 'gatsby'
 import './blogTemplate.module.css'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight,
+} from '@fortawesome/free-regular-svg-icons'
 
 const BlogTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -35,22 +40,26 @@ const BlogTemplate = ({ data, location }) => {
         {/* <footer>(Share buttons here)</footer> */}
       </article>
       <nav styleName="blognav">
-        <ul>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title} - {previous.frontmatter.date}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} - {next.frontmatter.date} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        {previous && (
+          <Link to={previous.fields.slug} rel="prev">
+            <button styleName="blogNavBtn">
+              <FontAwesomeIcon icon={faArrowAltCircleLeft} className="fa-2x" />
+              {''}
+              {previous.frontmatter.title} - {previous.frontmatter.date}
+            </button>
+          </Link>
+        )}
+
+        {next && (
+          <Link to={next.fields.slug} rel="next">
+            <button styleName="blogNavBtn">
+              <span>
+                {next.frontmatter.title} - {next.frontmatter.date}{' '}
+              </span>
+              <FontAwesomeIcon icon={faArrowAltCircleRight} className="fa-2x" />
+            </button>
+          </Link>
+        )}
       </nav>
     </Layout>
   )
