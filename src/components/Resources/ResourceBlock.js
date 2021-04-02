@@ -26,15 +26,13 @@ const ResourceBlock = () => {
       <header styleName="resourceName" itemProp="headline">
         {resource.frontmatter.name}
       </header>
-      <section styleName="resourceContent">
-        <a href={resource.frontmatter.link}>{resource.frontmatter.link}</a>
         <p
           dangerouslySetInnerHTML={{
             __html: resource.frontmatter.comment,
           }}
           itemProp="comment"
         />
-      </section>
+        <a href={resource.frontmatter.link}>{resource.frontmatter.link}</a>
     </div>
   ))
   return <ol> {resources} </ol>
