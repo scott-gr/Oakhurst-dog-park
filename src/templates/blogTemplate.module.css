@@ -1,12 +1,47 @@
-.blognav ul {
+.blognav {
   display: flex;
+  grid-row: 4/5;
+  gap: 2rem;
+  justify-self: center;
+  grid-column: 2/4;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  align-content: center;
   list-style: none;
-  padding: 0,
 }
 
-.blogTitle , .blogDate {
+.blogNavBtn {
+  padding: 1rem;
+  place-content: center;
+  text-align: center;
+  background-color: var(--black);
+  color: var(--offwhite);
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 15px;
+  transition-duration: 0.3s;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+}
+
+.blogNavBtn:hover {
+  cursor: pointer;
+  color: var(--black);
+  background-color: var(--yellow);
+}
+
+.fa-2x {
+  align-self: center;
+
+  align-content: center;
+}
+
+
+
+
+.blogTitle,
+.blogDate {
   font-family: var(--zilla);
 }
 
@@ -15,14 +50,9 @@
 }
 
 .blogCard {
-
-border-radius: 10px;
-padding-top: 1rem;
-padding-inline-start: 1rem;
-min-width: fit-content;
-max-width: 40rem;
+  grid-column: 1/5;
+  grid-row: 2/4;
+  margin: 3rem;
 }
-
-
 
 /* https://codepen.io/ambiva/pen/bGNWwyg */
