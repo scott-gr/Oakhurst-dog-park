@@ -55,9 +55,7 @@ const BlogTemplate = ({ data, location }) => {
         {next && (
           <Link to={next.fields.slug} rel="next">
             <button styleName="blogNavBtn">
-              <span styleName="btnText">
-                {next.frontmatter.title} - {next.frontmatter.date}{' '}
-              </span>
+              {next.frontmatter.title} - {next.frontmatter.date}{' '}
               <FontAwesomeIcon icon={faArrowAltCircleRight} className="fa-2x" />
             </button>
           </Link>
@@ -90,7 +88,12 @@ export const query = graphql`
         description
         image {
           childImageSharp {
-            fluid(fit: COVER, quality: 100, pngCompressionSpeed: 1) {
+            fluid(
+              fit: COVER
+              quality: 100
+              pngCompressionSpeed: 1
+              maxWidth: 600
+            ) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

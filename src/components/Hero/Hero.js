@@ -29,7 +29,7 @@ const Hero = () => {
       heroMobile: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
           fixed(height: 235, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }

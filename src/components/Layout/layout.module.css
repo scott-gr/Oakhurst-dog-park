@@ -19,6 +19,8 @@ footer {
 .fbIcon {
   color: var(--black);
   font-size: 2rem;
+  height: 32px;
+  width: 32px;
 }
 
 @media (maxWidth: 480px){
