@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Zilla+Slab:wght@600&display=swap');
 
+
 :root {
   --lato :'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --zilla :'Zilla Slab', serif;
@@ -9,6 +10,7 @@
   --black : #171717;
   --blackfade : rgb(23, 23, 23, .55);
   --offwhite: #f0eff0;
+  font-display: optional;
 }
 
 button {

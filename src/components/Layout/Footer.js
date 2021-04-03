@@ -9,7 +9,7 @@ const Footer = () => {
       <a
         styleName="fbIcon"
         href="https://www.facebook.com/OakhurstDogPark"
-        alt="Facebook Page"
+        alt="Our Facebook Page"
         target="_blank"
         rel="noreferrer"
       >
