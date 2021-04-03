@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import './blogTemplate.module.css'
+import Img from 'gatsby-image'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -31,6 +32,7 @@ const BlogTemplate = ({ data, location }) => {
           </h1>
           <p styleName="blogDate">{post.frontmatter.date}</p>
         </header>
+        <Img fluid={post.frontmatter.image} />
         <section
           styleName="blogBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -53,9 +55,7 @@ const BlogTemplate = ({ data, location }) => {
         {next && (
           <Link to={next.fields.slug} rel="next">
             <button styleName="blogNavBtn">
-              <span>
-                {next.frontmatter.title} - {next.frontmatter.date}{' '}
-              </span>
+              {next.frontmatter.title} - {next.frontmatter.date}{' '}
               <FontAwesomeIcon icon={faArrowAltCircleRight} className="fa-2x" />
             </button>
           </Link>
@@ -86,6 +86,18 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        image {
+          childImageSharp {
+            fluid(
+              fit: COVER
+              quality: 100
+              pngCompressionSpeed: 1
+              maxWidth: 600
+            ) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

@@ -106,7 +106,6 @@ const PhotoSlider = () => {
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
             durationFadeIn={10}
-            loading="eager"
             tag="img"
           />
         </Slide>
@@ -114,7 +113,6 @@ const PhotoSlider = () => {
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
             durationFadeIn={10}
-            loading="eager"
             tag="img"
           />
         </Slide>
@@ -122,7 +120,6 @@ const PhotoSlider = () => {
           <Img
             fluid={data.sliderImgThree.childImageSharp.fluid}
             durationFadeIn={10}
-            loading="eager"
             tag="img"
           />
         </Slide>
@@ -131,6 +128,7 @@ const PhotoSlider = () => {
             fluid={data.sliderImgFour.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
+            loading="lazy"
           />
         </Slide>
         <Slide styleName="slide" index={4}>
@@ -138,6 +136,7 @@ const PhotoSlider = () => {
             fluid={data.sliderImgFive.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
+            loading="lazy"
           />
         </Slide>
         <Slide styleName="slide" index={5}>
@@ -145,6 +144,7 @@ const PhotoSlider = () => {
             fluid={data.sliderImgSix.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
+            loading="lazy"
           />
         </Slide>
         <Slide styleName="slide" index={6}>
@@ -152,6 +152,7 @@ const PhotoSlider = () => {
             fluid={data.sliderImgSeven.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
+            loading="lazy"
           />
         </Slide>
         <Slide styleName="slide" index={7}>
@@ -159,6 +160,7 @@ const PhotoSlider = () => {
             fluid={data.sliderImgEight.childImageSharp.fluid}
             durationFadeIn={50}
             tag="img"
+            loading="lazy"
           />
         </Slide>
       </Slider>

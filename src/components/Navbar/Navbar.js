@@ -1,11 +1,17 @@
-import React from 'react'
-import MobileMenu from './MobileMenu.js'
+import React, { lazy, Suspense } from 'react'
 import { useBreakpoint } from 'gatsby-plugin-breakpoints'
 import './navbar.module.css'
 import NavbarLinks from './NavbarLinks.js'
 import NavIcon from './NavIcon.js'
 import { useLocation } from '@reach/router'
 
+const MobileMenu = lazy(() => import(`./MobileMenu.js`))
+const renderLoader = () => (
+  <p>
+    Loading...
+    <NavIcon />
+  </p>
+)
 const Navbar = () => {
   const location = useLocation()
   const breakpoints = useBreakpoint()
@@ -15,7 +21,9 @@ const Navbar = () => {
       {location.pathname !== '/' ? <NavIcon /> : null}
 
       {breakpoints.mobileXl ? (
-        <MobileMenu />
+        <Suspense fallback={renderLoader()}>
+          <MobileMenu />
+        </Suspense>
       ) : (
         <div styleName="navBox">
           {' '}

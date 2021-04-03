@@ -19,25 +19,24 @@
   font-size: 1.25rem;
   border: none;
   border-radius: 15px;
+  text-decoration: none;
   transition-duration: 0.3s;
   display: flex;
   flex-flow: row nowrap;
   align-content: center;
+  align-items: center;
+  column-gap: 1rem;
 }
 
-.blogNavBtn:hover {
+.blogNavBtn:hover, .blogNavBtn:active {
   cursor: pointer;
   color: var(--black);
   background-color: var(--yellow);
 }
 
-.fa-2x {
-  align-self: center;
-
-  align-content: center;
+[rel="prev"], [rel="next"] {
+  text-decoration: none;
 }
-
-
 
 
 .blogTitle,
