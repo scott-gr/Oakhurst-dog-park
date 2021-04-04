@@ -18,7 +18,6 @@ const GetInvolvedPage = ({ data, location }) => {
       <main styleName="container">
         <section styleName="contactList">
           <a
-            styleName="contact"
             href="https://www.facebook.com/OakhurstDogPark"
             alt="Facebook Page"
             target="_blank"
@@ -26,20 +25,13 @@ const GetInvolvedPage = ({ data, location }) => {
           >
             <FontAwesomeIcon icon={faFacebook} /> Facebook Page
           </a>
-          <a
-            styleName="contact"
-            href=""
-            alt="Email"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="" alt="Email" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faEnvelope} /> Email
           </a>
-          <span styleName="contact">
+          <span>
             <FontAwesomeIcon icon={faPhone} /> Phone
           </span>
           <a
-            styleName="contact"
             href="https://www.decaturga.com/activeliving/page/dog-parks"
             alt="City of Decatur parks site"
             target="_blank"

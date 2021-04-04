@@ -1,7 +1,10 @@
+import loadable from '@loadable/component'
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
 import './layout.module.css'
+
+const FacebookIcon = loadable(() => import(`./FacebookIcon.js`), {
+  fallback: <span>F</span>,
+})
 
 const Footer = () => {
   return (
@@ -13,7 +16,7 @@ const Footer = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <FontAwesomeIcon icon={faFacebook} />
+        <FacebookIcon />
       </a>
       <p>450 E Lake Dr, Decatur, GA 30030</p>
       <p> © Oakhurst Dog Park 2021</p>
