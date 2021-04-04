@@ -5,8 +5,8 @@ backend:
 
 site_url: https://oakhurstdogpark.com
 
-media_folder: static/img
-public_folder: /img
+media_folder: static/images/uploads
+public_folder: /images/uploads
 
 collections:
   - name: blog
@@ -14,6 +14,8 @@ collections:
     label_singular: Blog Post
     description: Publish new posts to the blog.
     folder: /content/blog
+    media_folder: ''
+    public_folder: ''
     editor: 
       preview: true
     create: true
@@ -23,7 +25,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description, widget: string, required: false }
-      - { name: image, label: Cover Image, widget: image, required: false}
+      - { name: image, label: Cover Image, widget: image, required: false, media_folder: static/images/uploads, multiple: false}
       - { name: body, label: Body, widget: markdown }
 
   - name: announcements
@@ -31,6 +33,8 @@ collections:
     label_singular: Announcement
     description: The announcement will appear on the home page. Edit this post to change it.
     folder: /content/announcements
+    media_folder: ''
+    public_folder: ''
     editor: 
       preview: true
     create: false #users cannot create new posts, but just edit the single post.
@@ -41,7 +45,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description, widget: string, required: false }
-      - { name: image, label: Cover Image, widget: image, required: false}
+      - { name: image, label: Cover Image, widget: image, required: false, media_folder: static/images/uploads, multiple: false}
       - { name: body, label: Body, widget: markdown }
 
   - name: rules
