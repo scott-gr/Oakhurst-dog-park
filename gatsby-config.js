@@ -21,10 +21,9 @@ module.exports = {
 
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'uploads',
-
+        name: `uploads`,
         path: `${__dirname}/static/images/uploads`,
       },
     },
@@ -92,13 +91,13 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630,
+              maxWidth: 720,
             },
           },
           {
-            resolve: 'gatsby-remark-relative-images',
+            resolve: `gatsby-remark-relative-images`,
             options: {
-              name: 'uploads',
+              name: `uploads`,
             },
           },
           {
