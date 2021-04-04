@@ -88,11 +88,7 @@ export const query = graphql`
         description
         image {
           childImageSharp {
-            fluid(
-              fit: COVER
-              quality: 100
-              maxWidth: 600
-            ) {
+            fluid(fit: COVER, quality: 100, maxWidth: 600) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
