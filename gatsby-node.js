@@ -116,7 +116,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       featuredpost: Boolean
       category: String
       name: String
-      image: Image
+      image: image
     }
 
     type Fields {
