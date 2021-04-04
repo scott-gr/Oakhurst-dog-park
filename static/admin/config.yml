@@ -5,7 +5,7 @@ backend:
 
 site_url: https://oakhurstdogpark.com
 
-media_folder: /static/images/uploads
+media_folder: /static/uploads
 public_folder: /images/uploads
 
 collections:
@@ -45,7 +45,7 @@ collections:
       - { name: title, label: Title, widget: string }
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description, widget: string, required: false }
-      - { name: image, label: Cover Image, widget: image, required: false, media_folder: static/images/uploads, multiple: false}
+      - { name: image, label: Cover Image, widget: image, required: false, media_folder: static/uploads, multiple: false}
       - { name: body, label: Body, widget: markdown }
 
   - name: rules
