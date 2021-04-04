@@ -1,17 +1,20 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
+import loadable from '@loadable/component'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import './styles/index.module.css'
-// import PhotoSlider from '../components/Slider/slider.js'
 import { graphql } from 'gatsby'
 import Hero from '../components/Hero/Hero.js'
 
-const AnnouncementPost = lazy(() =>
-  import(`../components/AnnouncementPost/AnnouncementPost.js`)
+const AnnouncementPost = loadable(
+  () => import(`../components/AnnouncementPost/AnnouncementPost.js`),
+  {
+    fallback: <p styleName="postLoading">Loading Post...</p>,
+  }
 )
-const PhotoSlider = lazy(() => import(`../components/Slider/slider.js`))
-const renderLoader = () => <p styleName="postLoading">Loading Post...</p>
-const sliderLoader = () => <div styleName="slideLoading" />
+const PhotoSlider = loadable(() => import(`../components/Slider/slider.js`), {
+  fallback: <div styleName="slideLoading" />,
+})
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
@@ -19,12 +22,8 @@ const HomePage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="Welcome" />
       <Hero />
-      <Suspense fallback={sliderLoader()}>
-        <PhotoSlider />
-      </Suspense>
-      <Suspense fallback={renderLoader()}>
-        <AnnouncementPost />
-      </Suspense>
+      <PhotoSlider />
+      <AnnouncementPost />
     </Layout>
   )
 }
