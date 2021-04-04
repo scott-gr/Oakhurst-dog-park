@@ -42,7 +42,6 @@ const BlogIndex = ({ data, location }) => {
               <small styleName="blogDate">{post.frontmatter.date}</small>
               <section>
                 <p
-                  styleName="blogDesc"
                   dangerouslySetInnerHTML={{
                     __html: post.frontmatter.description || post.excerpt,
                   }}

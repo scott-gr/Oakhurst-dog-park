@@ -91,7 +91,6 @@ export const query = graphql`
             fluid(
               fit: COVER
               quality: 100
-              pngCompressionSpeed: 1
               maxWidth: 600
             ) {
               ...GatsbyImageSharpFluid_withWebp

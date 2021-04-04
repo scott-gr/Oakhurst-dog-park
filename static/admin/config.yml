@@ -5,8 +5,8 @@ backend:
 
 site_url: https://oakhurstdogpark.com
 
-media_folder: content/assets/media
-public_folder: /assets
+media_folder: static/img
+public_folder: /img
 
 collections:
   - name: blog
