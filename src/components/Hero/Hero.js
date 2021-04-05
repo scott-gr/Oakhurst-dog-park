@@ -28,7 +28,11 @@ const Hero = () => {
     query {
       heroMobile: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
-          fixed(height: 235, quality: 100, traceSVG: { color: "#f0eff0", optTolerance: 0.8 }) {
+          fixed(
+            height: 235
+            quality: 100
+            traceSVG: { color: "#f0eff0", optTolerance: 0.8 }
+          ) {
             ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }

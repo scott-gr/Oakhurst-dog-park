@@ -116,7 +116,6 @@ const PhotoSlider = () => {
             durationFadeIn={35}
             tag="img"
             loading="eager"
-
           />
         </Slide>
         <Slide styleName="slide" index={2}>
@@ -125,7 +124,6 @@ const PhotoSlider = () => {
             durationFadeIn={35}
             tag="img"
             loading="eager"
-
           />
         </Slide>
         <Slide styleName="slide" index={3}>

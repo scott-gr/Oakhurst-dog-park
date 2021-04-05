@@ -32,7 +32,14 @@ const BlogTemplate = ({ data, location }) => {
           </h1>
           <p styleName="blogDate">{post.frontmatter.date}</p>
         </header>
-        <Img styleName="blogImg" durationFadeIn={35} loading="lazy" fluid={post.frontmatter.image.childImageSharp.fluid} />
+        {post.frontmatter.image && (
+          <Img
+            styleName="blogImg"
+            durationFadeIn={35}
+            loading="lazy"
+            fluid={post.frontmatter.image.childImageSharp.fluid}
+          />
+        )}
         <section
           styleName="blogBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
