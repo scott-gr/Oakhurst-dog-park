@@ -1,7 +1,7 @@
 ---
-title: Test Blog with Cover Image
+title: Welcome to our new website!
 date: 2021-03-27T21:09:14.243Z
-description: Testing blog function
+description: What to expect from this blog.
 image: happylab.png
 ---
 

@@ -8,7 +8,7 @@ const AboutPhoto = () => {
     query {
       aboutphoto: file(relativePath: { eq: "fieldfall.png" }) {
         childImageSharp {
-          fluid(fit: COVER, quality: 100, pngCompressionSpeed: 1) {
+          fluid(fit: COVER, quality: 100, pngCompressionSpeed: 1, webpQuality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -20,7 +20,7 @@ const AboutPhoto = () => {
       styleName="heroBox"
       tag="section"
       fluid={data.aboutphoto.childImageSharp.fluid}
-      durationFadeIn={50}
+      durationFadeIn={25}
     >
       <span styleName="pageHeader">
         <h2>About the Park</h2>

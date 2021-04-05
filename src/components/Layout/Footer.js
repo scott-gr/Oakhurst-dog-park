@@ -3,7 +3,7 @@ import React from 'react'
 import './layout.module.css'
 
 const FacebookIcon = loadable(() => import(`./FacebookIcon.js`), {
-  fallback: <span>F</span>,
+  fallback: <span>f</span>,
 })
 
 const Footer = () => {

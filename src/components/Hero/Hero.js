@@ -28,14 +28,14 @@ const Hero = () => {
     query {
       heroMobile: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
-          fixed(height: 235, quality: 100) {
+          fixed(height: 235, quality: 100, traceSVG: { color: "#f0eff0", optTolerance: 0.8 }) {
             ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
       heroDesktop: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
-          fixed(height: 300, quality: 100) {
+          fixed(height: 300, quality: 100, traceSVG: { color: "#f0eff0" }) {
             ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
@@ -54,7 +54,7 @@ const Hero = () => {
     return <div>Picture not found</div>
   }
 
-  return <Img styleName="hero" fixed={heroImage} durationFadeIn={100} />
+  return <Img styleName="hero" fixed={heroImage} durationFadeIn={25} />
 }
 
 export default Hero

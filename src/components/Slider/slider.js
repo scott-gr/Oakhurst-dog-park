@@ -13,49 +13,49 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100, webpQuality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "happylab.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100, webpQuality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 100, webpQuality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFour: file(relativePath: { eq: "stump.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgFive: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 95, webpQuality: 95) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgSeven: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -105,22 +105,27 @@ const PhotoSlider = () => {
         <Slide styleName="slide" innerClassName="innerClass" index={0}>
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
-            durationFadeIn={10}
+            durationFadeIn={25}
             tag="img"
+            loading="eager"
           />
         </Slide>
         <Slide styleName="slide" index={1}>
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
-            durationFadeIn={10}
+            durationFadeIn={35}
             tag="img"
+            loading="eager"
+
           />
         </Slide>
         <Slide styleName="slide" index={2}>
           <Img
             fluid={data.sliderImgThree.childImageSharp.fluid}
-            durationFadeIn={10}
+            durationFadeIn={35}
             tag="img"
+            loading="eager"
+
           />
         </Slide>
         <Slide styleName="slide" index={3}>

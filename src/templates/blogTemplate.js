@@ -32,14 +32,12 @@ const BlogTemplate = ({ data, location }) => {
           </h1>
           <p styleName="blogDate">{post.frontmatter.date}</p>
         </header>
-        <Img fluid={post.frontmatter.image} />
+        <Img styleName="blogImg" durationFadeIn={35} loading="lazy" fluid={post.frontmatter.image.childImageSharp.fluid} />
         <section
           styleName="blogBody"
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
         />
-        {/* <hr /> */}
-        {/* <footer>(Share buttons here)</footer> */}
       </article>
       <nav styleName="blognav">
         {previous && (
@@ -69,7 +67,7 @@ export default BlogTemplate
 
 export const query = graphql`
   query BlogPostBySlug(
-    $id: String!
+    $id: String
     $previousPostId: String
     $nextPostId: String
   ) {
@@ -78,7 +76,7 @@ export const query = graphql`
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
+    markdownRemark(id: { eq: $id }, fields: { collection: { eq: "blog" } }) {
       id
       excerpt(pruneLength: 160)
       html
@@ -88,7 +86,7 @@ export const query = graphql`
         description
         image {
           childImageSharp {
-            fluid(fit: COVER, quality: 100, maxWidth: 600) {
+            fluid(fit: CONTAIN, quality: 100) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

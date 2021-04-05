@@ -13,7 +13,6 @@ const AboutPage = ({ data, location }) => {
       <SEO title="About the Park" />
       <AboutPhoto />
       <main styleName="container">
-        {/* <section styleName="aboutContainer"> */}
         <ul styleName="facts">
           <li>Fully fenced-in</li>
           <li>All dogs share one area (no size separation)</li>
