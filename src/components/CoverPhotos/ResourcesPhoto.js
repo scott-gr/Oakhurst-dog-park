@@ -20,7 +20,7 @@ const ResourcesPhoto = () => {
       styleName={`heroBox`}
       tag="section"
       fluid={data.resourcesphoto.childImageSharp.fluid}
-      durationFadeIn={50}
+      durationFadeIn={25}
     >
       <span styleName="pageHeader">
         <h2>Resources</h2>

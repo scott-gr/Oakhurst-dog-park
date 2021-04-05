@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import '../pages/styles/blog.module.css'
@@ -30,6 +31,14 @@ const BlogIndex = ({ data, location }) => {
 
           return (
             <li key={post.fields.slug} styleName="blogCard">
+              {post.frontmatter.image && (
+                <Img
+                  styleName="blogImg"
+                  durationFadeIn={35}
+                  loading="lazy"
+                  fluid={post.frontmatter.image.childImageSharp.fluid}
+                />
+              )}
               <header>
                 <Link
                   styleName="blogTitle"
@@ -39,7 +48,7 @@ const BlogIndex = ({ data, location }) => {
                   <span itemProp="headline">{title}</span>
                 </Link>
               </header>
-              <small styleName="blogDate">{post.frontmatter.date}</small>
+              <small styleName="blogDate">{post.frontmatter.date}</small>{' '}
               <section>
                 <p
                   dangerouslySetInnerHTML={{
@@ -78,6 +87,13 @@ export const query = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          image {
+            childImageSharp {
+              fluid(fit: CONTAIN, quality: 80) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
         }
       }
     }
