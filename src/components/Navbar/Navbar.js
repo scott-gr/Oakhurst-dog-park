@@ -6,9 +6,7 @@ import NavbarLinks from './NavbarLinks.js'
 import NavIcon from './NavIcon.js'
 import { useLocation } from '@reach/router'
 
-const MobileMenu = loadable(() => import(`./MobileMenu.js`), {
-  fallback: <p>Menu Loading...</p>,
-})
+const MobileMenu = loadable(() => import(`./MobileMenu.js`))
 
 const Navbar = () => {
   const location = useLocation()

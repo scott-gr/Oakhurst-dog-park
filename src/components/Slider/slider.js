@@ -13,21 +13,21 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100, webpQuality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 50, webpQuality: 50) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "happylab.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100, webpQuality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 50, webpQuality: 50) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100, webpQuality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 50, webpQuality: 50) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -62,7 +62,7 @@ const PhotoSlider = () => {
       }
       sliderImgEight: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 100) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 50) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -85,7 +85,7 @@ const PhotoSlider = () => {
   return (
     <CarouselProvider
       key={visibleSlides}
-      naturalSlideWidth={100}
+      naturalSlideWidth={50}
       naturalSlideHeight={175}
       totalSlides={8}
       visibleSlides={visibleSlides}
@@ -105,25 +105,25 @@ const PhotoSlider = () => {
         <Slide styleName="slide" innerClassName="innerClass" index={0}>
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
-            durationFadeIn={25}
+            durationFadeIn={50}
             tag="img"
-            loading="eager"
+            loading="auto"
           />
         </Slide>
         <Slide styleName="slide" index={1}>
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
-            durationFadeIn={35}
+            durationFadeIn={50}
             tag="img"
-            loading="eager"
+            loading="auto"
           />
         </Slide>
         <Slide styleName="slide" index={2}>
           <Img
             fluid={data.sliderImgThree.childImageSharp.fluid}
-            durationFadeIn={35}
+            durationFadeIn={50}
             tag="img"
-            loading="eager"
+            loading="auto"
           />
         </Slide>
         <Slide styleName="slide" index={3}>
