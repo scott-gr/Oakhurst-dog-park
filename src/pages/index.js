@@ -6,15 +6,10 @@ import './styles/index.module.css'
 import { graphql } from 'gatsby'
 import Hero from '../components/Hero/Hero.js'
 
-const AnnouncementPost = loadable(
-  () => import(`../components/AnnouncementPost/AnnouncementPost.js`),
-  {
-    fallback: <p styleName="postLoading">Loading Post...</p>,
-  }
+const AnnouncementPost = loadable(() =>
+  import(`../components/AnnouncementPost/AnnouncementPost.js`)
 )
-const PhotoSlider = loadable(() => import(`../components/Slider/slider.js`), {
-  fallback: <div styleName="slideLoading" />,
-})
+const PhotoSlider = loadable(() => import(`../components/Slider/slider.js`))
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 
