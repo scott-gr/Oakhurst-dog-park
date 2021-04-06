@@ -26,6 +26,7 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description, widget: string, required: false }
       - { name: image, label: Cover Image, widget: image, required: false, media_folder: static/images/uploads, multiple: false}
+      - { name: alt, label: Image Alt text, widget: string, hint: Very short description of the image. This is for accessibility, i.e., users with screen readers.}
       - { name: body, label: Body, widget: markdown }
 
   - name: announcements
@@ -46,6 +47,7 @@ collections:
       - { name: date, label: Date, widget: datetime }
       - { name: description, label: Description, widget: string, required: false }
       - { name: image, label: Cover Image, widget: image, required: false, media_folder: static/uploads, multiple: false}
+      - { name: alt, label: Image Alt text, widget: string, hint: Very short description of the image. This is for accessibility, i.e., users with screen readers.}
       - { name: body, label: Body, widget: markdown }
 
   - name: rules

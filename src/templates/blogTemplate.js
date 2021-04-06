@@ -32,19 +32,20 @@ const BlogTemplate = ({ data, location }) => {
           </h1>
           <p styleName="blogDate">{post.frontmatter.date}</p>
         </header>
-          {post.frontmatter.image && (
-            <Img
-              styleName="blogImg"
-              durationFadeIn={35}
-              loading="lazy"
-              fluid={post.frontmatter.image.childImageSharp.fluid}
-            />
-          )}
-          <section
-            styleName="blogBody"
-            dangerouslySetInnerHTML={{ __html: post.html }}
-            itemProp="articleBody"
+        {post.frontmatter.image && (
+          <Img
+            styleName="blogImg"
+            durationFadeIn={35}
+            loading="lazy"
+            alt={post.frontmatter.alt || 'blog cover image'}
+            fluid={post.frontmatter.image.childImageSharp.fluid}
           />
+        )}
+        <section
+          styleName="blogBody"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+          itemProp="articleBody"
+        />
       </article>
       <nav styleName="blognav">
         {previous && (
@@ -91,6 +92,7 @@ export const query = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        alt
         image {
           childImageSharp {
             fluid(fit: CONTAIN, quality: 100) {

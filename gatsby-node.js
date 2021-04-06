@@ -116,6 +116,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       featuredpost: Boolean
       category: String
       name: String
+      alt: String
     }
 
     type Fields {

@@ -18,6 +18,14 @@ const AnnouncementPost = () => {
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            alt
+            image {
+              childImageSharp {
+                fluid(fit: CONTAIN, quality: 80) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
           }
         }
       }

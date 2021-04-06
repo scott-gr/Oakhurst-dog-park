@@ -35,6 +35,7 @@ const BlogIndex = ({ data, location }) => {
                 <Img
                   styleName="blogImg"
                   durationFadeIn={35}
+                  alt={post.frontmatter.alt || 'blog cover image'}
                   loading="lazy"
                   fluid={post.frontmatter.image.childImageSharp.fluid}
                 />
@@ -44,6 +45,7 @@ const BlogIndex = ({ data, location }) => {
                   styleName="blogTitle"
                   to={post.fields.slug}
                   itemProp="url"
+                  imgStyle="blogTitle"
                 >
                   <span itemProp="headline">{title}</span>
                 </Link>
@@ -87,6 +89,7 @@ export const query = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          alt
           image {
             childImageSharp {
               fluid(fit: CONTAIN, quality: 80) {
