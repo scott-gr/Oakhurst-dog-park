@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
-import '../pages/styles/blog.module.css'
+import './styles/blog.module.css'
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -40,25 +40,20 @@ const BlogIndex = ({ data, location }) => {
                   fluid={post.frontmatter.image.childImageSharp.fluid}
                 />
               )}
-              <header>
-                <Link
-                  styleName="blogTitle"
-                  to={post.fields.slug}
-                  itemProp="url"
-                  imgStyle="blogTitle"
-                >
-                  <span itemProp="headline">{title}</span>
-                </Link>
-              </header>
-              <small styleName="blogDate">{post.frontmatter.date}</small>{' '}
-              <section>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: post.frontmatter.description || post.excerpt,
-                  }}
-                  itemProp="description"
-                />
-              </section>
+              <Link to={post.fields.slug} itemProp="url">
+                <header styleName="blogTitle" itemProp="headline">
+                  {title}
+                </header>
+                <small styleName="blogDate">{post.frontmatter.date}</small>{' '}
+                <section styleName="blogDesc">
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.description || post.excerpt,
+                    }}
+                    itemProp="description"
+                  />
+                </section>
+              </Link>
             </li>
           )
         })}
@@ -92,7 +87,7 @@ export const query = graphql`
           alt
           image {
             childImageSharp {
-              fluid(fit: CONTAIN, quality: 80) {
+              fluid(fit: CONTAIN, quality: 80, cropFocus: ENTROPY) {
                 ...GatsbyImageSharpFluid_withWebp
               }
             }
