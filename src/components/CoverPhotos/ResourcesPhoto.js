@@ -8,7 +8,7 @@ const ResourcesPhoto = () => {
     query {
       resourcesphoto: file(relativePath: { eq: "gate.png" }) {
         childImageSharp {
-          fluid(fit: COVER, quality: 100, pngCompressionSpeed: 1) {
+          fluid(fit: COVER, quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -20,7 +20,7 @@ const ResourcesPhoto = () => {
       styleName={`heroBox`}
       tag="section"
       fluid={data.resourcesphoto.childImageSharp.fluid}
-      durationFadeIn={25}
+      durationFadeIn={35}
     >
       <span styleName="pageHeader">
         <h2>Resources</h2>

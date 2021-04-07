@@ -11,7 +11,6 @@ const GetInvolvedPhoto = () => {
           fluid(
             fit: COVER
             quality: 100
-            pngCompressionSpeed: 1
             webpQuality: 100
           ) {
             ...GatsbyImageSharpFluid_withWebp
@@ -25,7 +24,7 @@ const GetInvolvedPhoto = () => {
       styleName={`heroBox`}
       tag="section"
       fluid={data.getinvolvedphoto.childImageSharp.fluid}
-      durationFadeIn={25}
+      durationFadeIn={35}
     >
       <span styleName="pageHeader">
         <h2>Get Involved</h2>

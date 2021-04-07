@@ -12,7 +12,6 @@ const RulesPhoto = () => {
             fit: COVER
             cropFocus: NORTH
             quality: 100
-            pngCompressionSpeed: 1
             webpQuality: 100
           ) {
             ...GatsbyImageSharpFluid_withWebp
@@ -26,7 +25,7 @@ const RulesPhoto = () => {
       styleName={`heroBoxRules heroBox`}
       tag="section"
       fluid={data.rulesphoto.childImageSharp.fluid}
-      durationFadeIn={25}
+      durationFadeIn={35}
     >
       <span styleName="pageHeader">
         <h2>Park Rules</h2>
