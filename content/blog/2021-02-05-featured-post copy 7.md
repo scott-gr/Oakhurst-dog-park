@@ -1,8 +1,8 @@
 ---
 title: Welcome to our new website!
-date: 2021-03-27T21:09:14.243Z
+date: 2021-04-07T19:40:15.720Z
 description: What to expect from this blog.
-image: happylab.png
+image: static/images/uploads/happylab.png
+alt: Happy dog at the park
 ---
-
-Labore voluptate nulla voluptate minim consectetur nisi anim sint sunt quis esse ipsum consequat. Qui do ex dolor incididunt esse do pariatur veniam pariatur. Fugiat nostrud pariatur occaecat occaecat cillum sunt eiusmod nostrud. Consectetur id reprehenderit consectetur elit reprehenderit ut sunt incididunt occaecat. Proident sunt aute laboris officia voluptate duis culpa sint exercitation ex tempor ut.
+Welcome to our new website and thank you for checking out the blog.  Here we will share news, useful info for dog owners, and cute pictures like this guy.
