@@ -25,12 +25,12 @@ const GetInvolvedPage = ({ data, location }) => {
           >
             <FontAwesomeIcon icon={faFacebook} /> Facebook Page
           </a>
-          <a href="" alt="Email" target="_blank" rel="noreferrer">
+          {/* <a href="" alt="Email" target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faEnvelope} /> Email
           </a>
           <span>
             <FontAwesomeIcon icon={faPhone} /> Phone
-          </span>
+          </span> */}
           <a
             href="https://www.decaturga.com/activeliving/page/dog-parks"
             alt="City of Decatur parks site"
