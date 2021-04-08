@@ -3,20 +3,26 @@
 
 # Oakhurst Dog Park
 
-oakhurstdogpark.com (not deployed yet)
+https://oakhurstdogpark.com 
 
-#### About the park and community around it
+#### A site for Oakhurst Dog Park in Decatur, GA. Community leaders can publish to the blog and post new rules and announcements via the CMS.
 
 ## Content
 
 - Park Rules and Guidelines
 - Covid protocols
 - Blog with park news
-- Visitor Photos
+- About the Park
+- Resources for dog owners
 
-## Features
+## Dev Features
 
-- SEO
-- blog
-- photo upload for users
 - Made with Gatsby.js
+- GraphQL page metadata and image queries
+- Netlify CMS commits to github, configured so no coding knowledge required to use CMS to publish new content to pages.
+
+## Future Goals
+
+- QR code at park gate with protected route url to welcome visitors and open options for more user interaction
+- Explore image hosting options - Contentful?
+- Users will be able to upload images of themselves and their dog, adding to a gallery of regular park visitors
