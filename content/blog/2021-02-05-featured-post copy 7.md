@@ -5,4 +5,5 @@ description: What to expect from this blog.
 image: static/images/uploads/happylab.png
 alt: Happy dog at the park
 ---
-Welcome to our new website and thank you for checking out the blog.  Here we will share news, useful info for dog owners, and cute pictures like this guy.
+
+Welcome to our new website and thank you for checking out the blog. Here we will share news, useful info for dog owners, and cute pictures like this guy.

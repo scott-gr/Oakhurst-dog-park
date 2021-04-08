@@ -105,25 +105,25 @@ const PhotoSlider = () => {
         <Slide styleName="slide" innerClassName="innerClass" index={0}>
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
-            durationFadeIn={50}
+            durationFadeIn={35}
             tag="img"
-            loading="auto"
+            loading="eager"
           />
         </Slide>
         <Slide styleName="slide" index={1}>
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
-            durationFadeIn={50}
+            durationFadeIn={35}
             tag="img"
-            loading="auto"
+            loading="eager"
           />
         </Slide>
         <Slide styleName="slide" index={2}>
           <Img
             fluid={data.sliderImgThree.childImageSharp.fluid}
-            durationFadeIn={50}
+            durationFadeIn={35}
             tag="img"
-            loading="auto"
+            loading="eager"
           />
         </Slide>
         <Slide styleName="slide" index={3}>

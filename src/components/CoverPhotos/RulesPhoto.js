@@ -8,12 +8,7 @@ const RulesPhoto = () => {
     query {
       rulesphoto: file(relativePath: { eq: "beagle.png" }) {
         childImageSharp {
-          fluid(
-            fit: COVER
-            cropFocus: NORTH
-            quality: 100
-            webpQuality: 100
-          ) {
+          fluid(fit: COVER, cropFocus: NORTH, quality: 100, webpQuality: 100) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -25,7 +20,8 @@ const RulesPhoto = () => {
       styleName={`heroBoxRules heroBox`}
       tag="section"
       fluid={data.rulesphoto.childImageSharp.fluid}
-      durationFadeIn={35}
+      loading="eager"
+      durationFadeIn={25}
     >
       <span styleName="pageHeader">
         <h2>Park Rules</h2>
