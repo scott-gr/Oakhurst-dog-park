@@ -6,7 +6,7 @@ import GetInvolvedPhoto from '../components/CoverPhotos/GetInvolvedPhoto.js'
 import './styles/getinvolved.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope, faPhone, faCity } from '@fortawesome/free-solid-svg-icons'
+import { faCity } from '@fortawesome/free-solid-svg-icons'
 
 const GetInvolvedPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
