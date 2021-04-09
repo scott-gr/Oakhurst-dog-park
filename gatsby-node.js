@@ -3,6 +3,18 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const { fmImagesToRelative } = require('gatsby-remark-relative-images-v2')
 
+const webpack = require(`webpack`)
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    plugins: [
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^netlify-identity-widget$/,
+      }),
+    ],
+  })
+}
+
 exports.onCreateNode = ({ node }) => {
   fmImagesToRelative(node)
 }

@@ -27,7 +27,7 @@ const NavIcon = () => {
       <Img
         styleName="navIcon"
         fluid={data.iconImage.childImageSharp.fluid}
-        durationFadeIn={25}
+        durationFadeIn={300}
         loading="eager"
       />
     </Link>

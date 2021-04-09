@@ -139,7 +139,12 @@ module.exports = {
     },
 
     `gatsby-plugin-netlify-cache`,
-    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        enableIdentityWidget: false,
+      },
+    },
     'gatsby-plugin-netlify',
     `gatsby-plugin-react-helmet`,
   ],

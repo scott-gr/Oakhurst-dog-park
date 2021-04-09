@@ -35,7 +35,7 @@ const BlogTemplate = ({ data, location }) => {
         {post.frontmatter.image && (
           <Img
             styleName="blogImg"
-            durationFadeIn={25}
+            durationFadeIn={250}
             loading="eager"
             alt={post.frontmatter.alt || 'blog cover image'}
             fluid={post.frontmatter.image.childImageSharp.fluid}
