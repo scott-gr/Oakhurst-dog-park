@@ -10,14 +10,14 @@ const Hero = () => {
       heroMobile: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
           fixed(height: 235, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
       }
       heroDesktop: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
           fixed(height: 300, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+            ...GatsbyImageSharpFixed_withWebp_noBase64
           }
         }
       }
@@ -39,7 +39,7 @@ const Hero = () => {
     <Img
       styleName="hero"
       fixed={heroImage}
-      durationFadeIn={15}
+      durationFadeIn={250}
       loading="eager"
     />
   )

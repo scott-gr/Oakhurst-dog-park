@@ -34,9 +34,9 @@ const BlogIndex = ({ data, location }) => {
               {post.frontmatter.image && (
                 <Img
                   styleName="blogImg"
-                  durationFadeIn={35}
+                  durationFadeIn={250}
                   alt={post.frontmatter.alt || 'blog cover image'}
-                  loading="lazy"
+                  loading="auto"
                   fluid={post.frontmatter.image.childImageSharp.fluid}
                 />
               )}

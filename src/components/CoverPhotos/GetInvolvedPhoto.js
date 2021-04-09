@@ -21,7 +21,7 @@ const GetInvolvedPhoto = () => {
       tag="section"
       fluid={data.getinvolvedphoto.childImageSharp.fluid}
       loading="eager"
-      durationFadeIn={25}
+      durationFadeIn={250}
     >
       <span styleName="pageHeader">
         <h2>Get Involved</h2>

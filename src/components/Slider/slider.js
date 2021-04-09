@@ -105,7 +105,7 @@ const PhotoSlider = () => {
         <Slide styleName="slide" innerClassName="innerClass" index={0}>
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
-            durationFadeIn={35}
+            durationFadeIn={400}
             tag="img"
             loading="eager"
           />
@@ -113,7 +113,7 @@ const PhotoSlider = () => {
         <Slide styleName="slide" index={1}>
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
-            durationFadeIn={35}
+            durationFadeIn={400}
             tag="img"
             loading="eager"
           />
@@ -121,50 +121,29 @@ const PhotoSlider = () => {
         <Slide styleName="slide" index={2}>
           <Img
             fluid={data.sliderImgThree.childImageSharp.fluid}
-            durationFadeIn={35}
+            durationFadeIn={400}
             tag="img"
             loading="eager"
           />
         </Slide>
         <Slide styleName="slide" index={3}>
-          <Img
-            fluid={data.sliderImgFour.childImageSharp.fluid}
-            durationFadeIn={50}
-            tag="img"
-            loading="lazy"
-          />
+          <Img fluid={data.sliderImgFour.childImageSharp.fluid} tag="img" />
         </Slide>
         <Slide styleName="slide" index={4}>
           <Img
             fluid={data.sliderImgFive.childImageSharp.fluid}
-            durationFadeIn={50}
             tag="img"
             loading="lazy"
           />
         </Slide>
         <Slide styleName="slide" index={5}>
-          <Img
-            fluid={data.sliderImgSix.childImageSharp.fluid}
-            durationFadeIn={50}
-            tag="img"
-            loading="lazy"
-          />
+          <Img fluid={data.sliderImgSix.childImageSharp.fluid} tag="img" />
         </Slide>
         <Slide styleName="slide" index={6}>
-          <Img
-            fluid={data.sliderImgSeven.childImageSharp.fluid}
-            durationFadeIn={50}
-            tag="img"
-            loading="lazy"
-          />
+          <Img fluid={data.sliderImgSeven.childImageSharp.fluid} tag="img" />
         </Slide>
         <Slide styleName="slide" index={7}>
-          <Img
-            fluid={data.sliderImgEight.childImageSharp.fluid}
-            durationFadeIn={50}
-            tag="img"
-            loading="lazy"
-          />
+          <Img fluid={data.sliderImgEight.childImageSharp.fluid} tag="img" />
         </Slide>
       </Slider>
     </CarouselProvider>

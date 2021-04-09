@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import  BackgroundImage  from 'gatsby-background-image'
+import BackgroundImage from 'gatsby-background-image'
 import './coverphoto.module.css'
 
 const AboutPhoto = () => {
@@ -21,7 +21,7 @@ const AboutPhoto = () => {
       tag="section"
       fluid={data.aboutphoto.childImageSharp.fluid}
       loading="eager"
-      durationFadeIn={25}
+      durationFadeIn={250}
     >
       <span styleName="pageHeader">
         <h2>About the Park</h2>
