@@ -105,7 +105,7 @@ const PhotoSlider = () => {
         <Slide styleName="slide" innerClassName="innerClass" index={0}>
           <Img
             fluid={data.sliderImgOne.childImageSharp.fluid}
-            durationFadeIn={400}
+            durationFadeIn={300}
             tag="img"
             loading="eager"
           />
@@ -113,7 +113,7 @@ const PhotoSlider = () => {
         <Slide styleName="slide" index={1}>
           <Img
             fluid={data.sliderImgTwo.childImageSharp.fluid}
-            durationFadeIn={400}
+            durationFadeIn={300}
             tag="img"
             loading="eager"
           />
@@ -121,7 +121,7 @@ const PhotoSlider = () => {
         <Slide styleName="slide" index={2}>
           <Img
             fluid={data.sliderImgThree.childImageSharp.fluid}
-            durationFadeIn={400}
+            durationFadeIn={300}
             tag="img"
             loading="eager"
           />
@@ -130,11 +130,7 @@ const PhotoSlider = () => {
           <Img fluid={data.sliderImgFour.childImageSharp.fluid} tag="img" />
         </Slide>
         <Slide styleName="slide" index={4}>
-          <Img
-            fluid={data.sliderImgFive.childImageSharp.fluid}
-            tag="img"
-            loading="lazy"
-          />
+          <Img fluid={data.sliderImgFive.childImageSharp.fluid} tag="img" />
         </Slide>
         <Slide styleName="slide" index={5}>
           <Img fluid={data.sliderImgSix.childImageSharp.fluid} tag="img" />

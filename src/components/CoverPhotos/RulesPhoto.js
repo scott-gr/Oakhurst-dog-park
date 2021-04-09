@@ -20,8 +20,8 @@ const RulesPhoto = () => {
       styleName={`heroBoxRules heroBox`}
       tag="section"
       fluid={data.rulesphoto.childImageSharp.fluid}
-      // loading="eager"
-      durationFadeIn={300}
+      loading="eager"
+      durationFadeIn={250}
     >
       <span styleName="pageHeader">
         <h2>Park Rules</h2>
