@@ -10,7 +10,7 @@ const NavIcon = () => {
     query {
       iconImage: file(relativePath: { eq: "navicon.png" }) {
         childImageSharp {
-          fluid(maxHeight: 100, fit: CONTAIN) {
+          fluid(maxHeight: 100, fit: CONTAIN, traceSVG: {color: "#f0eff0", threshold: 75}) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }

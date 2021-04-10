@@ -10,14 +10,14 @@ const Hero = () => {
       heroMobile: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
           fixed(height: 235, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }
       heroDesktop: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
           fixed(height: 300, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp_noBase64
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }

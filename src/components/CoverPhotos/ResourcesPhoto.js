@@ -21,7 +21,7 @@ const ResourcesPhoto = () => {
       tag="section"
       fluid={data.resourcesphoto.childImageSharp.fluid}
       loading="eager"
-      durationFadeIn={250}
+      durationFadeIn={300}
     >
       <span styleName="pageHeader">
         <h2>Resources</h2>

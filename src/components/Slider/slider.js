@@ -13,21 +13,21 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 50, webpQuality: 50) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 95, webpQuality: 95) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "happylab.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 50, webpQuality: 50) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 50, webpQuality: 50) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -62,7 +62,7 @@ const PhotoSlider = () => {
       }
       sliderImgEight: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 50) {
+          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
