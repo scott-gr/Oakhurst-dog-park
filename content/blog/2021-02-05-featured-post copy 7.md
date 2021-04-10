@@ -2,7 +2,7 @@
 title: Welcome to our new website!
 date: 2021-04-07T19:40:15.720Z
 description: What to expect from this blog.
-image: static/images/uploads/happylab.png
+image: happylab.png
 alt: Happy dog at the park
 ---
 
