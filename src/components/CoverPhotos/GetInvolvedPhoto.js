@@ -8,7 +8,7 @@ const GetInvolvedPhoto = () => {
     query {
       getinvolvedphoto: file(relativePath: { eq: "wheelbarrow.png" }) {
         childImageSharp {
-          fluid(fit: COVER, quality: 100, webpQuality: 100) {
+          fluid(fit: COVER, quality: 100, webpQuality: 100,) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }
@@ -21,7 +21,7 @@ const GetInvolvedPhoto = () => {
       tag="section"
       fluid={data.getinvolvedphoto.childImageSharp.fluid}
       loading="eager"
-      durationFadeIn={250}
+      durationFadeIn={300}
     >
       <span styleName="pageHeader">
         <h2>Get Involved</h2>

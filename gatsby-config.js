@@ -70,18 +70,6 @@ module.exports = {
         path: `${__dirname}/content/assets/slides`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-breakpoints',
-      options: {
-        queries: myViews,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -109,6 +97,19 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: 'gatsby-plugin-breakpoints',
+      options: {
+        queries: myViews,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
+
     {
       resolve: `gatsby-plugin-react-css-modules`,
       options: {
