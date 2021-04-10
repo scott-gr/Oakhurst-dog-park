@@ -87,8 +87,8 @@ export const query = graphql`
           alt
           image {
             childImageSharp {
-              fluid(fit: CONTAIN, quality: 80, cropFocus: ENTROPY) {
-                ...GatsbyImageSharpFluid_withWebp
+              fluid(fit: CONTAIN, quality: 80, pngCompressionSpeed: 7) {
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }

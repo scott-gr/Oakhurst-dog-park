@@ -8,7 +8,7 @@ const ResourcesPhoto = () => {
     query {
       resourcesphoto: file(relativePath: { eq: "gate.png" }) {
         childImageSharp {
-          fluid(fit: COVER, quality: 100) {
+          fluid(fit: COVER, quality: 100, pngCompressionSpeed: 6) {
             ...GatsbyImageSharpFluid_withWebp
           }
         }

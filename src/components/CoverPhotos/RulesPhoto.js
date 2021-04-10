@@ -8,8 +8,8 @@ const RulesPhoto = () => {
     query {
       rulesphoto: file(relativePath: { eq: "beagle.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: NORTH, quality: 100, webpQuality: 100) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
+          fluid(fit: COVER, cropFocus: NORTH, quality: 100, webpQuality: 100, pngCompressionSpeed: 6) {
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -21,7 +21,7 @@ const RulesPhoto = () => {
       tag="section"
       fluid={data.rulesphoto.childImageSharp.fluid}
       loading="eager"
-      durationFadeIn={300}
+      durationFadeIn={250}
     >
       <span styleName="pageHeader">
         <h2>Park Rules</h2>
