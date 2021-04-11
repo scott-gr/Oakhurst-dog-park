@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
+import Img from 'gatsby-image'
 import './coverphoto.module.css'
 
 const ResourcesPhoto = () => {
@@ -16,17 +16,18 @@ const ResourcesPhoto = () => {
     }
   `)
   return (
-    <BackgroundImage
-      styleName={`heroBox`}
-      tag="section"
-      fluid={data.resourcesphoto.childImageSharp.fluid}
-      loading="eager"
-      durationFadeIn={300}
-    >
+    <div styleName="heroBox">
+      <Img
+        styleName="heroImg"
+        tag="img"
+        fluid={data.resourcesphoto.childImageSharp.fluid}
+        loading="eager"
+        durationFadeIn={250}
+      />
       <span styleName="pageHeader">
         <h2>Resources</h2>
       </span>
-    </BackgroundImage>
+    </div>
   )
 }
 
