@@ -4,11 +4,8 @@ import './blogTemplate.module.css'
 import Img from 'gatsby-image'
 import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faArrowAltCircleLeft,
-  faArrowAltCircleRight,
-} from '@fortawesome/free-regular-svg-icons'
+import RightArrowIcon from '../components/icons/RightArrow.js'
+import LeftArrowIcon from '../components/icons/LeftArrow.js'
 
 const BlogTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -51,8 +48,7 @@ const BlogTemplate = ({ data, location }) => {
         {previous && (
           <Link to={previous.fields.slug} rel="prev">
             <button styleName="blogNavBtn">
-              <FontAwesomeIcon icon={faArrowAltCircleLeft} className="fa-2x" />
-              {''}
+              <LeftArrowIcon />
               {previous.frontmatter.title} - {previous.frontmatter.date}
             </button>
           </Link>
@@ -61,8 +57,8 @@ const BlogTemplate = ({ data, location }) => {
         {next && (
           <Link to={next.fields.slug} rel="next">
             <button styleName="blogNavBtn">
-              {next.frontmatter.title} - {next.frontmatter.date}{' '}
-              <FontAwesomeIcon icon={faArrowAltCircleRight} className="fa-2x" />
+              {next.frontmatter.title} - {next.frontmatter.date}
+              <RightArrowIcon />{' '}
             </button>
           </Link>
         )}

@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
       <main styleName="globalWrapper">
         <NavBar />
         {children}
-        <Footer />
+        <Footer loading="lazy" />
       </main>
     </>
   )

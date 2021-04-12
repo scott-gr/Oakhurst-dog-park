@@ -5,12 +5,12 @@ import SEO from '../components/seo.js'
 import './styles/index.module.css'
 import { graphql } from 'gatsby'
 import Hero from '../components/Hero/Hero.js'
-import PhotoSlider from '../components/Slider/slider.js'
+// import PhotoSlider from '../components/Slider/slider.js'
 
 const AnnouncementPost = loadable(() =>
   import(`../components/AnnouncementPost/AnnouncementPost.js`)
 )
-// const PhotoSlider = loadable(() => import(`../components/Slider/slider.js`))
+const PhotoSlider = loadable(() => import(`../components/Slider/slider.js`))
 const HomePage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
 

@@ -4,9 +4,8 @@ import Layout from '../components/Layout/Layout.js'
 import SEO from '../components/seo.js'
 import GetInvolvedPhoto from '../components/CoverPhotos/GetInvolvedPhoto.js'
 import './styles/getinvolved.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faCity } from '@fortawesome/free-solid-svg-icons'
+import LogoFacebookIcon from '../components/icons/LogoFacebookIcon.js'
+import CityIcon from '../components/icons/CityIcon.js'
 
 const GetInvolvedPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -23,13 +22,15 @@ const GetInvolvedPage = ({ data, location }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebook} /> Facebook Page
+            {' '}
+            <LogoFacebookIcon />
+            Facebook Page
           </a>
           {/* <a href="" alt="Email" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faEnvelope} /> Email
+            email icon
           </a>
           <span>
-            <FontAwesomeIcon icon={faPhone} /> Phone
+            phone icon
           </span> */}
           <a
             href="https://www.decaturga.com/activeliving/page/dog-parks"
@@ -37,7 +38,8 @@ const GetInvolvedPage = ({ data, location }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <FontAwesomeIcon icon={faCity} /> City of Decatur Parks
+            <CityIcon />
+            City of Decatur Parks
           </a>
         </section>
         <article>

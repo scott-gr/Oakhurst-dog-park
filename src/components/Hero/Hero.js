@@ -9,15 +9,23 @@ const Hero = () => {
     query {
       heroMobile: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
-          fixed(height: 235, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fixed(
+            height: 235
+            quality: 100
+            traceSVG: { color: "#171717", turdSize: 4 }
+          ) {
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
       heroDesktop: file(relativePath: { eq: "tricolorwhiteshadow.png" }) {
         childImageSharp {
-          fixed(height: 300, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
+          fixed(
+            height: 300
+            quality: 100
+            traceSVG: { color: "#171717", turdSize: 4 }
+          ) {
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }
@@ -39,7 +47,7 @@ const Hero = () => {
     <Img
       styleName="hero"
       fixed={heroImage}
-      durationFadeIn={250}
+      // durationFadeIn={250}
       loading="eager"
     />
   )

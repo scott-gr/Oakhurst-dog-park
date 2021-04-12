@@ -38,16 +38,6 @@
     overflow-wrap: normal;
   }
 }
-
-/* forward slashes to visually break up nav links */
-/* .navItem:before {
-  content: ' // ';
-  position: relative;
-  left: -2px;
-
-  color: var(--blue);
-} */
-
 .navItem:hover {
   transform: scale(1.01);
   z-index: 20;
