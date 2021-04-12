@@ -13,9 +13,10 @@ const AboutPhoto = () => {
             fit: COVER
             quality: 100
             webpQuality: 100
-            pngCompressionSpeed: 6
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+
           ) {
-            ...GatsbyImageSharpFluid_withWebp
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
