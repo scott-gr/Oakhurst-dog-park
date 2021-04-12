@@ -1,10 +1,6 @@
-import loadable from '@loadable/component'
 import React from 'react'
+import LogoFacebookIcon from '../icons/LogoFacebookIcon.js'
 import './layout.module.css'
-
-const FacebookIcon = loadable(() => import(`./FacebookIcon.js`), {
-  fallback: <span>f</span>,
-})
 
 const Footer = () => {
   return (
@@ -16,7 +12,7 @@ const Footer = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <FacebookIcon />
+        <LogoFacebookIcon />
       </a>
       <p>450 E Lake Dr, Decatur, GA 30030</p>
       <p> © Oakhurst Dog Park 2021</p>

@@ -81,6 +81,6 @@ details[open] .controlIconExpand {
   display: none;
 }
 
-details[open] > summary::-webkit-details-marker {
+details[open] > summary::marker {
   color: var(--blue);
 }

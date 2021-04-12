@@ -13,57 +13,114 @@ const PhotoSlider = () => {
     query {
       sliderImgOne: file(relativePath: { eq: "widepark.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 95, webpQuality: 95, pngCompressionSpeed: 5, background: "#171717") {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 95
+            webpQuality: 95
+            pngCompressionSpeed: 8
+            background: "#171717"
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       sliderImgTwo: file(relativePath: { eq: "happylab.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90, pngCompressionSpeed: 6) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 90
+            webpQuality: 90
+            pngCompressionSpeed: 8
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       sliderImgThree: file(relativePath: { eq: "pool.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90, pngCompressionSpeed: 6) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 90
+            webpQuality: 90
+            pngCompressionSpeed: 8
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       sliderImgFour: file(relativePath: { eq: "stump.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90, pngCompressionSpeed: 6) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 90
+            webpQuality: 90
+            pngCompressionSpeed: 8
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       sliderImgFive: file(relativePath: { eq: "doglooking.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90, pngCompressionSpeed: 6) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 90
+            webpQuality: 90
+            pngCompressionSpeed: 8
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       sliderImgSix: file(relativePath: { eq: "twosheps.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 95, webpQuality: 95, pngCompressionSpeed: 6) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 95
+            webpQuality: 95
+            pngCompressionSpeed: 8
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       sliderImgSeven: file(relativePath: { eq: "falltrees.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90, pngCompressionSpeed: 6) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 90
+            webpQuality: 90
+            pngCompressionSpeed: 8
+            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       sliderImgEight: file(relativePath: { eq: "twodogs.png" }) {
         childImageSharp {
-          fluid(fit: COVER, cropFocus: CENTER, quality: 90, webpQuality: 90, pngCompressionSpeed: 6) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid(
+            fit: COVER
+            cropFocus: CENTER
+            quality: 90
+            webpQuality: 90
+            pngCompressionSpeed: 8
+            traceSVG: { color: "#c1bcc1", turdSize: 6}
+          ) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
@@ -96,6 +153,7 @@ const PhotoSlider = () => {
       isPlaying={true}
       orientation={'horizontal'}
       styleName="slideGrid"
+      loading="eager"
     >
       <Slider
         styleName="carouselWrapper"

@@ -21,11 +21,12 @@ const RulesPhoto = () => {
     }
   `)
   return (
-    <div styleName="heroBox" >
+    <div styleName="heroBox">
       <Img
         styleName="heroImg"
         imgStyle={{
-          objectPosition: "top"}}
+          objectPosition: 'top',
+        }}
         tag="img"
         fluid={data.rulesphoto.childImageSharp.fluid}
         loading="eager"

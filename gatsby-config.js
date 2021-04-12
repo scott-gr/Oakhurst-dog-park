@@ -139,6 +139,14 @@ module.exports = {
         icon: `content/assets/favicon.png`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
+      options: {
+        devMode: true,
+        analyzerMode: 'server',
+        analyzerPort: 3001,
+      },
+    },
 
     `gatsby-plugin-netlify-cache`,
     {
