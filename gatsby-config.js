@@ -17,7 +17,7 @@ module.exports = {
     description: `Visit Oakhurst Dog Park in Decatur, GA. Open daily with plenty of room to play!`,
     url: `https://oakhurstdogpark.com`,
     icon: `/favicon.ico`,
-    image: `/social-preview.png`,
+    image: `https://oakhurstdogpark.com/social-preview.png`,
   },
 
   plugins: [
