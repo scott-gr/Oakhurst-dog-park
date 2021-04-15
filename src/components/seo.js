@@ -45,7 +45,7 @@ SEO.propTypes = {
 SEO.defaultProps = {
   title: null,
   description: null,
-  image: null,
+  image: `https://oakhurstdogpark.com/social-preview.png`,
 }
 
 const query = graphql`
