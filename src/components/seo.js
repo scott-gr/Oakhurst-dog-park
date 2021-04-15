@@ -33,14 +33,14 @@ function SEO({ description, title, image, lang }) {
       image="https://oakhurstdogpark.com/social-preview.png"
     >
       <meta name="description" content={seo.description} />
-      {/* <meta property="og:image" content="https://oakhurstdogpark.com/social-preview.png"/> */}
+      <meta name="image" property="og:image" content="https://oakhurstdogpark.com/social-preview.png"/>
 
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
+
     </Helmet>
   )
 }
