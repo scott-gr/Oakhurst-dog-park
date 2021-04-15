@@ -14,7 +14,6 @@ const AboutPhoto = () => {
             quality: 100
             webpQuality: 100
             traceSVG: { color: "#c1bcc1", turdSize: 6 }
-
           ) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
