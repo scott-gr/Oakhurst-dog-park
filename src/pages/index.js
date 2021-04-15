@@ -16,7 +16,7 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Welcome" description="Visit Oakhurst Dog Park in Decatur, GA. Open daily with plenty of room to play!"/>
+      <SEO title="Welcome" description="Visit Oakhurst Dog Park in Decatur, GA. Open daily with plenty of room to play!" image="https://oakhurstdogpark.com/social-preview.png"/>
       <Hero />
       <PhotoSlider />
       <AnnouncementPost />
