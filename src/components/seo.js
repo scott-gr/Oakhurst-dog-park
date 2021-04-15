@@ -32,8 +32,7 @@ function SEO({ description, title, image, lang }) {
       }} image={seo.image}
     >
       <meta name="description" content={seo.description} />
-      {/* <meta name="image" content={seo.image} />
-      <meta property="og:image" content={seo.image} /> */}
+
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
