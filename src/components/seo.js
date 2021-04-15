@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { useLocation } from "@reach/router"
+import { useLocation } from '@reach/router'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, title, image }) {
+function SEO({ description, title, image, lang }) {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -13,24 +13,32 @@ function SEO({ description, title, image }) {
     defaultDescription,
     siteUrl,
     defaultImage,
+    defaultLang,
   } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
+    lang: lang || defaultLang,
     description: description || defaultDescription,
-    image: `https://oakhurstdogpark.com/social-preview.png`,
+    image: image || defaultImage,
     url: `${siteUrl}${pathname}`,
   }
 
   return (
-    <Helmet title={seo.title}>
+    <Helmet
+      title={seo.title}
+      htmlAttributes={{
+        lang,
+      }} image={seo.image}
+    >
       <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
+
       {seo.url && <meta property="og:url" content={seo.url} />}
       {seo.title && <meta property="og:title" content={seo.title} />}
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
+      {seo.image && <meta property="og:image" content={seo.image} />}
     </Helmet>
   )
 }
@@ -40,11 +48,13 @@ SEO.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string.isRequired,
   image: PropTypes.string,
+  lang: PropTypes.string,
 }
 SEO.defaultProps = {
   title: null,
   description: null,
   image: `https://oakhurstdogpark.com/social-preview.png`,
+  lang: `en`,
 }
 
 const query = graphql`
