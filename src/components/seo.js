@@ -18,7 +18,7 @@ function SEO({ description, title, image }) {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: `https://oakhurstdogpark.com/social-preview.png`,
     url: `${siteUrl}${pathname}`,
   }
 
@@ -31,7 +31,6 @@ function SEO({ description, title, image }) {
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
     </Helmet>
   )
 }
@@ -45,7 +44,7 @@ SEO.propTypes = {
 SEO.defaultProps = {
   title: null,
   description: null,
-  image: null,
+  image: `https://oakhurstdogpark.com/social-preview.png`,
 }
 
 const query = graphql`
