@@ -6,7 +6,6 @@ import './styles/index.module.css'
 import { graphql } from 'gatsby'
 import Hero from '../components/Hero/Hero.js'
 
-
 const AnnouncementPost = loadable(() =>
   import(`../components/AnnouncementPost/AnnouncementPost.js`)
 )
