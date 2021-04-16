@@ -118,7 +118,7 @@ const PhotoSlider = () => {
             quality: 90
             webpQuality: 90
             pngCompressionSpeed: 8
-            traceSVG: { color: "#c1bcc1", turdSize: 6 }
+            traceSVG: { color: "#c1bcc1", turdSize: 6}
           ) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
