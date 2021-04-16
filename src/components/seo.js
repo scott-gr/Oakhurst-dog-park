@@ -1,73 +1,72 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
-import { useLocation } from '@reach/router'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, title, image, lang }) {
-  const { pathname } = useLocation()
-  const { site } = useStaticQuery(query)
+// AZeHIOEnGEY8ibQuy4Z5rMn
+function SEO({ description, lang, meta, title, image }) {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            image
+          }
+        }
+      }
+    `
+  )
 
-  const {
-    defaultTitle,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-    defaultLang,
-  } = site.siteMetadata
-
-  const seo = {
-    title: title || defaultTitle,
-    lang: lang || defaultLang,
-    description: description || defaultDescription,
-    image: image || defaultImage,
-    url: `${siteUrl}${pathname}`,
-  }
+  const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
-      title={seo.title}
       htmlAttributes={{
         lang,
       }}
-      image="https://oakhurstdogpark.com/social-preview.png"
-    >
-      <meta name="description" content={seo.description} />
-      <meta name="image" property="og:image" content="https://oakhurstdogpark.com/social-preview.png"/>
-
-      {seo.url && <meta property="og:url" content={seo.url} />}
-      {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
-      )}
-
-    </Helmet>
+      title={title}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      meta={[
+        {
+          name: `description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: metaDescription,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: image,
+        },
+        
+        
+      ].concat(meta)}
+    />
   )
 }
-export default SEO
+
+SEO.defaultProps = {
+  lang: `en`,
+  meta: [],
+  description: ``,
+}
 
 SEO.propTypes = {
   description: PropTypes.string,
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string,
   lang: PropTypes.string,
-}
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  image: `https://oakhurstdogpark.com/social-preview.png`,
-  lang: `en`,
+  meta: PropTypes.arrayOf(PropTypes.object),
+  title: PropTypes.string.isRequired,
 }
 
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        defaultTitle: title
-        defaultDescription: description
-        defaultImage: image
-        siteUrl: url
-      }
-    }
-  }
-`
+export default SEO

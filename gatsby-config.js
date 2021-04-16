@@ -14,10 +14,10 @@ module.exports = {
       name: `Scott Griffin`,
       summary: `Web developer based in Atlanta. Looking for opportunities! - https://yoscott.com `,
     },
-    description: `Visit Oakhurst Dog Park in Decatur, GA. Open daily with plenty of room to play!`,
-    url: `https://oakhurstdogpark.com`,
-    icon: `/favicon.ico`,
-    image: `https://oakhurstdogpark.com/social-preview.png`,
+    description: `Visit Oakhurst Dog Park in Decatur, GA`,
+    siteUrl: `https://oakhurstdogpark.com`,
+    icon: `static/favicon.ico`,
+    image: `static/social-preview.png`
   },
 
   plugins: [
