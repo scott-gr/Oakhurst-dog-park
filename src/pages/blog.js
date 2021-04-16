@@ -44,7 +44,7 @@ const BlogIndex = ({ data, location }) => {
                 <header styleName="blogTitle" itemProp="headline">
                   {title}
                 </header>
-                <small styleName="blogDate">{post.frontmatter.date}</small>{' '}
+                <small>{post.frontmatter.date}</small>{' '}
                 <section styleName="blogDesc">
                   <p
                     dangerouslySetInnerHTML={{
