@@ -5,7 +5,7 @@ import SEO from '../components/seo.js'
 import './styles/index.module.css'
 import { graphql } from 'gatsby'
 import Hero from '../components/Hero/Hero.js'
-// import PhotoSlider from '../components/Slider/slider.js'
+
 
 const AnnouncementPost = loadable(() =>
   import(`../components/AnnouncementPost/AnnouncementPost.js`)
@@ -16,7 +16,7 @@ const HomePage = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Welcome" />
+      <SEO title="Welcome" image="https://oakhurstdogpark.com/share.png" />
       <Hero />
       <PhotoSlider />
       <AnnouncementPost />
