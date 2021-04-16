@@ -17,7 +17,6 @@ module.exports = {
     description: `Visit Oakhurst Dog Park in Decatur, GA`,
     siteUrl: `https://oakhurstdogpark.com`,
     icon: `static/favicon.ico`,
-    image: `static/social-preview.png`,
   },
 
   plugins: [
