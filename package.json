@@ -61,7 +61,6 @@
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
-    "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.21",
     "prettier": "2.2.1"
   },
   "repository": {
