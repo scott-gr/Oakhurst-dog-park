@@ -44,12 +44,7 @@ function SEO({ description, lang, meta, title}) {
           property: `og:type`,
           content: `website`,
         },
-        {
 
-          prefix: `http://ogp.me/ns#`,
-          property: `og:image`,
-          content: `https://oakhurstdogpark.com/share.png`,
-        },
       ].concat(meta)}
     />
   )
