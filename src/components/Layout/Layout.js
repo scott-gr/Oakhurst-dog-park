@@ -2,7 +2,8 @@ import React from 'react'
 import './layout.module.css'
 import Footer from './Footer.js'
 import NavBar from '../Navbar/Navbar.js'
-const Layout = ({ children }) => {
+
+function Layout({ children }) {
   return (
     <>
       <main styleName="globalWrapper">
