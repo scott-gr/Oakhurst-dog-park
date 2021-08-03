@@ -2,7 +2,7 @@
 title: "Fireworks & dogs "
 date: 2021-07-03T18:09:00.000Z
 description: Tips to keep your pup safe and calm
-image: https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/p526x296/211191019_5707121142696577_7439464296582788335_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=8bfeb9&_nc_ohc=itaKkdqa8UoAX9BICBh&_nc_ht=scontent-atl3-2.xx&oh=ab38babe427ac463a75a98b41dfe6078&oe=610E1FD3
+image: static/images/uploads/blanket.png
 alt: dog hiding in blanket
 ---
 Love them or hate them, fireworks are here to stay.
